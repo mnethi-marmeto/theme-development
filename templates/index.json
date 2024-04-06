@@ -1,0 +1,578 @@
+{
+  "sections": {
+    "slideshow_zFW6EH": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_4cJpDc": {
+          "type": "slide",
+          "settings": {
+            "heading": "ADD A TAGLINE",
+            "heading_size": "h2",
+            "subheading": "DISCOVER THE PERFECT ACCESSORY FOR YOUR STYLE",
+            "button_label": "Shop Now",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_bgefLa": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/main-slide-img2.jpg",
+            "heading": "NEW COLLECTION",
+            "heading_size": "h2",
+            "subheading": "EVERY PIECE IS A UNIQUE, ONE OF A KIND MASTERPIECE",
+            "button_label": "Shop the collection",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4cJpDc",
+        "slide_bgefLa"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured_collection_kHd8ET": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "heading_size": "h1",
+        "description": "<p>Beyond mere adornment, these pieces are made to make you feel good.<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_3t7LAQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_4RxQxk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mc-01_814x_crop_center_bb7de87b-51a9-446d-9c6b-df07a0f40275.jpg",
+            "title": "BESPOKE ENGAGEMENT RINGS",
+            "text": "<p>Looking to get the perfect engagement ring? Browse hundreds of ring styles find the perfect engagement ring today.<\/p>",
+            "link_label": "Browse Rings",
+            "link": "#"
+          }
+        },
+        "column_QVJV3H": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mc-02_814x_crop_center_8786ad46-82de-48f2-a3a6-cb91148dc470.jpg",
+            "title": "DANGLE & DROP EARRINGS",
+            "text": "<p>These are simple enough for everyday wear and an iconic symbol you’ll want to show off for years to come.<\/p>",
+            "link_label": "Browse Earrings",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_4RxQxk",
+        "column_QVJV3H"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_L8377M": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_qLNXaq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        },
+        "featured_collection_gyERkG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "featured_collection_jBbqmJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "featured_collection_NeiBWk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "diamonds"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_qLNXaq",
+        "featured_collection_gyERkG",
+        "featured_collection_jBbqmJ",
+        "featured_collection_NeiBWk"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_4dTgKt": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_YiCBdJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pearls"
+          }
+        },
+        "featured_collection_EjYkip": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_YiCBdJ",
+        "featured_collection_EjYkip"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_QFTQaE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jXPWJf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Timeless, classic and elegant",
+            "heading_size": "h0"
+          }
+        },
+        "text_NGmtpr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When choosing timeless jewelry, it is important to consider factors such as design, quality, and materials to ensure that the piece will withstand the test of time and retain its value and beauty for years to come.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jXPWJf",
+        "text_NGmtpr"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_Y34fHF": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_gKqxRb": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/spotlight_image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "featured_collection_7ymXqm": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "CUSTOMER REVIEWS",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_R6aArr": {
+      "type": "image-with-text",
+      "blocks": {
+        "button_mR6bW7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Custom design",
+            "button_link": "",
+            "button_style_secondary": true
+          }
+        },
+        "heading_MBeyRf": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES",
+            "heading_size": "h2"
+          }
+        },
+        "text_wnHBB9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Luxury jewelry is a high-end category of jewelry that is often made of precious metals and gems, and is known for its exceptional craftsmanship and quality. This type of jewelry is often associated with elegance and status.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "button_mR6bW7",
+        "heading_MBeyRf",
+        "text_wnHBB9"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/after_slide_image.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_7gD8VC": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "LATEST NEWS",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_nNHBYp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wzpF7N": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xin9bU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta2.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_x3tiW3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta3.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jEEYE8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta4.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_D8QFrw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta5.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wzpF7N",
+        "column_xin9bU",
+        "column_x3tiW3",
+        "column_jEEYE8",
+        "column_D8QFrw"
+      ],
+      "settings": {
+        "title": "<strong>FOLLOW US @FUELTHEMES<\/strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_nfKfxw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xVXmmy": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>FREE SHIPPING<\/strong>",
+            "text": "<p>We are happy to offer international shipping for a flat rate of $40.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mGaqgV": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>GIFT PACKAGE<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ry3bnV": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>EASY RETURNS<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7iVfTr": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>ONE YEAR WARRANTY<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_xVXmmy",
+        "column_mGaqgV",
+        "column_ry3bnV",
+        "column_7iVfTr"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_9PLwfE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AeeV3V": {
+          "type": "column",
+          "settings": {
+            "title": "MADE FOR YOU",
+            "text": "<h2>Timeless Style<\/h2>",
+            "link_label": "Shop now",
+            "link": "#"
+          }
+        },
+        "column_wAGJr7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/footer-img2.jpg",
+            "title": "LATEST TRENDS",
+            "text": "<h2>Unique & Affordable<\/h2>",
+            "link_label": "Shop now",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "column_AeeV3V",
+        "column_wAGJr7"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_zFW6EH",
+    "featured_collection_kHd8ET",
+    "multicolumn_3t7LAQ",
+    "collection_list_L8377M",
+    "collection_list_4dTgKt",
+    "rich_text_QFTQaE",
+    "featured_collection_Y34fHF",
+    "image_banner_gKqxRb",
+    "featured_collection_7ymXqm",
+    "image_with_text_R6aArr",
+    "featured_blog_7gD8VC",
+    "multicolumn_nNHBYp",
+    "multicolumn_nfKfxw",
+    "multicolumn_9PLwfE"
+  ]
+}
