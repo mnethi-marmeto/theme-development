@@ -593,6 +593,7 @@
         "buttons_xAPBir"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/spotlight_image.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
