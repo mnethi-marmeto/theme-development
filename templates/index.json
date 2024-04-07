@@ -561,20 +561,6 @@
     "image_banner_rpWkDb": {
       "type": "image-banner",
       "blocks": {
-        "heading_aYQGEj": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_Fbf9X3": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
         "buttons_xAPBir": {
           "type": "buttons",
           "settings": {
@@ -585,12 +571,26 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "text_Fbf9X3": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "heading_aYQGEj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
         }
       },
       "block_order": [
-        "heading_aYQGEj",
+        "buttons_xAPBir",
         "text_Fbf9X3",
-        "buttons_xAPBir"
+        "heading_aYQGEj"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/spotlight_image.jpg",
