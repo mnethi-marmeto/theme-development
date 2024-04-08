@@ -457,6 +457,7 @@
         "column_xVXmmy": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/free-shipping1.png",
             "title": "<strong>FREE SHIPPING<\/strong>",
             "text": "<p>We are happy to offer international shipping for a flat rate of $40.<\/p>",
             "link_label": "",
@@ -466,6 +467,7 @@
         "column_mGaqgV": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/gift2.png",
             "title": "<strong>GIFT PACKAGE<\/strong>",
             "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
             "link_label": "",
@@ -475,6 +477,7 @@
         "column_ry3bnV": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/returns.png",
             "title": "<strong>EASY RETURNS<\/strong>",
             "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
             "link_label": "",
@@ -484,6 +487,7 @@
         "column_7iVfTr": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/certificate.png",
             "title": "<strong>ONE YEAR WARRANTY<\/strong>",
             "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
             "link_label": "",
@@ -500,10 +504,10 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_width": "full",
+        "image_width": "third",
         "image_ratio": "adapt",
         "columns_desktop": 4,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
