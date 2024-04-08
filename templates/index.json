@@ -555,8 +555,8 @@
         "column_jFdVXz": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Company",
+            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Wholesale\">Wholesale<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Become a retailer\">Become a retailer<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Corporate orders\">Corporate orders<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Affiliates\">Affiliates<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/pages\/faq\" title=\"F.A.Q.\">F.A.Q.<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/pages\/contact\" title=\"Contact\">Contact<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
