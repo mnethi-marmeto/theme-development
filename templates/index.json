@@ -565,7 +565,7 @@
           "type": "column",
           "settings": {
             "title": "Resources",
-            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">About<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/blogs\/news\" title=\"Blog\">Blog<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Careers\">Careers<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Find a store\">Find a store<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Press\">Press<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Support\">Support<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Privacy\">Privacy<\/a><\/p>",
+            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">About<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Blog<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Careers<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Find a store<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Press<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Support<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Privacy<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
@@ -574,7 +574,7 @@
           "type": "column",
           "settings": {
             "title": "Support",
-            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Delivery\">Delivery<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Shipping & returns\">Shipping & returns<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"My account\">My account<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Customer service\">Customer service<\/a><\/p>",
+            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Delivery<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Shipping & returns<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">My account<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Customer service<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
