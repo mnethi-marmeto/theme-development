@@ -564,8 +564,8 @@
         "column_PegxNz": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Resources",
+            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">About<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/blogs\/news\" title=\"Blog\">Blog<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Careers\">Careers<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Find a store\">Find a store<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Press\">Press<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Support\">Support<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Privacy\">Privacy<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
