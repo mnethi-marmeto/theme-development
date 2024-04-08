@@ -4,9 +4,21 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_ed4zXy": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "company"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_ed4zXy"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
