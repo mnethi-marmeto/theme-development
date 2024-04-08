@@ -556,7 +556,7 @@
           "type": "column",
           "settings": {
             "title": "Company",
-            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Wholesale\">Wholesale<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Become a retailer\">Become a retailer<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Corporate orders\">Corporate orders<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Affiliates\">Affiliates<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/pages\/faq\" title=\"F.A.Q.\">F.A.Q.<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/pages\/contact\" title=\"Contact\">Contact<\/a><\/p>",
+            "text": "<p><a href=\"#\" title=\"#\">Wholesale<\/a><\/p><p><a href=\"#\" title=\"#\">Become a retailer<\/a><\/p><p><a href=\"#\" title=\"#\">Corporate orders<\/a><\/p><p><a href=\"#\" title=\"#\">Affiliates<\/a><\/p><p><a href=\"#\" title=\"#\">F.A.Q.<\/a><\/p><p><a href=\"#\" title=\"#\">Contact<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
@@ -597,7 +597,7 @@
         "column_3Xfndn"
       ],
       "custom_css": [
-        "*{text-decoration:none;}"
+        "* {text-decoration: none;}"
       ],
       "settings": {
         "title": "",
