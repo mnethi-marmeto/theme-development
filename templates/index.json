@@ -316,10 +316,10 @@
           "type": "row",
           "settings": {
             "image": "shopify:\/\/shop_images\/after_slide_image.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Button label",
+            "caption": "Custom design",
+            "heading": "THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES",
+            "text": "<p>Luxury jewelry is a high-end category of jewelry that is often made of precious metals and gems, and is known for its exceptional craftsmanship and quality. This type of jewelry is often associated with elegance and status.<\/p>",
+            "button_label": "",
             "button_link": ""
           }
         }
@@ -338,53 +338,6 @@
         "image_layout": "align-right",
         "section_color_scheme": "",
         "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_R6aArr": {
-      "type": "image-with-text",
-      "blocks": {
-        "button_mR6bW7": {
-          "type": "button",
-          "settings": {
-            "button_label": "Custom design",
-            "button_link": "",
-            "button_style_secondary": true
-          }
-        },
-        "heading_MBeyRf": {
-          "type": "heading",
-          "settings": {
-            "heading": "THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES",
-            "heading_size": "h2"
-          }
-        },
-        "text_wnHBB9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Luxury jewelry is a high-end category of jewelry that is often made of precious metals and gems, and is known for its exceptional craftsmanship and quality. This type of jewelry is often associated with elegance and status.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "button_mR6bW7",
-        "heading_MBeyRf",
-        "text_wnHBB9"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/after_slide_image.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -608,7 +561,6 @@
     "image_banner_gKqxRb",
     "featured_collection_7ymXqm",
     "multirow_y46X6Y",
-    "image_with_text_R6aArr",
     "featured_blog_7gD8VC",
     "multicolumn_nNHBYp",
     "multicolumn_nfKfxw",
