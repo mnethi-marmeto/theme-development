@@ -43,9 +43,8 @@
           "type": "block",
           "settings": {
             "Categorie_Name": "Condoms",
-            "title": "Climax Delay",
-            "image_picker_1": "shopify:\/\/shop_images\/3_1_2.png",
-            "image_picker_2": "shopify:\/\/shop_images\/2_1_1.png",
+            "title": "Intense",
+            "image_picker_1": "shopify:\/\/shop_images\/7_2.png",
             "bg_color": "#ececec",
             "color_scheme": "scheme-1",
             "description": "To Pleasure Both"
@@ -62,6 +61,19 @@
             "color_scheme": "scheme-1",
             "description": "To Pleasure Both"
           }
+        },
+        "block_DVUTxA": {
+          "type": "block",
+          "settings": {
+            "Categorie_Name": "Condoms",
+            "title": "Thin",
+            "image_picker_1": "shopify:\/\/shop_images\/4_1_4.png",
+            "image_picker_2": "shopify:\/\/shop_images\/5_1_1.png",
+            "image_picker_3": "shopify:\/\/shop_images\/6_1_1.png",
+            "bg_color": "#d2e1d7",
+            "color_scheme": "scheme-1",
+            "description": "For Greater Sensitivity"
+          }
         }
       },
       "block_order": [
@@ -69,7 +81,8 @@
         "block_XmRNhT",
         "block_XrD3Tw",
         "block_VjPxWH",
-        "block_8QUDgr"
+        "block_8QUDgr",
+        "block_DVUTxA"
       ],
       "settings": {
         "section_header": "What’s your Top Pick",
