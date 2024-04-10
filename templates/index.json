@@ -133,25 +133,25 @@
         "block_mpBbww": {
           "type": "block",
           "settings": {
-            "text": "Hello"
+            "text": "Jewelryize me"
           }
         },
         "block_dFTcmp": {
           "type": "block",
           "settings": {
-            "text": "Hello"
+            "text": "You’ll love it"
           }
         },
         "block_FKbUGV": {
           "type": "block",
           "settings": {
-            "text": "Hello"
+            "text": "Shop the latest trends"
           }
         },
         "block_BfG63P": {
           "type": "block",
           "settings": {
-            "text": "Hello"
+            "text": "A Personal Touch"
           }
         }
       },
@@ -164,9 +164,9 @@
       "settings": {
         "bg_color": "",
         "padding": 16,
-        "scroll_time": "10",
+        "scroll_time": "50",
         "font_color": "#000000",
-        "font_size": 22,
+        "font_size": 80,
         "pause_text": "initial"
       }
     },

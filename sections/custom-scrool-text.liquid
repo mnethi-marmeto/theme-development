@@ -1,37 +1,51 @@
 <section class="cstm-sliding-section">
-    <div id="section-id-{{section.id}}" class="hc-index-slider scroll">  
-      <div class="hc-slide-track">
-          {% for block in section.blocks %}
+  <div id="section-id-{{section.id}}" class="hc-index-slider scroll">
+    <div class="hc-slide-track">
+        {% for block in section.blocks %}
             <div class="hc-slide">
-              <div class="text-wrapper">
-                <img src="./Star.png" height="100%" width="100%" />
-                <p class="text">{{ block.settings.text }}</p>
-              </div>
+                <div class="text-wrapper">
+                  <img src="assets\Star.png" height="auto" width="auto">
+                  <h3 class="text heading-font">{{ block.settings.text }}</h3>
+                </div>
             </div>
-          {% endfor %}
-        </div>  
+        {% endfor %}
     </div>
-    <style>
+  </div>
+  <style>
     #section-id-{{ section.id }}.scroll {
         background-color: {{section.settings.bg_color}} ;
     }
-    
-    #section-id-{{ section.id }} .hc-slide p {
+
+    #section-id-{{ section.id }} .hc-slide h3 {
         color: {{section.settings.font_color}} ;
         display: inline;
         margin-bottom: 0;
         text-align: center;
-        font-weight: 700;
-        line-height: 26px;
+        font-weight: 600;
+        line-height: calc(1.5);
         font-size:{{section.settings.font_size}}px;
+        align-self: center;
+        margin-top:0;
     }
-      
+
+    #section-id-{{ section.id }} .hc-slide .text-wrapper{
+        display:flex;
+    }
+
+    #section-id-{{ section.id }} .hc-slide img{
+        height:60px;
+        width:60px;
+        aspect-ratio: auto 120 / 120;
+        margin:auto 0;
+        margin-right:40px;
+    }
+
       @keyframes scroll {
         0% {
           transform: translateX(0);
         }
         100% {
-          transform: translateX(calc(-250px * 6));
+          transform: translateX(calc(-250px * 7));
         }
       }
 
@@ -41,114 +55,117 @@
         position: relative;
         --width: 250px;
       }
-    
+
       #section-id-{{ section.id }}.hc-index-slider .hc-slide-track {
-        animation: scroll {{ section.settings.scroll_time }}s linear infinite;
+        animation: scroll {{section.settings.scroll_time}}s linear infinite;
         display: flex;
-        width: calc(var(--width) * 12);
+        width: calc(var(--width) * 22);
         padding: {{ section.settings.padding}}px 0;
       }
       #section-id-{{ section.id }}.hc-index-slider .hc-slide-track:hover {
         animation-play-state: {{section.settings.pause_text}};
       }
       #section-id-{{ section.id }}.hc-index-slider .hc-slide {
-        width: var(--width);
-        display: flex;
-        justify-content: center;
+        width:fit-content;
+        padding: 0px 30px;
       }
-    
+
       @media screen and (max-width: 768px) {
         #section-id-{{ section.id }}.hc-index-slider {
           --width: 200px;
         }
-    
         @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-              transform: translateX(calc(-200px * 6));
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-250px * 7));
             }
           }
         }
-    </style>
-    </section>
-    {% schema %}
-      {
-        "name": "Sliding Text",
-        "settings": [
-          {
-            "type": "color",
-            "id": "bg_color",
-            "label": "Background Color"
-          },
-          {
-          "type": "range",
-          "id": "padding",
-          "min": 0,
-          "max": 50,
-          "step": 1,
-          "unit": "px",
-          "label": "Padding from top and bottom",
-          "default": 16
-        },
-         {
-            "type": "text",
-            "label": "Scroll Time",
-            "id": "scroll_time",
-            "default": "10"
-        },
-        {
-        "type": "color",
-        "id": "font_color",
-        "label": "Font color",
-        "default": "#000000"
-        },
-        {
-        "type": "range",
-        "id": "font_size",
-        "min": 8,
-        "max": 50,
-        "step": 1,
-        "unit": "px",
-        "label": "Font size",
-        "default": 14
+  </style>
+</section>
+{% schema %}
+{
+  "name": "Sliding Text",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
     },
     {
-        "type": "select",
-        "id": "pause_text",
-        "label": "Pause text on mouse hover",
-        "options": [
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 50,
+      "step": 1,    
+      "unit": "px",
+      "label": "Padding from top and bottom",
+      "default": 16
+    },
+    {
+      "type": "text",
+      "label": "Scroll Time",
+      "id": "scroll_time",
+      "default": "50"
+    },
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 8,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 80
+    },
+    {
+      "type": "select",
+      "id": "pause_text",
+      "label": "Pause text on mouse hover",
+      "options": [
         {
-            "value": "paused",
-            "label": "Yes"
+          "value": "paused",
+          "label": "Yes"
         },
         {
-            "value": "initial",
-            "label": "No"
-        }
-        ],
-        "default": "initial"
-    }
-        ],
-        "blocks": [
-        {
-          "name": "Sliding text",
-          "type": "block",
-          "settings": [
-            {
-              "type": "text",
-              "label": "Add Text",
-              "id": "text"
-            }
-          ]
+          "value": "initial",
+          "label": "No"
         }
       ],
-      "presets": [
+      "default": "initial"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Sliding text",
+      "type": "block",
+      "settings": [
         {
-          "name": "Sliding Text"
+          "type": "text",
+          "label": "Add Text",
+          "id": "text"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
         }
       ]
-      }
-    {% endschema %}
-    
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sliding Text"
+    }
+  ]
+}
+{% endschema %}
