@@ -6,10 +6,6 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  .images{
-    background-color:{{ }}
-  }
-
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -52,16 +48,18 @@
         {% if block.settings.Categorie_Name == each %}
           <div class="total">
             <h2 class="heading">{{ block.settings.title }}</h2>
-            <div class="images" style="background-color:{{ block.settings.bg_color }};border: 2px solid {{ block.settings.bg_color }};">
-              {% if block.settings.image_picker_1 != blank %}
-                <img src="{{block.settings.image_picker_1 | image_url}}" height="100" width="100"/>
-              {% endif %}
-              {% if block.settings.image_picker_2 != blank %}
-                <img src="{{block.settings.image_picker_2 | image_url}}" height="100" width="100"/>
-              {% endif %}
-              {% if block.settings.image_picker_3 != blank %}
-                <img src="{{block.settings.image_picker_3 | image_url}}" height="100" width="100"/>
-              {% endif %}
+            <div class="images-container" style="background-color:{{ block.settings.bg_color }}; outline: 1px solid #ddd">
+              <div class="images">
+                {% if block.settings.image_picker_1 != blank %}
+                  <img src="{{block.settings.image_picker_1 | image_url}}" height="100" width="100"/>
+                {% endif %}
+                {% if block.settings.image_picker_2 != blank %}
+                  <img src="{{block.settings.image_picker_2 | image_url}}" height="100" width="100"/>
+                {% endif %}
+                {% if block.settings.image_picker_3 != blank %}
+                  <img src="{{block.settings.image_picker_3 | image_url}}" height="100" width="100"/>
+                {% endif %}
+              </div>
               <p>{{ block.settings.description }}</p>
             </div>
           </div>

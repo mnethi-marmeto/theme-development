@@ -11,6 +11,7 @@
 }
 .section-header{
   text-align: center;
+  font-family: One Night Sans !important;
 }
 .tabs-container{
   display: flex;
@@ -19,31 +20,54 @@
 .tab{
   background-color: rgb(107, 181, 230);
   columns: white;
-  padding: 20px;
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
   margin: 0px 10px;
   cursor: pointer;
 }
+.images-container{
+  border-radius: 15px;
+  padding: 25px 10px;
+}
+.images-container p{
+  font-size: 14px;
+  text-align: center;
+  font-family: One Night Sans !important;
+}
 .images{
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.images img{
+  object-fit: contain;
 }
 .total{
   position: relative;
+  margin-bottom: 10px;
 }
 
 .heading{
   position: absolute;
-  top: -30px;
+  top: -26px;
   left: 30px;
   background-color: white;
+  border-bottom: 2px solid #8a8888;
+  padding: 0px 10px;
+  border-radius: 10px;
+  font-family: One Night Sans;
+  font-size: 15px;
+  font-weight: bold;
 }
 .all-caterogies{
   display: none;
-  max-width: 1000px;
+  max-width: inherit;
+  width: 80%;
   flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  justify-content: center;
 }
 
 @media screen and (min-width: 750px) {
