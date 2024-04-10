@@ -34,6 +34,14 @@
       "content": "t:sections.all.padding.section_padding_heading"
     },
     {
+      "type": "text",
+      "id": "section_header",
+      "label": "Section header",
+      "default": "What’s your Top Pick",
+      "info": "Enter your section heading",
+      "placeholder": "Heading"
+    },
+    {
       "type": "range",
       "id": "padding_top",
       "min": 0,
@@ -53,6 +61,53 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
-  ]
+  ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Categorie",
+        "settings": [
+          {
+            "type": "text",
+            "id": "Categorie_Name",
+            "label": "Categorie_Name",
+            "info": "Name of your Categorie"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_picker_1",
+            "label": "Image 1"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_picker_2",
+            "label": "Image 2"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_picker_3",
+            "label": "Image 3"
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#000000",
+            "info": "Background Color"
+          },
+          {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "t:sections.all.colors.label",
+            "default": "scheme-1"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
 }
 {% endschema %}
