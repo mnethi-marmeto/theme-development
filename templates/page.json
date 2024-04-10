@@ -2,7 +2,23 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "blocks": {
+        "block_KJNAgw": {
+          "type": "block",
+          "settings": {
+            "Categorie_Name": "Real Feel",
+            "image_picker_1": "shopify:\/\/shop_images\/1_2_2.png",
+            "bg_color": "#d9d9d9",
+            "color_scheme": "scheme-1",
+            "description": "Natural Skin on Skin Feeling"
+          }
+        }
+      },
+      "block_order": [
+        "block_KJNAgw"
+      ],
       "settings": {
+        "section_header": "What’s your Top Pick",
         "padding_top": 28,
         "padding_bottom": 28
       }
