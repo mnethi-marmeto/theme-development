@@ -12,10 +12,22 @@
             "color_scheme": "scheme-1",
             "description": "Natural Skin on Skin Feeling"
           }
+        },
+        "block_XmRNhT": {
+          "type": "block",
+          "settings": {
+            "Categorie_Name": "Climax Delay",
+            "image_picker_1": "shopify:\/\/shop_images\/3_1_2.png",
+            "image_picker_2": "shopify:\/\/shop_images\/2_1_1.png",
+            "bg_color": "#ececec",
+            "color_scheme": "scheme-1",
+            "description": "To Pleasure Both"
+          }
         }
       },
       "block_order": [
-        "block_KJNAgw"
+        "block_KJNAgw",
+        "block_XmRNhT"
       ],
       "settings": {
         "section_header": "What’s your Top Pick",
