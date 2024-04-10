@@ -74,6 +74,17 @@
             "color_scheme": "scheme-1",
             "description": "For Greater Sensitivity"
           }
+        },
+        "block_APRRVf": {
+          "type": "block",
+          "settings": {
+            "Categorie_Name": "Lubes",
+            "title": "Intense",
+            "image_picker_1": "shopify:\/\/shop_images\/6_1_1.png",
+            "bg_color": "#fff7e7",
+            "color_scheme": "scheme-1",
+            "description": "Natural Skin on Skin Feeling"
+          }
         }
       },
       "block_order": [
@@ -82,7 +93,8 @@
         "block_XrD3Tw",
         "block_VjPxWH",
         "block_8QUDgr",
-        "block_DVUTxA"
+        "block_DVUTxA",
+        "block_APRRVf"
       ],
       "settings": {
         "section_header": "What’s your Top Pick",
