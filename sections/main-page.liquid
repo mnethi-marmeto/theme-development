@@ -20,15 +20,6 @@
 
 <script src="{{ 'main-page.js' | asset_url }}" defer></script>
 
-{% comment %} <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    {{ page.content }}
-  </div>
-</div> {% endcomment %}
-
 <div class="page-width section-{{ section.id }}-padding main-container">
   <div class="section-header">
       <h2>{{ section.settings.section_header }}</h2>
@@ -51,29 +42,33 @@
 
     {% for each in categories %}
       {%- if each != blank -%}
-        <button class="tab">{{ each }}</button>
+        <button class="tab" onclick="changeValue('{{ each }}')">{{ each }}</button>
       {% endif %}
     {% endfor %}
   </div>
-  <div class="all-caterogies">
+  {% for each in categories %}
+    <div class="all-caterogies" id="allCaterogies-{{ each }}">
       {% for block in section.blocks %}
-        <div class="total">
-          <h2 class="heading">{{ block.settings.title }}</h2>
-          <div class="images" style="background-color:{{ block.settings.bg_color }};border: 2px solid {{ block.settings.bg_color }};">
-            {% if block.settings.image_picker_1 != blank %}
-              <img src="{{block.settings.image_picker_1 | image_url}}" height="150" width="150"/>
-            {% endif %}
-            {% if block.settings.image_picker_2 != blank %}
-              <img src="{{block.settings.image_picker_2 | image_url}}" height="150" width="150"/>
-            {% endif %}
-            {% if block.settings.image_picker_3 != blank %}
-              <img src="{{block.settings.image_picker_3 | image_url}}" height="150" width="150"/>
-            {% endif %}
-            <p>{{ block.settings.description }}</p>
+        {% if block.settings.Categorie_Name == each %}
+          <div class="total">
+            <h2 class="heading">{{ block.settings.title }}</h2>
+            <div class="images" style="background-color:{{ block.settings.bg_color }};border: 2px solid {{ block.settings.bg_color }};">
+              {% if block.settings.image_picker_1 != blank %}
+                <img src="{{block.settings.image_picker_1 | image_url}}" height="100" width="100"/>
+              {% endif %}
+              {% if block.settings.image_picker_2 != blank %}
+                <img src="{{block.settings.image_picker_2 | image_url}}" height="100" width="100"/>
+              {% endif %}
+              {% if block.settings.image_picker_3 != blank %}
+                <img src="{{block.settings.image_picker_3 | image_url}}" height="100" width="100"/>
+              {% endif %}
+              <p>{{ block.settings.description }}</p>
+            </div>
           </div>
-        </div>
+        {% endif %}
       {% endfor %}
-  </div>
+    </div>
+  {% endfor %}
 </div>
 
 {% schema %}
@@ -153,12 +148,6 @@
             "label": "Background Color",
             "default": "#000000",
             "info": "Background Color"
-          },
-          {
-            "type": "color_scheme",
-            "id": "color_scheme",
-            "label": "t:sections.all.colors.label",
-            "default": "scheme-1"
           },
           {
             "type": "text",

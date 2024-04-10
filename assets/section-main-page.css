@@ -22,6 +22,8 @@
   padding: 20px;
   border: none;
   border-radius: 5px;
+  margin: 0px 10px;
+  cursor: pointer;
 }
 .images{
   border-radius: 5px;
@@ -31,6 +33,7 @@
 .total{
   position: relative;
 }
+
 .heading{
   position: absolute;
   top: -30px;
@@ -38,8 +41,8 @@
   background-color: white;
 }
 .all-caterogies{
-  display: flex;
-  max-width: 650px;
+  display: none;
+  max-width: 1000px;
   flex-wrap: wrap;
 }
 
