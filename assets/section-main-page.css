@@ -6,6 +6,43 @@
   margin-bottom: 3rem;
 }
 
+.main-container{
+  width: 100%;
+}
+.section-header{
+  text-align: center;
+}
+.tabs-container{
+  display: flex;
+  justify-content: center;
+}
+.tab{
+  background-color: rgb(107, 181, 230);
+  columns: white;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+}
+.images{
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.total{
+  position: relative;
+}
+.heading{
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  background-color: white;
+}
+.all-caterogies{
+  display: flex;
+  max-width: 650px;
+  flex-wrap: wrap;
+}
+
 @media screen and (min-width: 750px) {
   .main-page-title {
     margin-bottom: 4rem;
