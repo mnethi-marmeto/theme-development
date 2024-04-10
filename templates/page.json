@@ -10,7 +10,6 @@
             "title": "Real Feel",
             "image_picker_1": "shopify:\/\/shop_images\/1_2_2.png",
             "bg_color": "#fff7e7",
-            "color_scheme": "scheme-1",
             "description": "Natural Skin on Skin Feeling"
           }
         },
@@ -22,7 +21,6 @@
             "image_picker_1": "shopify:\/\/shop_images\/3_1_2.png",
             "image_picker_2": "shopify:\/\/shop_images\/2_1_1.png",
             "bg_color": "#ececec",
-            "color_scheme": "scheme-1",
             "description": "To Pleasure Both"
           }
         },
@@ -35,7 +33,6 @@
             "image_picker_2": "shopify:\/\/shop_images\/5_1_1.png",
             "image_picker_3": "shopify:\/\/shop_images\/6_1_1.png",
             "bg_color": "#d2e1d7",
-            "color_scheme": "scheme-1",
             "description": "For Greater Sensitivity"
           }
         },
@@ -46,7 +43,6 @@
             "title": "Intense",
             "image_picker_1": "shopify:\/\/shop_images\/7_2.png",
             "bg_color": "#ececec",
-            "color_scheme": "scheme-1",
             "description": "Natural Skin on Skin Feeling"
           }
         },
@@ -54,12 +50,11 @@
           "type": "block",
           "settings": {
             "Categorie_Name": "Condoms",
-            "title": "Climax Delay",
-            "image_picker_1": "shopify:\/\/shop_images\/3_1_2.png",
-            "image_picker_2": "shopify:\/\/shop_images\/2_1_1.png",
+            "title": "Stimulation",
+            "image_picker_1": "shopify:\/\/shop_images\/8_1.png",
+            "image_picker_2": "shopify:\/\/shop_images\/8_1.png",
             "bg_color": "#ececec",
-            "color_scheme": "scheme-1",
-            "description": "To Pleasure Both"
+            "description": "Ribbed & Dotted to Pleasure Her"
           }
         },
         "block_DVUTxA": {
@@ -71,7 +66,6 @@
             "image_picker_2": "shopify:\/\/shop_images\/5_1_1.png",
             "image_picker_3": "shopify:\/\/shop_images\/6_1_1.png",
             "bg_color": "#d2e1d7",
-            "color_scheme": "scheme-1",
             "description": "For Greater Sensitivity"
           }
         },
@@ -82,7 +76,6 @@
             "title": "Intense",
             "image_picker_1": "shopify:\/\/shop_images\/6_1_1.png",
             "bg_color": "#fff7e7",
-            "color_scheme": "scheme-1",
             "description": "Natural Skin on Skin Feeling"
           }
         }
