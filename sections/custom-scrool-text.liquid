@@ -5,7 +5,9 @@
             <div class="hc-slide">
                 <div class="text-wrapper">
                   <img src="{{ section.settings.image_picker | image_url }}" height="auto" width="auto">
-                  <h3 class="text heading-font">{{ block.settings.text }}</h3>
+                  <h3 class="text heading-font" {% if {{ block.settings.checkbox }} %}
+                    class="text-outline"
+                  {% endif %}>{{ block.settings.text }}</h3>
                 </div>
             </div>
         {% endfor %}
@@ -68,6 +70,10 @@
       #section-id-{{ section.id }}.hc-index-slider .hc-slide {
         width:fit-content;
         padding: 0px 30px;
+      }
+      .text-outline{
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
       }
 
       @media screen and (max-width: 768px) {
@@ -159,10 +165,11 @@
           "id": "text"
         },
         {
-          "type": "color_scheme",
-          "id": "color_scheme",
-          "label": "t:sections.all.colors.label",
-          "default": "scheme-1"
+          "type": "checkbox",
+          "id": "checkbox",
+          "label": "Text-outline",
+          "default": false,
+          "info": "Make your text visible by outline"
         }
       ]
     }
