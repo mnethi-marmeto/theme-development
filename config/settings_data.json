@@ -204,12 +204,12 @@
       },
       "scheme-5c89f68e-b3dd-4fcf-830b-6c048ae7c624": {
         "settings": {
-          "background": "#fff",
+          "background": "#ffffff",
           "background_gradient": "",
           "text": "#3b5342",
           "button": "#ffffff",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#ffffff",
+          "button_label": "#fff",
+          "secondary_button_label": "#3b5342",
           "shadow": "#121212"
         }
       },
