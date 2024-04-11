@@ -148,14 +148,14 @@
           "type": "block",
           "settings": {
             "text": "Shop the latest trends",
-            "color_scheme": ""
+            "color_scheme": "scheme-1"
           }
         },
         "block_BfG63P": {
           "type": "block",
           "settings": {
             "text": "A Personal Touch",
-            "color_scheme": ""
+            "color_scheme": "scheme-1"
           }
         }
       },
