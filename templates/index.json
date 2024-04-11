@@ -134,28 +134,28 @@
           "type": "block",
           "settings": {
             "text": "Jewelryize me",
-            "color_scheme": "scheme-5"
+            "checkbox": false
           }
         },
         "block_dFTcmp": {
           "type": "block",
           "settings": {
             "text": "You’ll love it",
-            "color_scheme": "scheme-1"
+            "checkbox": true
           }
         },
         "block_FKbUGV": {
           "type": "block",
           "settings": {
             "text": "Shop the latest trends",
-            "color_scheme": "scheme-1"
+            "checkbox": false
           }
         },
         "block_BfG63P": {
           "type": "block",
           "settings": {
             "text": "A Personal Touch",
-            "color_scheme": "scheme-1"
+            "checkbox": true
           }
         }
       },
