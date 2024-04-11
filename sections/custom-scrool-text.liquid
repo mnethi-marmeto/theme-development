@@ -5,9 +5,7 @@
             <div class="hc-slide">
                 <div class="text-wrapper">
                   <img src="{{ section.settings.image_picker | image_url }}" height="auto" width="auto">
-                  <h3 class="text heading-font" {% if {{ block.settings.checkbox }} %}
-                    class="text-outline"
-                  {% endif %}>{{ block.settings.text }}</h3>
+                  <h3 class="text heading-font">{{ block.settings.text }}</h3>
                 </div>
             </div>
         {% endfor %}
