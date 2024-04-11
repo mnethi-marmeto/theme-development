@@ -133,25 +133,29 @@
         "block_mpBbww": {
           "type": "block",
           "settings": {
-            "text": "Jewelryize me"
+            "text": "Jewelryize me",
+            "color_scheme": ""
           }
         },
         "block_dFTcmp": {
           "type": "block",
           "settings": {
-            "text": "You’ll love it"
+            "text": "You’ll love it",
+            "color_scheme": ""
           }
         },
         "block_FKbUGV": {
           "type": "block",
           "settings": {
-            "text": "Shop the latest trends"
+            "text": "Shop the latest trends",
+            "color_scheme": ""
           }
         },
         "block_BfG63P": {
           "type": "block",
           "settings": {
-            "text": "A Personal Touch"
+            "text": "A Personal Touch",
+            "color_scheme": ""
           }
         }
       },
@@ -167,7 +171,8 @@
         "scroll_time": "50",
         "font_color": "#000000",
         "font_size": 80,
-        "pause_text": "initial"
+        "pause_text": "initial",
+        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_66bd8fb6-0d75-42b3-8b96-2b0c0ca18470.png"
       }
     },
     "collection_list_L8377M": {
