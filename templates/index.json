@@ -133,51 +133,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_3t7LAQ": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_4RxQxk": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mc-01_814x_crop_center_bb7de87b-51a9-446d-9c6b-df07a0f40275.jpg",
-            "title": "BESPOKE ENGAGEMENT RINGS",
-            "text": "<p>Looking to get the perfect engagement ring? Browse hundreds of ring styles find the perfect engagement ring today.<\/p>",
-            "link_label": "Browse Rings",
-            "link": "#"
-          }
-        },
-        "column_QVJV3H": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mc-02_814x_crop_center_8786ad46-82de-48f2-a3a6-cb91148dc470.jpg",
-            "title": "DANGLE & DROP EARRINGS",
-            "text": "<p>These are simple enough for everyday wear and an iconic symbol you’ll want to show off for years to come.<\/p>",
-            "link_label": "Browse Earrings",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_4RxQxk",
-        "column_QVJV3H"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-5c89f68e-b3dd-4fcf-830b-6c048ae7c624",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "custom_scrool_text_nCiJzH": {
       "type": "custom-scrool-text",
       "blocks": {
@@ -720,7 +675,6 @@
     "slideshow_zFW6EH",
     "featured_collection_kHd8ET",
     "custom_static_banner_DNMgN9",
-    "multicolumn_3t7LAQ",
     "custom_scrool_text_nCiJzH",
     "collection_list_L8377M",
     "collection_list_4dTgKt",
