@@ -90,11 +90,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mc-01_814x_crop_center_bb7de87b-51a9-446d-9c6b-df07a0f40275.jpg",
             "title": "BESPOKE ENGAGEMENT RINGS",
-            "title_color": "#000000",
+            "title_color": "#263d2d",
             "text": "<p>Looking to get the perfect engagement ring? Browse hundreds of ring styles find the perfect engagement ring today.<\/p>",
-            "text_color": "#000000",
+            "text_color": "#3b5342",
             "link_label": "Browse Rings",
-            "link_color": "#000000",
+            "link_color": "#8d5d48",
             "link": "#"
           }
         },
