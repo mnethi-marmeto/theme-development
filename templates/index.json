@@ -255,86 +255,6 @@
         "padding_bottom": 16
       }
     },
-    "collection_list_L8377M": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_qLNXaq": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "bracelets"
-          }
-        },
-        "featured_collection_gyERkG": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "necklaces"
-          }
-        },
-        "featured_collection_jBbqmJ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "earrings"
-          }
-        },
-        "featured_collection_NeiBWk": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "diamonds"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_qLNXaq",
-        "featured_collection_gyERkG",
-        "featured_collection_jBbqmJ",
-        "featured_collection_NeiBWk"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "portrait",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collection_list_4dTgKt": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_YiCBdJ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pearls"
-          }
-        },
-        "featured_collection_EjYkip": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "rings"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_YiCBdJ",
-        "featured_collection_EjYkip"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_QFTQaE": {
       "type": "rich-text",
       "blocks": {
@@ -752,8 +672,6 @@
     "custom_scrool_text_nCiJzH",
     "custom_collecton_list_rMqWrD",
     "custom_collecton_list_Ar4JFz",
-    "collection_list_L8377M",
-    "collection_list_4dTgKt",
     "rich_text_QFTQaE",
     "featured_collection_Y34fHF",
     "image_banner_gKqxRb",
