@@ -281,6 +281,7 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    <link rel="stylesheet" href="{{ 'splide.min.css' | asset_url }}">
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -304,7 +305,7 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-
+    <script src="{{ 'splide.min.js' | asset_url }}" defer></script>
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {

@@ -1,3 +1,22 @@
+{{ "custom-slideshow.css" | asset_url | stylesheet_tag }}
+
+{% style %}
+    .custom-slideshow--{{ section.id }}{
+        padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
+        padding-bottom:{{ section.settings.padding_bottom | divided_by:2 }}px;
+    }
+    @media screen and (min-width:749px){
+        .custom-slideshow--{{ section.id }}{
+            padding-top:{{ section.settings.padding_top }}px;
+            padding-bottom:{{ section.settings.padding_bottom }}px;
+        }
+    }
+{% endstyle %}
+
+<div class="custom-slideshow custom-slideshow-wrapper page-width custom-slideshow--{{ section.id }}">
+    hello
+</div>
+
 {% schema %}
     {
         "name": "custom-slideshow",
@@ -105,13 +124,119 @@
                         "id": "mobile_image",
                         "label": "Mobile Image",
                         "info": "Recommended size: 360 X 282 px"
-                    }
+                    },
+                    {
+                        "type": "header",
+                        "content": "Text customization"
+                    },
+                    {
+                        "type": "text",
+                        "id": "pre_heading",
+                        "label": "Pre heading",
+                        "default": "Women's Apperels"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "pre_text",
+                        "label": "Pre heading",
+                        "default": "<p>Women's Apperels</p>"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_label",
+                        "label": "Button label",
+                        "default": "Explore more"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_link",
+                        "label": "Button link"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Content align customization"
+                    },
+                    {
+                        "type": "select",
+                        "id": "Desktop_content_position",
+                        "label": "Desktop content position",
+                        "options": [
+                            {
+                            "value": "top-left",
+                            "label": "Top left"
+                            },
+                            {
+                            "value": "top-center",
+                            "label": "Top center"
+                            },
+                            {
+                            "value": "top-right",
+                            "label": "Top right"
+                            },
+                            {
+                            "value": "center-left",
+                            "label": "center left"
+                            },
+                            {
+                            "value": "center-center",
+                            "label": "center center"
+                            },
+                            {
+                            "value": "center-right",
+                            "label": "center right"
+                            },
+                            {
+                            "value": "bottom-left",
+                            "label": "bottom left"
+                            },
+                            {
+                            "value": "bottom-center",
+                            "label": "bottom center"
+                            },
+                            {
+                            "value": "bottom-right",
+                            "label": "bottom right"
+                            }
+                        ],
+                        "default": "center-center"
+                    },
+                    {
+                        "type": "select",
+                        "id": "text_alignment_mobile",
+                        "label": "text_alignment_mobile",
+                        "options": [
+                          {
+                            "value": "left",
+                            "label": "Left"
+                          },
+                          {
+                            "value": "center",
+                            "label": "Center"
+                          },
+                          {
+                            "value": "right",
+                            "label": "Right"
+                          }
+                        ],
+                        "default": "center"
+                      }
                 ]
             }
         ],
         "presets": [
             {
-                "name": "Custom slideshow"
+                "name": "Custom slideshow",
+                "blocks": [
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    }
+                ]
             }
         ]
     }

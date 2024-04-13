@@ -1,5 +1,57 @@
 {
   "sections": {
+    "custom_slideshow_UBXddT": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_B4JnmE": {
+          "type": "slide",
+          "settings": {
+            "pre_heading": "Women's Apperels",
+            "pre_text": "<p>Women's Apperels<\/p>",
+            "button_label": "Explore more",
+            "button_link": "",
+            "Desktop_content_position": "center-center",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_wbTKL3": {
+          "type": "slide",
+          "settings": {
+            "pre_heading": "Women's Apperels",
+            "pre_text": "<p>Women's Apperels<\/p>",
+            "button_label": "Explore more",
+            "button_link": "",
+            "Desktop_content_position": "center-center",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_6x4h6X": {
+          "type": "slide",
+          "settings": {
+            "pre_heading": "Women's Apperels",
+            "pre_text": "<p>Women's Apperels<\/p>",
+            "button_label": "Explore more",
+            "button_link": "",
+            "Desktop_content_position": "center-center",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_B4JnmE",
+        "slide_wbTKL3",
+        "slide_6x4h6X"
+      ],
+      "settings": {
+        "auto_play": false,
+        "show_pagination": false,
+        "show_arrows": false,
+        "auto_play_duration": 2000,
+        "slide_animation": "slide",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
     "slideshow_zFW6EH": {
       "type": "slideshow",
       "blocks": {
@@ -672,6 +724,7 @@
     }
   },
   "order": [
+    "custom_slideshow_UBXddT",
     "slideshow_zFW6EH",
     "featured_collection_kHd8ET",
     "custom_static_banner_DNMgN9",
