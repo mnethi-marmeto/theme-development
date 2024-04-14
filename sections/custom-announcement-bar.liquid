@@ -14,7 +14,7 @@
 {% endstyle %}
 
 <div class="custom-slideshow custom-slideshow--{{ section.id }}" id="customSlideshow">
-    <div class="splide">
+    <div class="splide" id="new">
         <div class="splide__track">
             <ul class="splide__list">
                 {% for block in section.blocks %}
@@ -27,7 +27,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var splide = new Splide('.splide', {
+        var splide = new Splide('#new', {
         type   : 'loop',
         autoplay: {{ section.settings.auto_play }},
         interval: {{ section.settings.auto_play_duration }} * 1000, 
