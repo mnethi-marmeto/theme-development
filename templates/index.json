@@ -207,13 +207,27 @@
           "settings": {
             "collection": "diamonds"
           }
+        },
+        "featured_collection_fyAgmW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "diamonds"
+          }
+        },
+        "featured_collection_XeL8UP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "diamonds"
+          }
         }
       },
       "block_order": [
         "featured_collection_cqPazP",
         "featured_collection_riLJAT",
         "featured_collection_4BNWAt",
-        "featured_collection_3TCnGG"
+        "featured_collection_3TCnGG",
+        "featured_collection_fyAgmW",
+        "featured_collection_XeL8UP"
       ],
       "settings": {
         "title": "",
@@ -230,12 +244,14 @@
       "blocks": {
         "featured_collection_pVyLFJ": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "pearls"
           }
         },
         "featured_collection_3fqQY8": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "rings"
           }
