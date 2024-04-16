@@ -514,11 +514,6 @@
     }
   },
   "shopify": {
-    "checkout": {
-      "general": {
-        "autocomplete_powered_by_google": " "
-      }
-    },
     "links": {
       "powered_by_shopify": " "
     }
