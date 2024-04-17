@@ -4,11 +4,11 @@
 
 {% style %}
     .custom-testimonials--{{ section.id }}{
-        background-color: {{ section.settings.background-color }}
+        background-color: {{ section.settings.background-color }};
         padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
         padding-bottom:{{ section.settings.padding_bottom | divided_by:2 }}px;
     }
-    @media screen and (min-width:749px){
+    @media screen and (min-width:800px){
         .custom-testimonials--{{ section.id }}{
             padding-top:{{ section.settings.padding_top }}px;
             padding-bottom:{{ section.settings.padding_bottom }}px;
@@ -32,10 +32,10 @@
     "autoplay" : {{ autoplay }},
     "interval" : {{ auto_play_duration }},
     "focus": 0,
-    "perPage": 2,  
+    "perPage": 1.95,  
     "perMove": 1,  
     "breakpoints": {
-        "749": {
+        "720": {
             "perPage": 1
         }
     }
@@ -61,10 +61,10 @@
                 <div class="splide__track">
                     <ul class="splide__list">
                         {% for block in section.blocks %}
-                            <li class="splide__slide custom-testimonials" data-image="{{ block.settings.main-image | image_url }}" data-activecolor="{{ block.settings.active-background }}" data-cardcolor="{{ block.settings.card-background }}">
-                                <div class="custom-testimonials--slide">
+                            <li class="splide__slide custom-testimonials" data-image="{{ block.settings.main-image | image_url }}" data-activecolor="{{ block.settings.active-background }}" >
+                                <div class="custom-testimonials--slide" data-cardcolor="{{ block.settings.card-background }}">
                                     {%- if block.settings.testmonial-text != blank -%}
-                                        <p>"{{ block.settings.testmonial-text }}"</p>
+                                        <p class="custom-testimonials--text">"{{ block.settings.testmonial-text }}"</p>
                                     {%- endif -%}
                                     <div class="custom-testimonials--authour-container">
                                         {%- if block.settings.authour-image -%}
@@ -72,7 +72,7 @@
                                         {%- endif -%}
                                         <div class="custom-testimonials--authour-text">
                                             {%- if block.settings.authour-name != blank -%}
-                                                <h3>{{ block.settings.authour-name }}</h3>
+                                                <h3 class="custom-testimonials--heading">{{ block.settings.authour-name }}</h3>
                                             {%- endif -%}
                                             {%- if block.settings.author-title != blank -%}
                                                 <p>{{ block.settings.author-title }}</p>
@@ -87,8 +87,44 @@
             </splide-component>
         </div>
     </div>
-    
 </div>
+<div class="custom-testimonials-subscribe">
+    {%- form 'customer'-%}
+      <h2 class="custom-testimonials-subscribe-heading">Subscribe to Our Newsletter</h2>
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="custom-testimonials--subscribe-container">
+          <input
+            id="NewsletterForm--{{ section.id }}"
+            type="email"
+            name="contact[email]"
+            class="custom-testimonials-subscribe-input"
+            value="{{ form.email }}"
+            aria-required="true"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            placeholder="Email"
+            required
+            {% if form.errors %}
+              autofocus
+              aria-invalid="true"
+              aria-describedby="ContactFooter-error"
+            {% elsif form.posted_successfully? %}
+              aria-describedby="ContactFooter-success"
+            {% endif %}
+          >
+        <button
+            type="submit"
+            name="commit"
+            id="Subscribe"
+            aria-label="Subscribe"
+            class="custom-testimonials-subscribe-button"
+          >
+            SUBSCRIBE
+          </button>
+      </div>
+    {%- endform -%}
+</div> 
 
 
 
