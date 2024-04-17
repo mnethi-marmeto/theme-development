@@ -1,14 +1,5 @@
 {
   "sections": {
-    "custom_liquid_gKDn3p": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "slideshow_zFW6EH": {
       "type": "slideshow",
       "blocks": {
@@ -379,6 +370,43 @@
         "padding_bottom": 36
       }
     },
+    "custom_before_yz9Hdw": {
+      "type": "custom-before",
+      "blocks": {
+        "badge_CBfxW6": {
+          "type": "badge",
+          "settings": {
+            "badge": "Custom Design"
+          }
+        },
+        "heading_9Mny4N": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES<\/p>"
+          }
+        },
+        "text_JNXXjD": {
+          "type": "text",
+          "settings": {
+            "discription": "<p>Luxury jewelry is a high-end category of jewelry that is often made of precious metals and gems, and is known for its exceptional craftsmanship and quality. This type of jewelry is often associated with elegance and status.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "badge_CBfxW6",
+        "heading_9Mny4N",
+        "text_JNXXjD"
+      ],
+      "settings": {
+        "image_before": "shopify:\/\/shop_images\/before_1250x1200_crop_center_9973b62e-9c2e-4d70-87aa-f3d55c468b66.jpg",
+        "image_after": "shopify:\/\/shop_images\/after_1250x1200_crop_center_6a1a0424-18e7-43cb-83e6-a224f181b241.jpg",
+        "desktop-image-placement": "image_first",
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "multirow_y46X6Y": {
       "type": "multirow",
       "blocks": {
@@ -688,7 +716,6 @@
     }
   },
   "order": [
-    "custom_liquid_gKDn3p",
     "slideshow_zFW6EH",
     "featured_collection_kHd8ET",
     "custom_static_banner_DNMgN9",
@@ -699,6 +726,7 @@
     "custom_products_VYHxXw",
     "image_banner_gKqxRb",
     "featured_collection_7ymXqm",
+    "custom_before_yz9Hdw",
     "multirow_y46X6Y",
     "featured_blog_7gD8VC",
     "multicolumn_nNHBYp",

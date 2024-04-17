@@ -1,5 +1,7 @@
 {{ "custom-slideshow.css" | asset_url | stylesheet_tag }}
 
+<script src={{ 'custom-component-splide.js' | asset_url }} defer></script>
+
 {% style %}
     .custom-slideshow--{{ section.id }}{
         padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
@@ -11,10 +13,43 @@
             padding-bottom:{{ section.settings.padding_bottom }}px;
         }
     }
+    .custom-slideshow--{{ section.id }} .splide__arrow{
+    background:transparent;
+    }
+    .custom-slideshow--{{ section.id }} .splide__arrow svg{
+        fill:black;
+        height:10px;
+        width:10px;
+    }
+    .custom-slideshow--{{ section.id }} .splide__slide{
+        text-align:center;
+    }
+    
 {% endstyle %}
 
+
+{% capture options %}  
+{
+    "type" : "{{ section.settings.slide_animation }}",
+    "arrows": {{ section.settings.show_arrows }},
+    "pagination":{{ section.settings.show_pagination }},
+    "autoplay" : {{ section.settings.auto_play }},
+    "interval" : {{ section.settings.auto_play_duration }}
+}
+{% endcapture %}
+
+
+
 <div class="custom-slideshow custom-slideshow-wrapper page-width custom-slideshow--{{ section.id }}">
-    hello
+    <splide-component class="splide" data-options='{{ options }}'>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    {% for block in section.blocks %}
+                        <li class="splide__slide">{{ block.settings.pre_heading }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+    </splide-component>
 </div>
 
 {% schema %}

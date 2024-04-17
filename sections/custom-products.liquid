@@ -64,7 +64,7 @@
                                         {% for eachcolor in product.options_by_name['Color'].values %}
                                             {% assign val = forloop.index %}
                                             <div class="outer-radio" style="display:block;">
-                                                <div class="radio" style="background-color:{{eachcolor}};display:block;" data-images="{{ product.images[val].src |image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
+                                                <div class="radio" style="background-color:{{eachcolor}};display:block;" data-images="{{ product.images[val].src | image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
                                             </div>
                                         {% endfor %}
                                     </div>

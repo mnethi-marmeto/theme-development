@@ -89,14 +89,74 @@
         "block_DVUTxA",
         "block_APRRVf"
       ],
+      "disabled": true,
       "settings": {
         "section_header": "What’s your Top Pick",
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_testimonials_4MqpBQ": {
+      "type": "custom-testimonials",
+      "blocks": {
+        "slide_RAgk3K": {
+          "type": "slide",
+          "settings": {
+            "active-background": "#f6ffc2",
+            "card-background": "#ffffff",
+            "testmonial-text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+            "authour-image": "shopify:\/\/shop_images\/Rectangle_8.png",
+            "authour-name": "Mr. john d0e",
+            "author-title": "clients",
+            "main-image": "shopify:\/\/shop_images\/Wrapper.png"
+          }
+        },
+        "slide_jc8WKJ": {
+          "type": "slide",
+          "settings": {
+            "active-background": "#f6ffc2",
+            "card-background": "#ffffff",
+            "testmonial-text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+            "authour-image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
+            "authour-name": "Mr. john d0e",
+            "author-title": "clients",
+            "main-image": "shopify:\/\/shop_images\/top-view-mix-vegetables-bowl-with-chicken-drumstick_23-2148369699.jpg"
+          }
+        },
+        "slide_EYgdy7": {
+          "type": "slide",
+          "settings": {
+            "active-background": "#f6ffc2",
+            "card-background": "#ffffff",
+            "testmonial-text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+            "authour-image": "shopify:\/\/shop_images\/Rectangle_8.png",
+            "authour-name": "Mr. john d0e",
+            "author-title": "clients",
+            "main-image": "shopify:\/\/shop_images\/world-health-day-celebration-with-healthy-food_23-2151244695.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_RAgk3K",
+        "slide_jc8WKJ",
+        "slide_EYgdy7"
+      ],
+      "settings": {
+        "background-color": "#ffffff",
+        "heading": "Testimonials",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "auto_play": false,
+        "show_pagination": true,
+        "show_arrows": true,
+        "auto_play_duration": 2,
+        "slide_animation": "slide",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_testimonials_4MqpBQ"
   ]
 }
