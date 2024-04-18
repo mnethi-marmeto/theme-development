@@ -247,37 +247,12 @@
         "color_scheme": "",
         "columns_mobile": "2",
         "padding_top": 20,
-        "padding_bottom": 0
+        "padding_bottom": 20
       }
     },
-    "rich_text_QFTQaE": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_jXPWJf": {
-          "type": "heading",
-          "settings": {
-            "heading": "Timeless, classic and elegant",
-            "heading_size": "h0"
-          }
-        },
-        "text_NGmtpr": {
-          "type": "text",
-          "settings": {
-            "text": "<p>When choosing timeless jewelry, it is important to consider factors such as design, quality, and materials to ensure that the piece will withstand the test of time and retain its value and beauty for years to come.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_jXPWJf",
-        "text_NGmtpr"
-      ],
+    "custom_richtext_ThWjdt": {
+      "type": "custom-richtext",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "custom_products_VYHxXw": {
@@ -729,7 +704,7 @@
     "custom_static_banner_DNMgN9",
     "custom_scrool_text_nCiJzH",
     "custom_collecton_list_rMqWrD",
-    "rich_text_QFTQaE",
+    "custom_richtext_ThWjdt",
     "custom_products_VYHxXw",
     "custom_hotspot_JfzDrh",
     "featured_collection_7ymXqm",
