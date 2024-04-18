@@ -16,7 +16,7 @@
     }
 {% endstyle %}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="custom-rings-product color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width custom-product-{{ section.id }}">
         {%- unless section.settings.title == blank -%}
             <div>
@@ -26,29 +26,29 @@
             </div>
         {%- endunless -%}
         <div>
-            <div class="all-products">
+            <div class="custom-rings-product--all-products">
                 {%- for block in section.blocks -%}
                   {%- assign product = block.settings.product -%}
                     {%- if product != blank -%}
-                        <div class="each-product" id="eachProduct">
+                        <div class="custom-rings-product--each-product" id="eachProduct">
                             {%- if product.featured_image != blank -%}
                                 <a href="{{ product.url }}">
-                                    <div class="image-container" id="imageContainer">
+                                    <div class="custom-rings-product--image-container" id="imageContainer">
                                         <div>
-                                            <img src="{{ product.images[1] | image_url}}" height="auto" width="auto" class="first-image" id="firstImage"/>
+                                            <img src="{{ product.images[1] | image_url}}" height="auto" width="auto" class="custom-rings-product--first-image" id="firstImage"/>
                                             {% if product.images.size > 1 %}
-                                                <img src="{{ product.images[0] | image_url }}" height="" width="" alt="{{ product.title }}" class="second-image" id="secondImage">
+                                                <img src="{{ product.images[0] | image_url }}" height="" width="" alt="{{ product.title }}" class="custom-rings-product--second-image" id="secondImage">
                                             {% endif %}
                                         </div>
                                         {%- if block.settings.Quick_view_button -%}
-                                            <div class="view-container">
+                                            <div class="custom-rings-product--view-container">
                                                 <button>Quick view</button>
                                             </div>
                                         {%- endif -%}
                                     </div>
                                 </a>
                             {%- endif -%}
-                            <div class="card-details" style="background-color:{{ block.settings.card_color }};">
+                            <div class="custom-rings-product--card-details" style="background-color:{{ block.settings.card_color }};">
                                 {%- if product.vendor != blank -%}
                                     <h4>{{ product.vendor }}</h4>
                                 {%- endif -%}
@@ -58,13 +58,13 @@
                                 {%- if product.price != blank -%}
                                     <p>{{ product.price | money }}</p>
                                 {%- endif -%}
-                                <div class="animation-container">
-                                    <p class="available">Available in {{ product.options_by_name['Color'].values.size }} colors</p>
-                                    <div class="colors-container">
+                                <div class="custom-rings-product--animation-container">
+                                    <p class="custom-rings-product--available">Available in {{ product.options_by_name['Color'].values.size }} colors</p>
+                                    <div class="custom-rings-product--colors-container">
                                         {% for eachcolor in product.options_by_name['Color'].values %}
                                             {% assign val = forloop.index %}
-                                            <div class="outer-radio" style="display:block;">
-                                                <div class="radio" style="background-color:{{eachcolor}};display:block;" data-images="{{ product.images[val].src | image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
+                                            <div class="custom-rings-product--outer-radio">
+                                                <div class="custom-rings-product--radio" style="background-color:{{eachcolor}};" data-images="{{ product.images[val].src | image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
                                             </div>
                                         {% endfor %}
                                     </div>

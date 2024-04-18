@@ -1,25 +1,25 @@
-  .each-collection{
+  .custom-collection--each-collection{
     position:relative;
   }
-  .each-collection a{
+  .custom-collection--each-collection a{
     overflow: hidden;
     height:300px;
     width: 100%;
     display: block;
     border-radius:6px;
   }
-  .image{
+  .custom-collection--image{
     width:100%;
     height: 100%;
     object-fit:cover;
     object-position: center;
     transition: transform 0.5s ease-in-out;
   }
-  .each-collection:hover .image{
+  .custom-collection--each-collection:hover .custom-collection--image{
     transform: scale(1.1);
   }
   
-  .collection-title p{
+  .custom-collection--collection-title p{
     position:absolute;
     bottom:10%;
     left:10%;
@@ -28,7 +28,7 @@
     font-size:calc(1.15*28px);
   }
   @media screen and (max-width:1068px){
-    .collection-title p{
+    .custom-collection--collection-title p{
         font-size:calc(1.15*20px);
     }
   }

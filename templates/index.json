@@ -207,13 +207,27 @@
           "settings": {
             "collection": "diamonds"
           }
+        },
+        "featured_collection_6TUUwx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pearls"
+          }
+        },
+        "featured_collection_BJ9AtK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
         }
       },
       "block_order": [
         "featured_collection_cqPazP",
         "featured_collection_riLJAT",
         "featured_collection_4BNWAt",
-        "featured_collection_3TCnGG"
+        "featured_collection_3TCnGG",
+        "featured_collection_6TUUwx",
+        "featured_collection_BJ9AtK"
       ],
       "settings": {
         "title": "",
@@ -223,36 +237,6 @@
         "columns_mobile": "2",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "custom_collecton_list_Ar4JFz": {
-      "type": "custom-collecton-list",
-      "blocks": {
-        "featured_collection_pVyLFJ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pearls"
-          }
-        },
-        "featured_collection_3fqQY8": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "rings"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_pVyLFJ",
-        "featured_collection_3fqQY8"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "columns_desktop": 2,
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "padding_top": 12,
-        "padding_bottom": 16
       }
     },
     "rich_text_QFTQaE": {
@@ -721,7 +705,6 @@
     "custom_static_banner_DNMgN9",
     "custom_scrool_text_nCiJzH",
     "custom_collecton_list_rMqWrD",
-    "custom_collecton_list_Ar4JFz",
     "rich_text_QFTQaE",
     "custom_products_VYHxXw",
     "image_banner_gKqxRb",

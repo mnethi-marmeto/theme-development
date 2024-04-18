@@ -1,11 +1,11 @@
 let imageContainer =  document.querySelectorAll("#imageContainer");
 let firstImage = document.querySelectorAll("#firstImage");    
 let secondImage = document.querySelectorAll("#secondImage");  
-let viewContainer = document.querySelectorAll(".view-container button");
-let availableEl = document.querySelectorAll(".available");
-let colorsContainer = document.querySelectorAll(".colors-container");
-let radio = document.querySelectorAll(".radio");
-let cardDetails = document.querySelectorAll(".card-details")
+let viewContainer = document.querySelectorAll(".custom-rings-product--view-container button");
+let availableEl = document.querySelectorAll(".custom-rings-product--available");
+let colorsContainer = document.querySelectorAll(".custom-rings-product--colors-container");
+let radio = document.querySelectorAll(".custom-rings-product--radio");
+let cardDetails = document.querySelectorAll(".custom-rings-product--card-details")
 
 
 imageContainer.forEach((each,index)=>{
