@@ -310,20 +310,31 @@
         "padding_bottom": 40
       }
     },
-    "image_banner_gKqxRb": {
-      "type": "image-banner",
+    "custom_hotspot_JfzDrh": {
+      "type": "custom-hotspot",
+      "blocks": {
+        "product_wQJNRq": {
+          "type": "product",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/spotlight_image.jpg",
+            "primary_left_position": 28,
+            "primary_top_position": 23,
+            "primary_product": "18k-gold-double-initial-custom-ring",
+            "secondary_left_position": 47,
+            "secondary_top_position": 10,
+            "secondary_product": "onyx-torus-toggle-rolo-chain-necklace",
+            "third_left_position": 77,
+            "third_top_position": 22,
+            "third_product": "retro-inspired-disco-chain-bracelet"
+          }
+        }
+      },
+      "block_order": [
+        "product_wQJNRq"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/spotlight_image.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     },
     "featured_collection_7ymXqm": {
@@ -389,6 +400,42 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_logo_based_slider_UapL86": {
+      "type": "custom-logo-based-slider",
+      "blocks": {
+        "text_slider_F4D7aC": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/swarovski_328x108_crop_center_94d1244a-002f-4f35-b8b9-0882cd9f9ae6.png"
+          }
+        },
+        "text_slider_gPwWiA": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/verdura_328x108_crop_center_fe6236aa-e769-49d0-83be-cba33ed93fc6.png"
+          }
+        },
+        "text_slider_FCidDP": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/doves_328x108_crop_center_c3afe59a-371e-4af9-9c53-ccb98b93e098.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_slider_F4D7aC",
+        "text_slider_gPwWiA",
+        "text_slider_FCidDP"
+      ],
+      "settings": {
+        "heading": "IN THE PRESS",
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     },
     "featured_blog_7gD8VC": {
@@ -673,9 +720,10 @@
     "custom_collecton_list_rMqWrD",
     "rich_text_QFTQaE",
     "custom_products_VYHxXw",
-    "image_banner_gKqxRb",
+    "custom_hotspot_JfzDrh",
     "featured_collection_7ymXqm",
     "custom_before_yz9Hdw",
+    "custom_logo_based_slider_UapL86",
     "featured_blog_7gD8VC",
     "multicolumn_nNHBYp",
     "multicolumn_nfKfxw",
