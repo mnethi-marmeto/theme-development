@@ -54,32 +54,43 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "featured_collection_kHd8ET": {
-      "type": "featured-collection",
+    "custom_new_arrivals_nqHLaF": {
+      "type": "custom-new-arrivals",
+      "blocks": {
+        "product_collections_tigbiU": {
+          "type": "product_collections",
+          "settings": {
+            "image_select": "shopify:\/\/shop_images\/earrings_624x820_crop_center_4fe808d0-d270-4e72-904a-43dcc859605a.jpg",
+            "imageHeading": "SALE OFF",
+            "imageDescription": "<p>Advertise a promotion or a sale<\/p>",
+            "imageButton": "Shop Sale",
+            "url": "#",
+            "collection_name": "Earrings",
+            "collection": "earrings"
+          }
+        },
+        "product_collections_rGFyf6": {
+          "type": "product_collections",
+          "settings": {
+            "image_select": "shopify:\/\/shop_images\/promotion_624x820_crop_center_7234fffd-92c0-4c44-91c1-c1bcaea97e73.jpg",
+            "imageHeading": "SALE OFF",
+            "imageDescription": "<p>Gold and crystal chained heart stud and ear cuff<\/p>",
+            "imageButton": "Shop Sale",
+            "url": "#",
+            "collection_name": "Necklaces",
+            "collection": "necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "product_collections_tigbiU",
+        "product_collections_rGFyf6"
+      ],
       "settings": {
-        "title": "New Arrivals",
-        "heading_size": "h1",
-        "description": "<p>Beyond mere adornment, these pieces are made to make you feel good.<\/p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "NEW ARRIVALS",
+        "para": "Beyond mere adornment, these pieces are made to make you feel good.",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "custom_static_banner_DNMgN9": {
@@ -714,7 +725,7 @@
   },
   "order": [
     "slideshow_zFW6EH",
-    "featured_collection_kHd8ET",
+    "custom_new_arrivals_nqHLaF",
     "custom_static_banner_DNMgN9",
     "custom_scrool_text_nCiJzH",
     "custom_collecton_list_rMqWrD",
