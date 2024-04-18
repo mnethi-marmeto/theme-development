@@ -138,11 +138,11 @@
   width: 200px;
 }
 
-/* .custom-new-arrivals .splide__arrow--prev {
+.custom-new-arrivals .splide__arrow--prev {
 left: -14px;
 top: 30%;
 transform: rotate(180deg);
-} */
+}
 .custom-new-arrivals .splide__arrow--next {
 right: -14px;
 top: 30%;
