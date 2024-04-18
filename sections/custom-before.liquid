@@ -5,24 +5,28 @@
 <div class="page-width custom-before-{{ section.id }} custom-before-after">
   <div class="custom-before-after--container">
     <div class="custom-before-after--text-container">
-        {% for block in section.blocks %}
-            {%- if block.settings.badge != blank -%}
-                <span class="custom-before-after-badge">{{ block.settings.badge }}</span>
-            {%- endif -%}
-            {%- if block.settings.heading != blank -%}
-                <div class="custom-before-after--heading">{{ block.settings.heading }}</div>
-            {%- endif -%}
-            {%- if block.settings.discription != blank -%}
-                <div class="custom-before-after--discription">{{ block.settings.discription }}</div>
-            {%- endif -%}
-        {% endfor %}
+        <div>
+            {% for block in section.blocks %}
+                {%- if block.settings.badge != blank -%}
+                    <div>
+                        <span class="custom-before-after-badge">{{ block.settings.badge }}</span>
+                    </div>
+                {%- endif -%}
+                {%- if block.settings.heading != blank -%}
+                    <div class="custom-before-after--heading">{{ block.settings.heading }}</div>
+                {%- endif -%}
+                {%- if block.settings.discription != blank -%}
+                    <div class="custom-before-after--discription">{{ block.settings.discription }}</div>
+                {%- endif -%}
+            {% endfor %}
+        </div>
     </div>
     <div id="before-after-slider">
       <div id="before-image">
-        <img src="{{ section.settings.image_before | image_url }}" height="auto" width="auto">
+        <img src="{{ section.settings.image_before | image_url }}" height="auto" width="auto" class="custom-before-after-image">
       </div>
       <div id="after-image">
-        <img src="{{ section.settings.image_after | image_url }}" height="auto" width="auto">
+        <img src="{{ section.settings.image_after | image_url }}" height="auto" width="auto" class="custom-before-after-image">
       </div>
       <div id="resizer"></div>
    </div>

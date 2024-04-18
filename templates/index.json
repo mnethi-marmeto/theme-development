@@ -235,7 +235,7 @@
         "columns_desktop": 4,
         "color_scheme": "",
         "columns_mobile": "2",
-        "padding_top": 0,
+        "padding_top": 20,
         "padding_bottom": 0
       }
     },
@@ -389,40 +389,6 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "multirow_y46X6Y": {
-      "type": "multirow",
-      "blocks": {
-        "row_wnmEqj": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/after_slide_image.jpg",
-            "caption": "Custom design",
-            "heading": "THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES",
-            "text": "<p>Luxury jewelry is a high-end category of jewelry that is often made of precious metals and gems, and is known for its exceptional craftsmanship and quality. This type of jewelry is often associated with elegance and status.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_wnmEqj"
-      ],
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "align-right",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "featured_blog_7gD8VC": {
@@ -710,7 +676,6 @@
     "image_banner_gKqxRb",
     "featured_collection_7ymXqm",
     "custom_before_yz9Hdw",
-    "multirow_y46X6Y",
     "featured_blog_7gD8VC",
     "multicolumn_nNHBYp",
     "multicolumn_nfKfxw",

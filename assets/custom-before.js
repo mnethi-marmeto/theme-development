@@ -8,14 +8,12 @@ let active = false;
 //Sort overflow out for Overlay Image
 document.addEventListener("DOMContentLoaded", function() {
   let width = slider.offsetWidth;
-  console.log(width);
   beforeImage.style.width = width + 'px';
 });
 
 //Adjust width of image on resize 
 window.addEventListener('resize', function() {
   let width = slider.offsetWidth;
-  console.log(width);
   beforeImage.style.width = width + 'px';
 })
 
