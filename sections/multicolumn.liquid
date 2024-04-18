@@ -30,6 +30,7 @@
       data-cascade
     {% endif %}
   >
+    {{ section.id }}
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">

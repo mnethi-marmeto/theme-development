@@ -43,90 +43,103 @@
 {% endcapture %}
 
 
-<div class="custom-testimonials page-width custom-testimonials--{{ section.id }}">
-    <div class="custom-testimonials--container">
-        {%- if section.blocks.first.settings.main-image != blank  -%}
-            <div class="custom-testimonials--img-container">
-                <img src="{{ section.blocks.first.settings.main-image | image_url }}" height="auto" width="auto" class="custom-testimonials--img" id="mainImage"/>
-            </div>
-        {%- endif -%}
-        <div class="custom-testimonials--slide-container">
-            {%- if section.settings.heading != blank -%}
-                <h2 class="custom-testimonials--heading">{{ section.settings.heading }}</h2>
-            {%- endif -%}
-            {%- if section.settings.description != blank -%}
-                <p class="custom-testimonials--description">{{ section.settings.description }}</p>
-            {%- endif -%}
-            <splide-component class="splide" data-options='{{ options }}'>
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        {% for block in section.blocks %}
-                            <li class="splide__slide custom-testimonials" data-image="{{ block.settings.main-image | image_url }}" data-activecolor="{{ block.settings.active-background }}" >
-                                <div class="custom-testimonials--slide" data-cardcolor="{{ block.settings.card-background }}">
-                                    {%- if block.settings.testmonial-text != blank -%}
-                                        <p class="custom-testimonials--text">"{{ block.settings.testmonial-text }}"</p>
-                                    {%- endif -%}
-                                    <div class="custom-testimonials--authour-container">
-                                        {%- if block.settings.authour-image -%}
-                                            <img src="{{ block.settings.authour-image | image_url }}" height="auto" width="auto"/>
-                                        {%- endif -%}
-                                        <div class="custom-testimonials--authour-text">
-                                            {%- if block.settings.authour-name != blank -%}
-                                                <h3 class="custom-testimonials--heading">{{ block.settings.authour-name }}</h3>
+
+{% if shop.customer_accounts_enabled %}
+    {% if customer %}
+        <div class="custom-testimonials page-width custom-testimonials--{{ section.id }}">
+            <div class="custom-testimonials--container">
+                {%- if section.blocks.first.settings.main-image != blank  -%}
+                    <div class="custom-testimonials--img-container">
+                        <img src="{{ section.blocks.first.settings.main-image | image_url }}" height="auto" width="auto" class="custom-testimonials--img" id="mainImage"/>
+                    </div>
+                {%- endif -%}
+                <div class="custom-testimonials--slide-container">
+                    {%- if section.settings.heading != blank -%}
+                        <h2 class="custom-testimonials--heading">{{ section.settings.heading }}</h2>
+                    {%- endif -%}
+                    {%- if section.settings.description != blank -%}
+                        <p class="custom-testimonials--description">{{ section.settings.description }}</p>
+                    {%- endif -%}
+                    <splide-component class="splide" data-options='{{ options }}'>
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                {% for block in section.blocks %}
+                                    <li class="splide__slide custom-testimonials" data-image="{{ block.settings.main-image | image_url }}" data-activecolor="{{ block.settings.active-background }}" >
+                                        <div class="custom-testimonials--slide" data-cardcolor="{{ block.settings.card-background }}">
+                                            {%- if block.settings.testmonial-text != blank -%}
+                                                <p class="custom-testimonials--text">"{{ block.settings.testmonial-text }}"</p>
                                             {%- endif -%}
-                                            {%- if block.settings.author-title != blank -%}
-                                                <p>{{ block.settings.author-title }}</p>
-                                            {%- endif -%}
+                                            <div class="custom-testimonials--authour-container">
+                                                {%- if block.settings.authour-image -%}
+                                                    <img src="{{ block.settings.authour-image | image_url }}" height="auto" width="auto"/>
+                                                {%- endif -%}
+                                                <div class="custom-testimonials--authour-text">
+                                                    {%- if block.settings.authour-name != blank -%}
+                                                        <h3 class="custom-testimonials--heading">{{ block.settings.authour-name }}</h3>
+                                                    {%- endif -%}
+                                                    {%- if block.settings.author-title != blank -%}
+                                                        <p>{{ block.settings.author-title }}</p>
+                                                    {%- endif -%}
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </splide-component>
                 </div>
-            </splide-component>
+            </div>
         </div>
-    </div>
-</div>
-<div class="custom-testimonials-subscribe">
-    {%- form 'customer'-%}
-      <h2 class="custom-testimonials-subscribe-heading">Subscribe to Our Newsletter</h2>
-      <input type="hidden" name="contact[tags]" value="newsletter">
-      <div class="custom-testimonials--subscribe-container">
-          <input
-            id="NewsletterForm--{{ section.id }}"
-            type="email"
-            name="contact[email]"
-            class="custom-testimonials-subscribe-input"
-            value="{{ form.email }}"
-            aria-required="true"
-            autocorrect="off"
-            autocapitalize="off"
-            autocomplete="email"
-            placeholder="Email"
-            required
-            {% if form.errors %}
-              autofocus
-              aria-invalid="true"
-              aria-describedby="ContactFooter-error"
-            {% elsif form.posted_successfully? %}
-              aria-describedby="ContactFooter-success"
-            {% endif %}
-          >
-        <button
-            type="submit"
-            name="commit"
-            id="Subscribe"
-            aria-label="Subscribe"
-            class="custom-testimonials-subscribe-button"
-          >
-            SUBSCRIBE
-          </button>
-      </div>
-    {%- endform -%}
-</div> 
-
-
+        <div class="custom-testimonials-subscribe">
+            {%- form 'customer'-%}
+              <h2 class="custom-testimonials-subscribe-heading">Subscribe to Our Newsletter</h2>
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="custom-testimonials--subscribe-container">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    class="custom-testimonials-subscribe-input"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    placeholder="Email"
+                    required
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="ContactFooter-error"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="ContactFooter-success"
+                    {% endif %}
+                  >
+                <button
+                    type="submit"
+                    name="commit"
+                    id="Subscribe"
+                    aria-label="Subscribe"
+                    class="custom-testimonials-subscribe-button"
+                  >
+                    SUBSCRIBE
+                  </button>
+              </div>
+            {%- endform -%}
+        </div> 
+    {% else %}
+        <a href="/account/login" class="header__icon header__icon--account link focus-inset small-hide">
+            <div>
+                
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-account" fill="none" viewBox="0 0 18 19">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor">
+            </path></svg>
+            <span class="visually-hidden">Log in</span>
+        </a>
+    {% endif %}
+{% endif %}
 
 
 

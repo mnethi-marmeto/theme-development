@@ -1,24 +1,24 @@
 {{ "custom-announcement-bar.css" | asset_url | stylesheet_tag }}
 
 {% style %}
-    .custom-slideshow--{{ section.id }}{
+    .custom-announcement--{{ section.id }}{
         padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
         padding-bottom:{{ section.settings.padding_bottom | divided_by:2 }}px;
     }
     @media screen and (min-width:749px){
-        .custom-slideshow--{{ section.id }}{
+        .custom-announcement--{{ section.id }}{
             padding-top:{{ section.settings.padding_top }}px;
             padding-bottom:{{ section.settings.padding_bottom }}px;
         }
     }
 {% endstyle %}
 
-<div class="custom-slideshow custom-slideshow--{{ section.id }}" id="customSlideshow">
-    <div class="splide" id="new">
-        <div class="splide__track">
-            <ul class="splide__list">
+<div class="custom-announcement custom-announcement-{{ section.id }}" id="customSlideshow">
+    <div class="custom-announcement--splide  splide" id="new">
+        <div class="custom-announcement--splide--track splide__track">
+            <ul class="custom-announcement--splide--list splide__list">
                 {% for block in section.blocks %}
-                    <li class="splide__slide custom-slide" data-bg-color="{{ block.settings.color }}">{{ block.settings.announcement }}</li>
+                    <li class="splide__slide custom-announcement--slide" data-bg-color="{{ block.settings.color }}">{{ block.settings.announcement }}</li>
                 {% endfor %}
             </ul>
         </div>
@@ -40,14 +40,12 @@
       splide.on('moved', function () {
           updateSplideBackgroundColor(splide);
       });
-  
       function updateSplideBackgroundColor(splide) {
           var activeSlide = splide.Components.Elements.list.children[splide.index];
           var backgroundColor = activeSlide.getAttribute('data-bg-color');
           let customSlideshow = document.getElementById("customSlideshow");
           customSlideshow.style.backgroundColor = backgroundColor;
       }
-
     });
 </script>
 

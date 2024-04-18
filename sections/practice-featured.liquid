@@ -1,0 +1,36 @@
+<script src="{{ 'practice-featured.js' | asset_url }}" defer></script>
+
+{% render 'custom-product-card',
+    name : section.settings.name,
+    products : section.settings.product_list
+%}
+
+<button onclick="append()">open</button>
+
+<div id="appendContainer">
+
+</div>
+
+{% schema %}
+    {
+        "name": "practice-featured",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "name",
+                "label": "name"
+            },
+            {
+                "type": "product_list",
+                "id": "product_list",
+                "label": "product list"
+            }
+        ],
+        "presets": [
+            {
+                "name": "practice-featured"
+            }
+        ]
+    }
+{% endschema %}
