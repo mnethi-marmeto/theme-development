@@ -43,6 +43,7 @@
     },
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu",
@@ -58,10 +59,26 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "custom_header_9kGjCk": {
+      "type": "custom-header",
+      "settings": {
+        "hover_logo_image": "shopify:\/\/shop_images\/logo2x.png",
+        "logo_position": "top-center",
+        "menu": "main-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "none",
+        "color_scheme": "scheme-4",
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "custom_announcement_bar_q4F3Gd",
-    "header"
+    "header",
+    "custom_header_9kGjCk"
   ]
 }

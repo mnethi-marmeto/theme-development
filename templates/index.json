@@ -1,57 +1,47 @@
 {
   "sections": {
-    "slideshow_zFW6EH": {
-      "type": "slideshow",
+    "custom_hero_section_xWUwxk": {
+      "type": "custom-hero-section",
       "blocks": {
-        "slide_4cJpDc": {
+        "slide_zqymwy": {
           "type": "slide",
           "settings": {
-            "heading": "ADD A TAGLINE",
-            "heading_size": "h2",
-            "subheading": "DISCOVER THE PERFECT ACCESSORY FOR YOUR STYLE",
-            "button_label": "Shop Now",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/vp\/5915fba7e49e419886a3689ac1cdd535\/5915fba7e49e419886a3689ac1cdd535.HD-1080p-4.8Mbps-12891231.mp4",
+            "desktop_image": "shopify:\/\/shop_images\/5915fba7e49e419886a3689ac1cdd535.thumbnail.0000000000_small_74e80abd-3d73-457b-9ff9-f4ee4ff6f480.webp",
+            "caption_text": "ADD A TAGLINE",
+            "rich_text": "<p>DISCOVER THE PERFECT ACCESSORY FOR YOUR STYLE<\/p>",
+            "button_text": "Shop Now",
+            "button_url": "#",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
           }
         },
-        "slide_bgefLa": {
+        "slide_jmT7pk": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/main-slide-img2.jpg",
-            "heading": "NEW COLLECTION",
-            "heading_size": "h2",
-            "subheading": "EVERY PIECE IS A UNIQUE, ONE OF A KIND MASTERPIECE",
-            "button_label": "Shop the collection",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
+            "video_url": "",
+            "desktop_image": "shopify:\/\/shop_images\/main-slide-img2.jpg",
+            "caption_text": "NEW COLLECTION",
+            "rich_text": "<p>EVERY PIECE IS A UNIQUE, ONE OF A KIND MASTERPIECE<\/p>",
+            "button_text": "Shop the collection",
+            "button_url": "#",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
           }
         }
       },
       "block_order": [
-        "slide_4cJpDc",
-        "slide_bgefLa"
+        "slide_zqymwy",
+        "slide_jmT7pk"
       ],
       "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
+        "auto_play": false,
+        "show_arrows": false,
+        "show_pagination": false,
+        "auto_play_duration": 2000,
+        "slide_animation": "fade",
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     },
     "custom_new_arrivals_nqHLaF": {
@@ -187,7 +177,7 @@
         "padding": 16,
         "scroll_time": "50",
         "font_color": "#7d5c70",
-        "font_size": 56,
+        "font_size": 80,
         "pause_text": "initial",
         "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_66bd8fb6-0d75-42b3-8b96-2b0c0ca18470.png"
       }
@@ -321,6 +311,67 @@
       "settings": {
         "padding_top": 30,
         "padding_bottom": 30
+      }
+    },
+    "custom_customer_review_rR3pbT": {
+      "type": "custom-customer-review",
+      "blocks": {
+        "slide_X4wXPA": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/p1_300x250_crop_center_1a77006b-7ba6-4310-9be7-a3f26b5081cf.jpg",
+            "product_url": "#",
+            "rating_range_review": 4.5,
+            "comment": "Beautiful Ring",
+            "text_area": "“Gorgeous, dainty, sparkly band that works as a solo everyday ring.”",
+            "author_name": "JULIE THOMAS",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_WeFdgf": {
+          "type": "slide",
+          "settings": {
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "Amazing",
+            "text_area": "",
+            "author_name": "",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_pEMbUw": {
+          "type": "slide",
+          "settings": {
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "Amazing",
+            "text_area": "",
+            "author_name": "",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_6BbQJY": {
+          "type": "slide",
+          "settings": {
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "Amazing",
+            "text_area": "",
+            "author_name": "",
+            "content_position_desktop": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_X4wXPA",
+        "slide_WeFdgf",
+        "slide_pEMbUw",
+        "slide_6BbQJY"
+      ],
+      "settings": {
+        "heading_customer_review": "Customer Review",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "featured_collection_7ymXqm": {
@@ -699,7 +750,7 @@
     }
   },
   "order": [
-    "slideshow_zFW6EH",
+    "custom_hero_section_xWUwxk",
     "custom_new_arrivals_nqHLaF",
     "custom_static_banner_DNMgN9",
     "custom_scrool_text_nCiJzH",
@@ -707,6 +758,7 @@
     "custom_richtext_ThWjdt",
     "custom_products_VYHxXw",
     "custom_hotspot_JfzDrh",
+    "custom_customer_review_rR3pbT",
     "featured_collection_7ymXqm",
     "custom_before_yz9Hdw",
     "custom_logo_based_slider_UapL86",
