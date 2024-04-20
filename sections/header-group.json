@@ -9,7 +9,7 @@
           "type": "slide",
           "settings": {
             "announcement": "Free shipping all orders over $60",
-            "color": "#de544b"
+            "color": "#dd1d1d"
           }
         },
         "slide_FfMwYA": {
@@ -36,9 +36,9 @@
         "auto_play": true,
         "show_pagination": false,
         "show_arrows": true,
-        "auto_play_duration": 4,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "auto_play_duration": 5,
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "header": {
