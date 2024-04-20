@@ -1,32 +1,31 @@
 {{ 'custom-testimonials.css' | asset_url | stylesheet_tag }}
-<script src={{ 'custom-component-splide.js' | asset_url }} defer></script>
-
+<script src="{{ 'custom-component-splide.js' | asset_url }}" defer></script>
 
 {% style %}
-    .custom-testimonials--{{ section.id }}{
-        background-color: {{ section.settings.background-color }};
-        padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
-        padding-bottom:{{ section.settings.padding_bottom | divided_by:2 }}px;
-    }
-    @media screen and (min-width:800px){
-        .custom-testimonials--{{ section.id }}{
-            padding-top:{{ section.settings.padding_top }}px;
-            padding-bottom:{{ section.settings.padding_bottom }}px;
-        }
-    } 
+  .custom-testimonials--{{ section.id }}{
+      background-color: {{ section.settings.background-color }};
+      padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
+      padding-bottom:{{ section.settings.padding_bottom | divided_by:2 }}px;
+  }
+  @media screen and (min-width:800px){
+      .custom-testimonials--{{ section.id }}{
+          padding-top:{{ section.settings.padding_top }}px;
+          padding-bottom:{{ section.settings.padding_bottom }}px;
+      }
+  }
 {% endstyle %}
 
 {% liquid
-    assign type = section.settings.slide_aniamtion
-    assign arrows = section.settings.show_arrows
-    assign pagination = section.settings.show_pagination
-    assign autoplay = section.settings.auto_play
-    assign auto_play_duration = section.settings.auto_play_duration
+  assign type = section.settings.slide_aniamtion
+  assign arrows = section.settings.show_arrows
+  assign pagination = section.settings.show_pagination
+  assign autoplay = section.settings.auto_play
+  assign auto_play_duration = section.settings.auto_play_duration
 %}
 
 {% capture options %}  
 {
-    "type" : "{{ type }}",
+    "type" : "{{ section.settings.slide_animation }}",
     "arrows": {{ arrows }},
     "pagination":{{ pagination }},
     "autoplay" : {{ autoplay }},
@@ -45,277 +44,307 @@
 
 
 {% if shop.customer_accounts_enabled %}
-    {% if customer %}
-        <div class="custom-testimonials page-width custom-testimonials--{{ section.id }}">
-            <div class="custom-testimonials--container">
-                {%- if section.blocks.first.settings.main-image != blank  -%}
-                    <div class="custom-testimonials--img-container">
-                        <img src="{{ section.blocks.first.settings.main-image | image_url }}" height="auto" width="auto" class="custom-testimonials--img" id="mainImage"/>
-                    </div>
-                {%- endif -%}
-                <div class="custom-testimonials--slide-container">
-                    {%- if section.settings.heading != blank -%}
-                        <h2 class="custom-testimonials--heading">{{ section.settings.heading }}</h2>
-                    {%- endif -%}
-                    {%- if section.settings.description != blank -%}
-                        <p class="custom-testimonials--description">{{ section.settings.description }}</p>
-                    {%- endif -%}
-                    <splide-component class="splide" data-options='{{ options }}'>
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                {% for block in section.blocks %}
-                                    <li class="splide__slide custom-testimonials" data-image="{{ block.settings.main-image | image_url }}" data-activecolor="{{ block.settings.active-background }}" >
-                                        <div class="custom-testimonials--slide" data-cardcolor="{{ block.settings.card-background }}">
-                                            {%- if block.settings.testmonial-text != blank -%}
-                                                <p class="custom-testimonials--text">"{{ block.settings.testmonial-text }}"</p>
-                                            {%- endif -%}
-                                            <div class="custom-testimonials--authour-container">
-                                                {%- if block.settings.authour-image -%}
-                                                    <img src="{{ block.settings.authour-image | image_url }}" height="auto" width="auto"/>
-                                                {%- endif -%}
-                                                <div class="custom-testimonials--authour-text">
-                                                    {%- if block.settings.authour-name != blank -%}
-                                                        <h3 class="custom-testimonials--heading">{{ block.settings.authour-name }}</h3>
-                                                    {%- endif -%}
-                                                    {%- if block.settings.author-title != blank -%}
-                                                        <p>{{ block.settings.author-title }}</p>
-                                                    {%- endif -%}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+  {% if customer %}
+    <div class="custom-testimonials page-width custom-testimonials--{{ section.id }}">
+      <div class="custom-testimonials--container">
+        {%- if section.blocks.first.settings['main-image'] != blank -%}
+          <div class="custom-testimonials--img-container">
+            <img
+              src="{{ section.blocks.first.settings.main-image | image_url }}"
+              height="auto"
+              width="auto"
+              class="custom-testimonials--img"
+              id="mainImage"
+            >
+          </div>
+        {%- endif -%}
+        <div class="custom-testimonials--slide-container">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="custom-testimonials--heading">{{ section.settings.heading }}</h2>
+            <p>{{ section.settings.slide_animation }}</p>
+          {%- endif -%}
+          {%- if section.settings.description != blank -%}
+            <p class="custom-testimonials--description">{{ section.settings.description }}</p>
+          {%- endif -%}
+          <splide-component class="splide" data-options='{{ options }}'>
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for block in section.blocks %}
+                  <li
+                    class="splide__slide custom-testimonials"
+                    data-image="{{ block.settings.main-image | image_url }}"
+                    data-activecolor="{{ block.settings.active-background }}"
+                  >
+                    <div class="custom-testimonials--slide" data-cardcolor="{{ block.settings.card-background }}">
+                      {%- if block.settings['testmonial-text'] != blank -%}
+                        <p class="custom-testimonials--text">"{{ block.settings['testmonial-text'] }}"</p>
+                      {%- endif -%}
+                      <div class="custom-testimonials--authour-container">
+                        {%- if block.settings['authour-image'] -%}
+                          <img src="{{ block.settings.authour-image | image_url }}" height="auto" width="auto">
+                        {%- endif -%}
+                        <div class="custom-testimonials--authour-text">
+                          {%- if block.settings['authour-name'] != blank -%}
+                            <h3 class="custom-testimonials--heading">{{ block.settings['authour-name'] }}</h3>
+                          {%- endif -%}
+                          {%- if block.settings['author-title'] != blank -%}
+                            <p>{{ block.settings['author-title'] }}</p>
+                          {%- endif -%}
                         </div>
-                    </splide-component>
-                </div>
+                      </div>
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
             </div>
+          </splide-component>
         </div>
-        <div class="custom-testimonials-subscribe">
-            {%- form 'customer'-%}
-              <h2 class="custom-testimonials-subscribe-heading">Subscribe to Our Newsletter</h2>
-              <input type="hidden" name="contact[tags]" value="newsletter">
-              <div class="custom-testimonials--subscribe-container">
-                  <input
-                    id="NewsletterForm--{{ section.id }}"
-                    type="email"
-                    name="contact[email]"
-                    class="custom-testimonials-subscribe-input"
-                    value="{{ form.email }}"
-                    aria-required="true"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    autocomplete="email"
-                    placeholder="Email"
-                    required
-                    {% if form.errors %}
-                      autofocus
-                      aria-invalid="true"
-                      aria-describedby="ContactFooter-error"
-                    {% elsif form.posted_successfully? %}
-                      aria-describedby="ContactFooter-success"
-                    {% endif %}
-                  >
-                <button
-                    type="submit"
-                    name="commit"
-                    id="Subscribe"
-                    aria-label="Subscribe"
-                    class="custom-testimonials-subscribe-button"
-                  >
-                    SUBSCRIBE
-                  </button>
-              </div>
-            {%- endform -%}
-        </div> 
-    {% else %}
-        <a href="/account/login" class="header__icon header__icon--account link focus-inset small-hide">
-            <div>
-                
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-account" fill="none" viewBox="0 0 18 19">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor">
-            </path></svg>
-            <span class="visually-hidden">Log in</span>
-        </a>
-    {% endif %}
+      </div>
+    </div>
+    <div class="custom-testimonials-subscribe">
+      {%- form 'customer' -%}
+        <h2 class="custom-testimonials-subscribe-heading">Subscribe to Our Newsletter</h2>
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="custom-testimonials--subscribe-container">
+          <input
+            id="NewsletterForm--{{ section.id }}"
+            type="email"
+            name="contact[email]"
+            class="custom-testimonials-subscribe-input"
+            value="{{ form.email }}"
+            aria-required="true"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            placeholder="Email"
+            required
+            {% if form.errors %}
+              autofocus
+              aria-invalid="true"
+              aria-describedby="ContactFooter-error"
+            {% elsif form.posted_successfully? %}
+              aria-describedby="ContactFooter-success"
+            {% endif %}
+            {% if form.errors %}
+              autofocus
+              aria-invalid="true"
+              aria-describedby="ContactFooter-error"
+            {% elsif form.posted_successfully? %}
+              aria-describedby="ContactFooter-success"
+            {% endif %}
+          >
+          <button
+            type="submit"
+            name="commit"
+            id="Subscribe"
+            aria-label="Subscribe"
+            class="custom-testimonials-subscribe-button"
+          >
+            SUBSCRIBE
+          </button>
+        </div>
+        {%- if form.errors -%}
+          <small class="newsletter-form__message form__message" id="ContactFooter-error">
+            {%- render 'icon-error' -%}
+            {{- form.errors.translated_fields.email | capitalize }}
+            {{ form.errors.messages.email -}}
+          </small>
+        {%- endif -%}
+        {%- if form.posted_successfully? -%}
+          <h3
+            class="newsletter-form__message newsletter-form__message--success form__message"
+            id="ContactFooter-success"
+            tabindex="-1"
+            autofocus
+          >
+            {% render 'icon-success' -%}
+            {{- 'newsletter.success' | t }}
+          </h3>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  {% else %}
+    <a href="/account/login" class="login">
+      <div class="login--container">
+        <h2 class="login--announcemnet">Please login to view this page</h2>
+        <button class="login--button">Login</button>
+      </div>
+    </a>
+  {% endif %}
 {% endif %}
 
-
-
-
 {% schema %}
+{
+  "name": "custom-testimonials",
+  "tag": "section",
+  "class": "section",
+  "settings": [
     {
-        "name": "custom-testimonials",
-        "tag": "section",
-        "class": "section",
-        "settings": [
-            {
-                "type": "header",
-                "content": "Section level customizations"
-            },
-            {
-                "type": "color",
-                "id": "background-color",
-                "label": "Background color",
-                "default": "#FFFFF5"
-            },
-            {
-                "type": "text",
-                "id": "heading",
-                "label": "Heading",
-                "default": "Testimonials"
-            },
-            {
-                "type": "text",
-                "id": "description",
-                "label": "Description",
-                "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
-            },
-            {
-                "type": "header",
-                "content": "Slider options"
-            },
-            {
-                "type": "checkbox",
-                "id": "auto_play",
-                "label": "Enable auto play",
-                "default": false
-            },
-            {
-                "type": "checkbox",
-                "id": "show_pagination",
-                "label": "Show dots",
-                "default": false
-            },
-            {
-                "type": "checkbox",
-                "id": "show_arrows",
-                "label": "Show arrows",
-                "default": false
-            },
-            {
-                "type": "range",
-                "id": "auto_play_duration",
-                "min": 1,
-                "max": 5,
-                "step": 1,
-                "unit": "sec",
-                "label": "Autoplay duration",
-                "default": 2
-            },
-            {
-                "type": "header",
-                "content": "Animation options"
-            },
-            {
-                "type": "select",
-                "id": "slide_animation",
-                "label": "Slider animation",
-                "options": [
-                    {
-                    "value": "fade",
-                    "label": "Fade"
-                    },
-                    {
-                    "value": "slide",
-                    "label": "Slide"
-                    },
-                    {
-                    "value": "loop",
-                    "label": "Loop"
-                    }
-                ],
-                "default": "slide"
-            },
-            {
-                "type": "header",
-                "content": "Section padding"
-            },
-            {
-                "type": "range",
-                "id": "padding_top",
-                "min": 0,
-                "max": 100,
-                "step": 10,
-                "unit": "px",
-                "label": "Padding Top",
-                "default": 0
-            },
-            {
-                "type": "range",
-                "id": "padding_bottom",
-                "min": 0,
-                "max": 100,
-                "step": 10,
-                "unit": "px",
-                "label": "Padding Bottom",
-                "default": 0
-            }
-        ],
-        "blocks": [
-            {
-                "name":"Slide",
-                "type": "slide",
-                "settings": [
-                    {
-                        "type": "color",
-                        "id": "active-background",
-                        "label": "Background color for Active Card",
-                        "default": "#F6FFC2"                       
-                    },
-                    {
-                        "type": "color",
-                        "id": "card-background",
-                        "label": "Background color for  Card",
-                        "default": "#ffffff"
-                    },
-                    {
-                        "type": "text",
-                        "id": "testmonial-text",
-                        "label": "Testimonial text",
-                        "default": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
-                    },
-                    {
-                        "type": "image_picker",
-                        "id": "authour-image",
-                        "label": "Authour-image"
-                    },
-                    {
-                        "type": "text",
-                        "id": "authour-name",
-                        "label": "Author name",
-                        "default": "Mr. john d0e"
-                    },
-                    {
-                        "type": "text",
-                        "id": "author-title",
-                        "label": "Author Title",
-                        "default": "clients"
-                    },
-                    {
-                        "type": "image_picker",
-                        "id": "main-image",
-                        "label": "Active main image"
-                    }
-                ]
-            }
-        ],
-        "presets": [
-            {
-                "name": "custom-testimonials",
-                "blocks": [
-                    {
-                        "type": "slide"
-                    },
-                    {
-                        "type": "slide"
-                    },
-                    {
-                        "type": "slide"
-                    }
-                ]
-            }
-        ]
+      "type": "header",
+      "content": "Section level customizations"
+    },
+    {
+      "type": "color",
+      "id": "background-color",
+      "label": "Background color",
+      "default": "#FFFFF5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Testimonials"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Slider options"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_play",
+      "label": "Enable auto play",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pagination",
+      "label": "Show dots",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show arrows",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "auto_play_duration",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "sec",
+      "label": "Autoplay duration",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "Animation options"
+    },
+    {
+      "type": "select",
+      "id": "slide_animation",
+      "label": "Slider animation",
+      "options": [
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "slide",
+          "label": "Slide"
+        },
+        {
+          "value": "loop",
+          "label": "Loop"
+        }
+      ],
+      "default": "slide"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
     }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "color",
+          "id": "active-background",
+          "label": "Background color for Active Card",
+          "default": "#F6FFC2"
+        },
+        {
+          "type": "color",
+          "id": "card-background",
+          "label": "Background color for  Card",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "testmonial-text",
+          "label": "Testimonial text",
+          "default": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
+        },
+        {
+          "type": "image_picker",
+          "id": "authour-image",
+          "label": "Authour-image"
+        },
+        {
+          "type": "text",
+          "id": "authour-name",
+          "label": "Author name",
+          "default": "Mr. john d0e"
+        },
+        {
+          "type": "text",
+          "id": "author-title",
+          "label": "Author Title",
+          "default": "clients"
+        },
+        {
+          "type": "image_picker",
+          "id": "main-image",
+          "label": "Active main image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "custom-testimonials",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

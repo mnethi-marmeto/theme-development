@@ -48,9 +48,10 @@
 }
 
 .custom-before-after--heading{
-    font-size: calc(1.15 * 24px);
-    letter-spacing: -0.02em;
-    line-height: calc(1.15*44px);
+    font-weight: 700;
+    font-size: calc(1.15* 42px);
+    letter-spacing: -.02em;
+    line-height: calc(1.15* 44px);
     font-style: normal;
   }
 
@@ -123,7 +124,7 @@
       width: 100%;
     }
     .custom-before-after--heading{
-      font-size: calc(1.15 * 20px);
+      font-size: calc(1.15 * 30px);
       letter-spacing: -0.02em;
       line-height: calc(1.15*50px);
     }

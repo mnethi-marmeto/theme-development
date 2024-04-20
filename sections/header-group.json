@@ -43,7 +43,6 @@
     },
     "header": {
       "type": "header",
-      "disabled": true,
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu",
@@ -62,6 +61,7 @@
     },
     "custom_header_9kGjCk": {
       "type": "custom-header",
+      "disabled": true,
       "settings": {
         "hover_logo_image": "shopify:\/\/shop_images\/logo2x.png",
         "logo_position": "top-center",

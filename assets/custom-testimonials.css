@@ -1,3 +1,21 @@
+.login{
+    text-decoration: none;
+}
+
+.login--container{
+    text-align: center;
+}
+.login--announcemnet{
+    font-weight: bold;
+}
+.login--button{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
 .custom-testimonials--img-container{
     width: 100%;
 }
@@ -109,6 +127,9 @@
     border-radius: 30px;
     width: 100%;
 }
+.custom-testimonials-subscribe .newsletter-form__message{
+    justify-content: center;
+}
 @media screen and (min-width:800px){
     .custom-testimonials--container{
         display: flex;
@@ -151,6 +172,9 @@
     }
     .custom-testimonials-subscribe-button{
         width: 30%;
+    }
+    .custom-testimonials-subscribe .newsletter-form__message{
+        justify-content: center;
     }
 }
 

@@ -331,11 +331,12 @@
         "slide_WeFdgf": {
           "type": "slide",
           "settings": {
-            "product_url": "",
+            "slide_image": "shopify:\/\/shop_images\/p4_300x250_crop_center_ca614fcd-6b79-4973-9752-cb40d17aecb6.jpg",
+            "product_url": "#",
             "rating_range_review": 4.5,
-            "comment": "Amazing",
-            "text_area": "",
-            "author_name": "",
+            "comment": "So Pretty!",
+            "text_area": "“I love all of this collection, bracelets and necklaces.”",
+            "author_name": "GRISELLE",
             "content_position_desktop": "center"
           }
         },
@@ -414,7 +415,7 @@
         "heading_9Mny4N": {
           "type": "heading",
           "settings": {
-            "heading": "<p>THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES<\/p>"
+            "heading": "THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES"
           }
         },
         "text_JNXXjD": {
