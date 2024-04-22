@@ -49,11 +49,11 @@
     justify-content: center;
     text-align: center;
 }
-.custom-rings-product--card-details h4,h2,p{
+.custom-rings-product--card-details .custom-rings-product--vendor,.custom-rings-product--title,.custom-rings-product--price{
     margin: 5px 0;
     padding: 0;
 }
-.custom-rings-product--card-details h2{
+.custom-rings-product--card-details .custom-rings-product--title{
     font-size: 16px;
 }
 .custom-rings-product--animation-container{

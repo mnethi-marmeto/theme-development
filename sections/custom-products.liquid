@@ -50,13 +50,13 @@
                             {%- endif -%}
                             <div class="custom-rings-product--card-details" style="background-color:{{ block.settings.card_color }};">
                                 {%- if product.vendor != blank -%}
-                                    <h4>{{ product.vendor }}</h4>
+                                    <h4 class="custom-rings-product--vendor">{{ product.vendor }}</h4>
                                 {%- endif -%}
                                 {%- if product.title != blank -%}
-                                    <h2>{{ product.title }}</h2>
+                                    <h2 class="custom-rings-product--title">{{ product.title }}</h2>
                                 {%- endif -%}
                                 {%- if product.price != blank -%}
-                                    <p>{{ product.price | money }}</p>
+                                    <p class="custom-rings-product--price">{{ product.price | money }}</p>
                                 {%- endif -%}
                                 <div class="custom-rings-product--animation-container">
                                     <p class="custom-rings-product--available">Available in {{ product.options_by_name['Color'].values.size }} colors</p>

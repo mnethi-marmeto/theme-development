@@ -1,9 +1,9 @@
 <script src="{{ 'practice-featured.js' | asset_url }}" defer></script>
 
-{% render 'custom-product-card',
+{% comment %} {% render 'custom-product-card',
     name : section.settings.name,
     products : section.settings.product_list
-%}
+%} {% endcomment %}
 
 <button onclick="append()">open</button>
 

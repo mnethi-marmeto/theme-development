@@ -369,38 +369,11 @@
         "slide_pEMbUw",
         "slide_6BbQJY"
       ],
+      "disabled": true,
       "settings": {
         "heading_customer_review": "Customer Review",
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "featured_collection_7ymXqm": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "CUSTOMER REVIEWS",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "custom_before_yz9Hdw": {
@@ -476,8 +449,27 @@
         "padding_bottom": 30
       }
     },
+    "custom_blog_list_CndALQ": {
+      "type": "custom-blog-list",
+      "settings": {
+        "heading": "LATEST NEWS",
+        "heading_size": "h1",
+        "paragraph": "Beyond mere adornment, these pieces are made to make you feel good.",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_blog_7gD8VC": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "LATEST NEWS",
         "heading_size": "h1",
@@ -638,48 +630,40 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_9PLwfE": {
-      "type": "multicolumn",
+    "custom_video_image_NHKVeF": {
+      "type": "custom-video-image",
       "blocks": {
-        "column_AeeV3V": {
-          "type": "column",
+        "card_ehMU8n": {
+          "type": "card",
           "settings": {
-            "title": "MADE FOR YOU",
-            "text": "<h2>Timeless Style<\/h2>",
-            "link_label": "Shop now",
-            "link": "#"
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/vp\/56ecdbb8d8cf4950ba3561ad64320a55\/56ecdbb8d8cf4950ba3561ad64320a55.HD-1080p-4.8Mbps-12890938.mp4",
+            "desktop_image": "shopify:\/\/shop_images\/56ecdbb8d8cf4950ba3561ad64320a55.thumbnail.0000000000_1280x_a89d19fe-14b0-4c22-a6c4-e2cd2478f6e5.webp",
+            "caption_text": "MADE FOR YOU",
+            "rich_text": "<p>Timeless Style<\/p>",
+            "button_text": "Shop now",
+            "button_url": ""
           }
         },
-        "column_wAGJr7": {
-          "type": "column",
+        "card_pTByFQ": {
+          "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/footer-img2.jpg",
-            "title": "LATEST TRENDS",
-            "text": "<h2>Unique & Affordable<\/h2>",
-            "link_label": "Shop now",
-            "link": "#"
+            "video_url": "",
+            "desktop_image": "shopify:\/\/shop_images\/footer-img1_610x_crop_center_817352a4-4b4e-4eef-8dca-995816813310.webp",
+            "caption_text": "LATEST TRENDS",
+            "rich_text": "<p>Unique & Affordable<\/p>",
+            "button_text": "Shop now",
+            "button_url": "#"
           }
         }
       },
       "block_order": [
-        "column_AeeV3V",
-        "column_wAGJr7"
+        "card_ehMU8n",
+        "card_pTByFQ"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-5c89f68e-b3dd-4fcf-830b-6c048ae7c624",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "scheme-7edcd8eb-fb41-4340-b59a-07963fe6ffab",
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     },
     "multicolumn_836FRr": {
@@ -742,7 +726,7 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "scheme-5c89f68e-b3dd-4fcf-830b-6c048ae7c624",
+        "color_scheme": "scheme-7edcd8eb-fb41-4340-b59a-07963fe6ffab",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -760,13 +744,13 @@
     "custom_products_VYHxXw",
     "custom_hotspot_JfzDrh",
     "custom_customer_review_rR3pbT",
-    "featured_collection_7ymXqm",
     "custom_before_yz9Hdw",
     "custom_logo_based_slider_UapL86",
+    "custom_blog_list_CndALQ",
     "featured_blog_7gD8VC",
     "multicolumn_nNHBYp",
     "multicolumn_nfKfxw",
-    "multicolumn_9PLwfE",
+    "custom_video_image_NHKVeF",
     "multicolumn_836FRr"
   ]
 }
