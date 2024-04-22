@@ -666,55 +666,52 @@
         "padding_bottom": 30
       }
     },
-    "multicolumn_836FRr": {
-      "type": "multicolumn",
+    "custom_footer_wMkNka": {
+      "type": "custom-footer",
       "blocks": {
-        "column_jFdVXz": {
+        "column_7FAwBd": {
           "type": "column",
           "settings": {
             "title": "Company",
-            "text": "<p><a href=\"#\" title=\"#\">Wholesale<\/a><\/p><p><a href=\"#\" title=\"#\">Become a retailer<\/a><\/p><p><a href=\"#\" title=\"#\">Corporate orders<\/a><\/p><p><a href=\"#\" title=\"#\">Affiliates<\/a><\/p><p><a href=\"#\" title=\"#\">F.A.Q.<\/a><\/p><p><a href=\"#\" title=\"#\">Contact<\/a><\/p>",
+            "text": "<p><a href=\"#\" title=\"#\">Wholesale<\/a><\/p><p><a href=\"https:\/\/b03-kishor-n.myshopify.com\/?#\">Become a retailer<\/a><\/p><p><a href=\"https:\/\/b03-kishor-n.myshopify.com\/?#\">Corporate orders<\/a><\/p><p><a href=\"https:\/\/b03-kishor-n.myshopify.com\/?#\">Affiliates<\/a><\/p><p><a href=\"https:\/\/b03-kishor-n.myshopify.com\/?#\">F.A.Q.<\/a><\/p><p><a href=\"https:\/\/b03-kishor-n.myshopify.com\/?#\">Contact<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_PegxNz": {
+        "column_8TRdCN": {
           "type": "column",
           "settings": {
             "title": "Resources",
-            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">About<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Blog<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Careers<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Find a store<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Press<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Support<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Privacy<\/a><\/p>",
+            "text": "<p><a href=\"#\" title=\"#\">About<\/a><\/p><p><a href=\"#\" title=\"#\">Blog<\/a><\/p><p><a href=\"#\" title=\"#\">Careers<\/a><\/p><p><a href=\"#\" title=\"#\">Find a store<\/a><\/p><p><a href=\"#\" title=\"#\">Press<\/a><\/p><p><a href=\"#\" title=\"#\">Support<\/a><\/p><p><a href=\"#\" title=\"#\">Privacy<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_h3CeQE": {
+        "column_h64B9f": {
           "type": "column",
           "settings": {
             "title": "Support",
-            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Delivery<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Shipping & returns<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">My account<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"#\">Customer service<\/a><\/p>",
+            "text": "<p><a href=\"#\" title=\"#\">Delivery<\/a><\/p><p><a href=\"#\" title=\"#\">Shipping & returns<\/a><\/p><p><a href=\"#\" title=\"#\">My account<\/a><\/p><p><a href=\"#\" title=\"#\">Customer service<\/a><\/p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_3Xfndn": {
+        "column_Lm46am": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo2x_fotter.png",
-            "title": "",
-            "text": "<p>The Perfect Present for Your Partner<\/p>",
+            "image": "shopify:\/\/shop_images\/logo-white_bac07ddb-d848-4240-b717-c345f8b26b1f_1.png",
+            "title": "The Perfect Present for Your Partner",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_jFdVXz",
-        "column_PegxNz",
-        "column_h3CeQE",
-        "column_3Xfndn"
-      ],
-      "custom_css": [
-        "* {text-decoration: none;}"
+        "column_7FAwBd",
+        "column_8TRdCN",
+        "column_h64B9f",
+        "column_Lm46am"
       ],
       "settings": {
         "title": "",
@@ -751,6 +748,6 @@
     "multicolumn_nNHBYp",
     "multicolumn_nfKfxw",
     "custom_video_image_NHKVeF",
-    "multicolumn_836FRr"
+    "custom_footer_wMkNka"
   ]
 }
