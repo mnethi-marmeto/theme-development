@@ -563,71 +563,50 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_nfKfxw": {
-      "type": "multicolumn",
+    "custom_usp_3Xw3bK": {
+      "type": "custom-usp",
       "blocks": {
-        "column_xVXmmy": {
+        "column_CWhYEg": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/free-shipping1.png",
-            "title": "<strong>FREE SHIPPING<\/strong>",
-            "text": "<p>We are happy to offer international shipping for a flat rate of $40.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image_picker": "shopify:\/\/shop_images\/free-shipping1.png",
+            "title": "FREE SHIPPING",
+            "description": "We are happy to offer international shipping for a flat rate of $40."
           }
         },
-        "column_mGaqgV": {
+        "column_Nrwzzb": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gift2.png",
-            "title": "<strong>GIFT PACKAGE<\/strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image_picker": "shopify:\/\/shop_images\/gift2.png",
+            "title": "GIFT PACKAGE",
+            "description": "Pair text with an image to focus on your chosen product."
           }
         },
-        "column_ry3bnV": {
+        "column_cWTAUq": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/returns.png",
-            "title": "<strong>EASY RETURNS<\/strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image_picker": "shopify:\/\/shop_images\/returns.png",
+            "title": "EASY RETURNS",
+            "description": "Pair text with an image to focus on your chosen product."
           }
         },
-        "column_7iVfTr": {
+        "column_iUXaPG": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/certificate.png",
-            "title": "<strong>ONE YEAR WARRANTY<\/strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image_picker": "shopify:\/\/shop_images\/certificate.png",
+            "title": "ONE YEAR WARRANTY",
+            "description": "Pair text with an image to focus on your chosen product."
           }
         }
       },
       "block_order": [
-        "column_xVXmmy",
-        "column_mGaqgV",
-        "column_ry3bnV",
-        "column_7iVfTr"
+        "column_CWhYEg",
+        "column_Nrwzzb",
+        "column_cWTAUq",
+        "column_iUXaPG"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-305c0515-0538-4dfb-92a6-46a72f5a31b7",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": ""
       }
     },
     "custom_video_image_NHKVeF": {
@@ -716,7 +695,7 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_width": "full",
+        "image_width": "half",
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "column_alignment": "left",
@@ -746,7 +725,7 @@
     "custom_blog_list_CndALQ",
     "featured_blog_7gD8VC",
     "multicolumn_nNHBYp",
-    "multicolumn_nfKfxw",
+    "custom_usp_3Xw3bK",
     "custom_video_image_NHKVeF",
     "custom_footer_wMkNka"
   ]
