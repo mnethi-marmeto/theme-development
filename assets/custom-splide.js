@@ -19,3 +19,36 @@ class customSplide extends HTMLElement {
 
 customElements.define("custom-splide", customSplide);
 
+let buttonEl = document.querySelectorAll(".custom-hotspot-slider--card-button")
+
+buttonEl.forEach(button=>{
+    button.addEventListener("click",(event)=>{
+        let val = event.target.dataset.product
+        let formData = {
+            'items': [{
+             'id': val,
+             'quantity': 1
+             }]
+           };
+           fetch(window.Shopify.routes.root + 'cart/add.js', {
+             method: 'POST',
+             headers: {
+               'Content-Type': 'application/json'
+             },
+             body: JSON.stringify(formData)
+           })
+           .then(response => {
+             return response.json();
+           })
+           .then(response => {
+             //Replace the below line with ajax cart open and update code
+            document.location.href = '/cart';
+            let cartEl = document.querySelector("cart-drawer.drawer");
+            cartEl.classList.add("active")
+           })
+           .catch((error) => {
+             console.error('Error:', error);
+           });
+    })
+})
+

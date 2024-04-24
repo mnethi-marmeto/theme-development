@@ -64,7 +64,7 @@
             {%- endif -%}
             {%- for block in section.blocks -%}
                 {% assign product = block.settings.hotspot-product %}
-                    <div class="custom-hotspot-slider--hotspot-{{ forloop.index }}">
+                    <div class="custom-hotspot-slider--hotspot-{{ forloop.index }} custom-hotspot-slider--hotspot">
                         <div class="product-tag-circle-top"></div>
                         <div class="custom-hotspot-slider--card">
                             {%- if product.featured_image != blank -%}
@@ -83,7 +83,7 @@
                                     {%- endif -%}
                                 </div>
                                 {%- if block.settings.add-to-cart -%}
-                                    <button class="custom-hotspot-slider--card-button">Add to bag</button>
+                                    <button class="custom-hotspot-slider--card-button" data-product="{{ product.variants.first.id }}">Add to bag</button>
                                 {%- endif -%}
                             </div>
                         </div>
@@ -93,7 +93,7 @@
         <div class="custom-hotspot-slider--slide-container">
             <custom-splide class="splide" data-options='{{ options }}'>
                 <div class="splide__track">
-                  <ul class="splide__list">
+                  <ul class="splide__list ">
                     {% for product in section.settings.product_list %}
                         <li class="splide__slide">
                             <div class="custom-hotspot-slider--slide">
@@ -102,8 +102,8 @@
                                     <p class="custom-hotspot-slider--slide-vender">{{ product.vendor }}</p>
                                     <p  class="custom-hotspot-slider--slide-title">{{ product.title }}</p>
                                     <div class="custom-hotspot-slider--slide-prices">
-                                        <p class="custom-hotspot-slider--slide-compareprice">{{ product.compare_at_price }}</p>
-                                        <p class="custom-hotspot-slider--slide-price">{{ product.price }}</p>
+                                        <p class="custom-hotspot-slider--slide-compareprice">{{ product.compare_at_price| money }}</p>
+                                        <p class="custom-hotspot-slider--slide-price">{{ product.price| money }}</p>
                                     </div>
                                 </div>
                             </div>

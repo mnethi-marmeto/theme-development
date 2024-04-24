@@ -4,15 +4,12 @@
 }
 .custom-hotspot-slider--hotspot-container{
     position: relative;
-    border-radius: 20% 20% 20px 20px;
 }
 
 .custom-hotspot-slider .custom-hotspot-slider--background-image{
     width: 100%;
-    min-height: 400px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 20% 20% 20px 20px;
+    height: 550px;
+    border-radius: 40px 40px 20px 20px;
 }
 .custom-hotspot-slider .custom-hotspot-slider--card{
     background-color: white;
@@ -21,12 +18,18 @@
     border-radius: 10px;
     padding: 10px;
     opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    width:200px;
+    height:82px
 }
 .product-tag-circle-top:hover{
     transform: scale(1.1);
+    cursor: pointer;
   }
-.product-tag-circle-top:hover~.custom-hotspot-slider--card{
+.custom-hotspot-slider--hotspot:hover .custom-hotspot-slider--card{
     opacity: 1;
+    visibility: unset;
   }
 .custom-hotspot-slider .custom-hotspot-slider--card-image{
     height: 60px;
@@ -36,10 +39,13 @@
 }
 .custom-hotspot-slider--card-info{
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .custom-hotspot-slider .custom-hotspot-slider--card-title{
     margin: 0;
-    font-size: 8px;
+    font-size: 10px;
 }
 .custom-hotspot-slider--card-pricecontainer{
     display: flex;
@@ -47,40 +53,120 @@
 .custom-hotspot-slider--card-compareprice{
     text-decoration: line-through;
     margin: 0;
-    font-size: 8px;
+    font-size: 10px;
 }
 .custom-hotspot-slider--card-price{
     margin: 0;
-    font-size: 8px;
+    font-size: 10px;
 }
 .custom-hotspot-slider--card-button{
     border-radius: 5px;
-    font-size: 8px;
+    font-size: 10px;
     background-color: white;
     color: black; 
     padding: 5px 20px; 
     border: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     margin: 0;
+    cursor: pointer;
 }
 .custom-hotspot-slider--slide{
-
+    border: 1px solid black;
+    border-radius: 7% 7% 20px 20px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+.custom-hotspot-slider--slide-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.custom-hotspot-slider--slide-vender{
+    margin: 0;
+    color: rgb(100, 225, 225);
+}
+.custom-hotspot-slider--slide-title{
+    margin: 0;
+    font-weight: 600;
 }
 .custom-hotspot-slider--slide-image{
-    height: 400px;
+    height: 250px;
     width: 100%;
+    border-radius: 7% 7% 20px 20px;
 }
-@media screen  and (min-width:768px){
+.custom-hotspot-slider--slide-prices{
+    display: flex;
+    justify-content: center;
+}
+.custom-hotspot-slider--slide-compareprice{
+    margin: 0;
+}
+.custom-hotspot-slider--slide-price{
+    margin: 0;
+}
+.custom-hotspot-slider .splide__arrow{
+    height: 38px;
+    width: 38px;
+}
+.custom-hotspot-slider .splide__arrow--prev{
+    left: 95%;
+    border-radius: 0 0 50% 50%;
+}
+.custom-hotspot-slider .splide__arrow--next{
+    right: -8%;
+    top: 40%;
+    border-radius: 50% 50% 0 0;
+}
+.custom-hotspot-slider--slide-container{
+    height: 400px;
+    width: 300px;
+}
+@media screen  and (min-width:800px){
     .custom-hotspot-slider--container{
         display: flex;
         width: 100%;
+        position: relative;
     }
     .custom-hotspot-slider--hotspot-container{
-        width: 80%;
+        width: 75vw;
     }
     .custom-hotspot-slider--slide-container{
-        width: 20%;
+        position: absolute;
+        right: 0;
+        top: 10%;
+    }
+    .custom-hotspot-slider--slide-image{
+        height: 280px;
     }
 }
+/* @media screen  and (min-width:936px){
+    .custom-hotspot-slider--hotspot-container{
+        width: 70%;
+    }
+    .custom-hotspot-slider--slide-container{
+        width: 30%;
+        position: absolute;
+        right: 10%;
+        top: 5%;
+    }
+    .custom-hotspot-slider--slide-image{
+        height: 220px;
+    }
+}
+@media screen  and (min-width:1248px){
+    .custom-hotspot-slider--hotspot-container{
+        width: 75%;
+    }
+    .custom-hotspot-slider--slide-container{
+        width: 25%;
+        position: absolute;
+        right: 10%;
+        top: 10%;
+    }
+    .custom-hotspot-slider--slide-image{
+        height: 300px;
+    }
+} */
   
   
