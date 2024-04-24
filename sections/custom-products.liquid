@@ -1,7 +1,7 @@
 {{ 'custom-product.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'custom-web-product.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
-<script src="{{ 'custom-product.js' | asset_url }}" defer></script>
-
+{% comment %} <script src="{{ 'custom-product.js' | asset_url }}" defer></script> {% endcomment %}
 
 {% style %}
     .custom-product-{{ section.id }}{
@@ -28,49 +28,13 @@
         <div>
             <div class="custom-rings-product--all-products">
                 {%- for block in section.blocks -%}
-                  {%- assign product = block.settings.product -%}
-                    {%- if product != blank -%}
-                        <div class="custom-rings-product--each-product" id="eachProduct">
-                            {%- if product.featured_image != blank -%}
-                                <a href="{{ product.url }}">
-                                    <div class="custom-rings-product--image-container" id="imageContainer">
-                                        <div>
-                                            <img src="{{ product.images[1] | image_url}}" height="auto" width="auto" class="custom-rings-product--first-image" id="firstImage"/>
-                                            {% if product.images.size > 1 %}
-                                                <img src="{{ product.images[0] | image_url }}" height="" width="" alt="{{ product.title }}" class="custom-rings-product--second-image" id="secondImage">
-                                            {% endif %}
-                                        </div>
-                                        {%- if block.settings.Quick_view_button -%}
-                                            <div class="custom-rings-product--view-container">
-                                                <button>Quick view</button>
-                                            </div>
-                                        {%- endif -%}
-                                    </div>
-                                </a>
-                            {%- endif -%}
-                            <div class="custom-rings-product--card-details" style="background-color:{{ block.settings.card_color }};">
-                                {%- if product.vendor != blank -%}
-                                    <h4 class="custom-rings-product--vendor">{{ product.vendor }}</h4>
-                                {%- endif -%}
-                                {%- if product.title != blank -%}
-                                    <h2 class="custom-rings-product--title">{{ product.title }}</h2>
-                                {%- endif -%}
-                                {%- if product.price != blank -%}
-                                    <p class="custom-rings-product--price">{{ product.price | money }}</p>
-                                {%- endif -%}
-                                <div class="custom-rings-product--animation-container">
-                                    <p class="custom-rings-product--available">Available in {{ product.options_by_name['Color'].values.size }} colors</p>
-                                    <div class="custom-rings-product--colors-container">
-                                        {% for eachcolor in product.options_by_name['Color'].values %}
-                                            {% assign val = forloop.index %}
-                                            <div class="custom-rings-product--outer-radio">
-                                                <div class="custom-rings-product--radio" style="background-color:{{eachcolor}};" data-images="{{ product.images[val].src | image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
-                                            </div>
-                                        {% endfor %}
-                                    </div>
-                                </div>    
-                            </div>
-                        </div>
+                  {%- assign each_product = block.settings.product -%}
+                    {%- if each_product != blank -%}
+                        {% render 'custom-web-product',
+                            product : each_product,
+                            Quick_view_button : block.settings.Quick_view_button,
+                            card_color : block.settings.card_color
+                         %}
                     {%- endif -%}
                 {%- endfor -%}
             </div>

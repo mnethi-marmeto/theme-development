@@ -41,9 +41,3 @@ class SplideComponent extends HTMLElement {
 
 customElements.define("splide-component", SplideComponent);
 
-
-  
-  
-  
-  
-  

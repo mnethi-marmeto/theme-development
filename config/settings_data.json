@@ -130,6 +130,39 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "custom-swatches": {
+        "type": "custom-swatches",
+        "blocks": {
+          "color_settings_9iTHn4": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Silver",
+              "color_code": "#c0c0c0"
+            }
+          },
+          "color_settings_4XQtUf": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Gold",
+              "color_code": "#ffd700"
+            }
+          },
+          "color_settings_HJ8RrH": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Rose",
+              "color_code": "#caa1a3"
+            }
+          }
+        },
+        "block_order": [
+          "color_settings_9iTHn4",
+          "color_settings_4XQtUf",
+          "color_settings_HJ8RrH"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -228,10 +261,10 @@
         "settings": {
           "background": "#3b5342",
           "background_gradient": "",
-          "text": "#fff",
+          "text": "#ffffff",
           "button": "#121212",
           "button_label": "#ffffff",
-          "secondary_button_label": "#fff",
+          "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
       }
