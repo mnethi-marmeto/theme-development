@@ -56,7 +56,6 @@ if (!customElements.get('custom-web-product')) {
             this.getUpdatedCard();
           }
           getUpdatedCard() {
-          //   const url = `/products/${this.productHandle}?variant=${this.currentVariant.id}&section_id=custom-product-card`;
             const url = `/products/${this.productHandle}?view=card&variant=${this.currentVariant.id}`;
             console.log(url);
             fetch(url)

@@ -34,7 +34,7 @@
                         {%- for value in product_option.values -%}
                             <input
                                 type="radio"
-                                id="{{ product_option.position | append : value }}"
+                                id="{{ product.id | append : value }}"
                                 name="{{ product_option.name }}"
                                 value="{{ value | escape }}"
                                 {% if product_option.selected_value == value %}checked{% endif %}
@@ -42,7 +42,7 @@
                                   class="disabled"
                                 {% endif %}
                                 >
-                              <label for="{{ product_option.position | append : value }}" data-value="{{ value }}">
+                              <label for="{{ product.id | append : value }}" data-value="{{ value }}">
                                 
                               </label>
                         {%- endfor -%}
