@@ -73,6 +73,13 @@
 @media screen  and (min-width:768px){
     .custom-hotspot-slider--container{
         display: flex;
+        width: 100%;
+    }
+    .custom-hotspot-slider--hotspot-container{
+        width: 80%;
+    }
+    .custom-hotspot-slider--slide-container{
+        width: 20%;
     }
 }
   
