@@ -43,6 +43,19 @@
       top: -10px;
   }
   {% endfor %}
+  {% for product in section.settings.product_list %}
+  .rating-{{ forloop.index }}:before {
+    content: "\2605\2605\2605\2605\2605";
+    background: linear-gradient(90deg, #FFAA47 calc({{product.metafields.custom.customer_rating}}/5 * 100%), #E1E1E1 calc({{product.metafields.custom.customer_rating}}/5 * 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    .custom-hotspot-slider--slide .rating-{{ forloop.index }} {
+        font-size: 2rem;
+        display:block;
+    }
+    {% endfor %}
 {%- endstyle -%} 
 
 {% capture options %}  
@@ -76,10 +89,10 @@
                                 {%- endif -%}
                                 <div class="custom-hotspot-slider--card-pricecontainer">
                                     {%- if product.compare_at_price != blank -%}
-                                        <p class="custom-hotspot-slider--card-compareprice">{{ product.compare_at_price | money }}</p>
+                                        <p class="custom-hotspot-slider--card-compareprice">${{product.compare_at_price | money_without_currency }}</p>
                                     {%- endif -%}
                                     {%- if product.price != blank -%}
-                                        <p class="custom-hotspot-slider--card-price">{{ product.price | money}}</p>
+                                        <p class="custom-hotspot-slider--card-price">${{product.price | money_without_currency }}</p>
                                     {%- endif -%}
                                 </div>
                                 {%- if block.settings.add-to-cart -%}
@@ -101,9 +114,10 @@
                                 <div class="custom-hotspot-slider--slide-info">
                                     <p class="custom-hotspot-slider--slide-vender">{{ product.vendor }}</p>
                                     <p  class="custom-hotspot-slider--slide-title">{{ product.title }}</p>
+                                    <div class="rating-{{ forloop.index }}"></div>
                                     <div class="custom-hotspot-slider--slide-prices">
-                                        <p class="custom-hotspot-slider--slide-compareprice">{{ product.compare_at_price| money }}</p>
-                                        <p class="custom-hotspot-slider--slide-price">{{ product.price| money }}</p>
+                                        <p class="custom-hotspot-slider--slide-compareprice">{{product.compare_at_price | money_without_currency }}</p>
+                                        <p class="custom-hotspot-slider--slide-price">${{product.price | money_without_currency }}</p>
                                     </div>
                                 </div>
                             </div>
