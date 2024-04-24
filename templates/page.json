@@ -96,67 +96,57 @@
         "padding_bottom": 28
       }
     },
-    "custom_testimonials_4MqpBQ": {
-      "type": "custom-testimonials",
+    "custom_hotspot_slider_t7CaeP": {
+      "type": "custom-hotspot-slider",
       "blocks": {
-        "slide_RAgk3K": {
-          "type": "slide",
+        "hotspot_G4HjrV": {
+          "type": "hotspot",
           "settings": {
-            "active-background": "#f6ffc2",
-            "card-background": "#ffffff",
-            "testmonial-text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
-            "authour-image": "shopify:\/\/shop_images\/Rectangle_8.png",
-            "authour-name": "Mr. john doe",
-            "author-title": "clients",
-            "main-image": "shopify:\/\/shop_images\/quinoa-mushrooms-lettuce-red-cabbage-spinach-cucumbers-tomatoes-buddha-bowl_127032-1989.jpg"
+            "hotspot-product": "high-performance-snow-goggles",
+            "x-axis": 36,
+            "y-axis": 19,
+            "add-to-cart": true
           }
         },
-        "slide_jc8WKJ": {
-          "type": "slide",
+        "hotspot_7Uhy4q": {
+          "type": "hotspot",
           "settings": {
-            "active-background": "#f6ffc2",
-            "card-background": "#ffffff",
-            "testmonial-text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
-            "authour-image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
-            "authour-name": "Mr. john doe",
-            "author-title": "clients",
-            "main-image": "shopify:\/\/shop_images\/top-view-mix-vegetables-bowl-with-chicken-drumstick_23-2148369699.jpg"
+            "hotspot-product": "asymmetrical-bits-hoop-earrings-in-green",
+            "x-axis": 30,
+            "y-axis": 33,
+            "add-to-cart": true
           }
         },
-        "slide_EYgdy7": {
-          "type": "slide",
+        "hotspot_p6GxNC": {
+          "type": "hotspot",
           "settings": {
-            "active-background": "#f6ffc2",
-            "card-background": "#ffffff",
-            "testmonial-text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
-            "authour-image": "shopify:\/\/shop_images\/Rectangle_8.png",
-            "authour-name": "Mr. john doe",
-            "author-title": "clients",
-            "main-image": "shopify:\/\/shop_images\/photo-1552611052-d59a0d9741bc.jpg"
+            "hotspot-product": "",
+            "x-axis": 69,
+            "y-axis": 56,
+            "add-to-cart": true
           }
         }
       },
       "block_order": [
-        "slide_RAgk3K",
-        "slide_jc8WKJ",
-        "slide_EYgdy7"
+        "hotspot_G4HjrV",
+        "hotspot_7Uhy4q",
+        "hotspot_p6GxNC"
       ],
       "settings": {
-        "background-color": "#ffffff",
-        "heading": "Testimonials",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "auto_play": false,
-        "show_pagination": true,
-        "show_arrows": false,
-        "auto_play_duration": 2,
-        "slide_animation": "slide",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "heading": "Shop the look",
+        "product_list": [
+          "14k-gold-mini-alidia-cubic-zirconia-ring",
+          "18k-gold-mel-ring-in-green-and-red",
+          "24k-gold-plated-double-half-circle-ring"
+        ],
+        "background-image": "shopify:\/\/shop_images\/image_3.png",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     }
   },
   "order": [
     "main",
-    "custom_testimonials_4MqpBQ"
+    "custom_hotspot_slider_t7CaeP"
   ]
 }
