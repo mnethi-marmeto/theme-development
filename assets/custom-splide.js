@@ -43,8 +43,6 @@ buttonEl.forEach(button=>{
            .then(response => {
              //Replace the below line with ajax cart open and update code
             document.location.href = '/cart';
-            let cartEl = document.querySelector("cart-drawer.drawer");
-            cartEl.classList.add("active")
            })
            .catch((error) => {
              console.error('Error:', error);
