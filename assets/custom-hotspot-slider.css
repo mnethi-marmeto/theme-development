@@ -72,7 +72,6 @@
     cursor: pointer;
 }
 .custom-hotspot-slider--slide{
-    border: 1px solid black;
     border-radius: 7% 7% 20px 20px;
     padding: 15px;
     background-color: #ffffff;
@@ -111,19 +110,61 @@
 .custom-hotspot-slider .splide__arrow{
     height: 38px;
     width: 38px;
+    border: 1px solid black;
+    opacity: 1;
 }
 .custom-hotspot-slider .splide__arrow--prev{
-    left: 95%;
+    left: 94%;
     border-radius: 0 0 50% 50%;
 }
+button.splide__arrow.splide__arrow--prev[disabled] {
+        background: white; 
+        opacity: 0.6;
+        cursor: not-allowed;
+}
+button.splide__arrow.splide__arrow--next[disabled] {
+        background: white; 
+        opacity: 0.6;
+        cursor: not-allowed;
+
+}
 .custom-hotspot-slider .splide__arrow--next{
-    right: -8%;
+    right: -7%;
     top: 40%;
     border-radius: 50% 50% 0 0;
 }
+
 .custom-hotspot-slider--slide-container{
-    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+.custom-hotspot-slider--slide-wrapper{
+    height: 420px;
     width: 300px;
+    border: 1px solid black;
+    border-radius: 7% 7% 20px 20px;
+}
+.custom-hotspot-slider .product-tag-circle-top{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #FFFFFF;
+    z-index: 9;
+    border-radius: 100%;
+    display: block;
+}
+
+.custom-hotspot-slider .product-tag-circle-top:before {
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    transition: all .4s;
+    border: 15px solid #ffffff80;
+    width: 36px;
+    height: 36px;
+    left: -10px;
+    z-index: 8;
+    top: -10px;
 }
 @media screen  and (min-width:800px){
     .custom-hotspot-slider--container{
@@ -132,7 +173,7 @@
         position: relative;
     }
     .custom-hotspot-slider--hotspot-container{
-        width: 75vw;
+        width: 70vw;
     }
     .custom-hotspot-slider--slide-container{
         position: absolute;
@@ -143,33 +184,6 @@
         height: 280px;
     }
 }
-/* @media screen  and (min-width:936px){
-    .custom-hotspot-slider--hotspot-container{
-        width: 70%;
-    }
-    .custom-hotspot-slider--slide-container{
-        width: 30%;
-        position: absolute;
-        right: 10%;
-        top: 5%;
-    }
-    .custom-hotspot-slider--slide-image{
-        height: 220px;
-    }
-}
-@media screen  and (min-width:1248px){
-    .custom-hotspot-slider--hotspot-container{
-        width: 75%;
-    }
-    .custom-hotspot-slider--slide-container{
-        width: 25%;
-        position: absolute;
-        right: 10%;
-        top: 10%;
-    }
-    .custom-hotspot-slider--slide-image{
-        height: 300px;
-    }
-} */
+
   
   

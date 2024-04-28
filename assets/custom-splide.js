@@ -41,7 +41,6 @@ buttonEl.forEach(button=>{
              return response.json();
            })
            .then(response => {
-             //Replace the below line with ajax cart open and update code
             document.location.href = '/cart';
            })
            .catch((error) => {

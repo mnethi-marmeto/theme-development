@@ -20,28 +20,6 @@
         top: {{block.settings.y-axis}}%;
         left: {{block.settings.x-axis}}%;
     }
-  .custom-hotspot-slider .product-tag-circle-top{
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      background: #FFFFFF;
-      z-index: 9;
-      border-radius: 100%;
-      display: block;
-  }
-  
-.custom-hotspot-slider .product-tag-circle-top:before {
-      position: absolute;
-      content: "";
-      border-radius: 100%;
-      transition: all .4s;
-      border: 15px solid #ffffff80;
-      width: 36px;
-      height: 36px;
-      left: -10px;
-      z-index: 8;
-      top: -10px;
-  }
   {% endfor %}
   {% for product in section.settings.product_list %}
   .rating-{{ forloop.index }}:before {
@@ -62,7 +40,8 @@
 {
     "perPage": 1,
     "pagination":false,
-    "perMove": 1
+    "perMove": 1,
+    "type":"fade"
 }
 {% endcapture %}
 
@@ -104,28 +83,30 @@
             {%- endfor -%}
         </div>
         <div class="custom-hotspot-slider--slide-container">
-            <custom-splide class="splide" data-options='{{ options }}'>
-                <div class="splide__track">
-                  <ul class="splide__list ">
-                    {% for product in section.settings.product_list %}
-                        <li class="splide__slide">
-                            <div class="custom-hotspot-slider--slide">
-                                <img src="{{ product.featured_image | image_url }}" height="auto" width="auto" class="custom-hotspot-slider--slide-image"/>
-                                <div class="custom-hotspot-slider--slide-info">
-                                    <p class="custom-hotspot-slider--slide-vender">{{ product.vendor }}</p>
-                                    <p  class="custom-hotspot-slider--slide-title">{{ product.title }}</p>
-                                    <div class="rating-{{ forloop.index }}"></div>
-                                    <div class="custom-hotspot-slider--slide-prices">
-                                        <p class="custom-hotspot-slider--slide-compareprice">{{product.compare_at_price | money_without_currency }}</p>
-                                        <p class="custom-hotspot-slider--slide-price">${{product.price | money_without_currency }}</p>
+            <div class="custom-hotspot-slider--slide-wrapper">
+                <custom-splide class="splide" data-options='{{ options }}'>
+                    <div class="splide__track">
+                      <ul class="splide__list ">
+                        {% for product in section.settings.product_list %}
+                            <li class="splide__slide">
+                                <div class="custom-hotspot-slider--slide">
+                                    <img src="{{ product.featured_image | image_url }}" height="auto" width="auto" class="custom-hotspot-slider--slide-image"/>
+                                    <div class="custom-hotspot-slider--slide-info">
+                                        <p class="custom-hotspot-slider--slide-vender">{{ product.vendor }}</p>
+                                        <p  class="custom-hotspot-slider--slide-title">{{ product.title }}</p>
+                                        <div class="rating-{{ forloop.index }}"></div>
+                                        <div class="custom-hotspot-slider--slide-prices">
+                                            <p class="custom-hotspot-slider--slide-compareprice">{{product.compare_at_price | money_without_currency }}</p>
+                                            <p class="custom-hotspot-slider--slide-price">${{product.price | money_without_currency }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-              </custom-splide>
+                            </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                </custom-splide>
+            </div>
         </div>
     </div>
 </div>
