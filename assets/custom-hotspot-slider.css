@@ -139,7 +139,7 @@ button.splide__arrow.splide__arrow--next[disabled] {
     justify-content: center;
 }
 .custom-hotspot-slider--slide-wrapper{
-    height: 420px;
+    height: 100%;
     width: 300px;
     border: 1px solid black;
     border-radius: 7% 7% 20px 20px;
