@@ -10,15 +10,15 @@
                             <img src="{{ product.images[1] | image_url }}" height="" width="" alt="{{ product.title }}" class="custom-rings-product--second-image" id="secondImage">
                         {%- endif -%}
                     </div>
-                    {%- if Quick_view_button -%}
+                    {% comment %} {%- if Quick_view_button -%} {% endcomment %}
                         <div class="custom-rings-product--view-container">
                             <button>Quick view</button>
                         </div>
-                    {%- endif -%}
+                    {% comment %} {%- endif -%} {% endcomment %}
                 </div>
             </a>
         {%- endif -%}
-        <div class="custom-rings-product--card-details" style="background-color:{{ card_color }};">
+        <div class="custom-rings-product--card-details" >
             {%- if product.vendor != blank -%}
                 <h4 class="custom-rings-product--vendor">{{ product.vendor }}</h4>
             {%- endif -%}
@@ -33,19 +33,19 @@
                 {%- for product_option in product.options_with_values -%}
                     {%- if product_option.name == "Color" -%}
                         {%- for value in product_option.values -%}
-                            <input
-                                type="radio"
-                                id="{{ product_option.position | append : value }}"
-                                name="{{ product_option.name }}"
-                                value="{{ value | escape }}"
-                                {% if product_option.selected_value == value %}checked{% endif %}
-                                {% if option_disabled %}
-                                  class="disabled"
-                                {% endif %}
-                                >
-                              <label for="{{ product_option.position | append : value }}" data-value="{{ value }}">
-                                
-                              </label>
+                            <div {% if product_option.selected_value == value %}
+                                style="border:1px solid black" {% endif %} class="custom-rings-product--selected-border">
+                                <input
+                                    type="radio"
+                                    id="{{ product.id | append : value }}"
+                                    name="{{ product_option.name }}"
+                                    value="{{ value.variant.id }}"
+                                    {% if product_option.selected_value == value %}checked{% endif %}
+                                    >
+                                  <label for="{{ product.id | append : value }}" data-value="{{ value }}"  >
+                                  
+                                  </label>
+                               </div>
                         {%- endfor -%}
                     {%- endif -%}
                 {%- endfor -%}

@@ -32,19 +32,19 @@
                 {%- for product_option in product.options_with_values -%}
                     {%- if product_option.name == "Color" -%}
                         {%- for value in product_option.values -%}
+                           <div {% if product_option.selected_value == value %}
+                            style="border:1px solid black" {% endif %} class="custom-rings-product--selected-border">
                             <input
                                 type="radio"
                                 id="{{ product.id | append : value }}"
                                 name="{{ product_option.name }}"
-                                value="{{ value | escape }}"
+                                value="{{ value.variant.id }}"
                                 {% if product_option.selected_value == value %}checked{% endif %}
-                                {% if option_disabled %}
-                                  class="disabled"
-                                {% endif %}
                                 >
-                              <label for="{{ product.id | append : value }}" data-value="{{ value }}">
-                                
+                              <label for="{{ product.id | append : value }}" data-value="{{ value }}"  >
+                              
                               </label>
+                           </div>
                         {%- endfor -%}
                     {%- endif -%}
                 {%- endfor -%}

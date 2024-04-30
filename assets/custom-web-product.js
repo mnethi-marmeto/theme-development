@@ -7,7 +7,7 @@ if (!customElements.get('custom-web-product')) {
             if (this.querySelector("script")) {
                 this.variantData = JSON.parse(this.querySelector("script").textContent);
               }
-            this.hoverImage();
+            // this.hoverImage();
             this.addEventListener('change', () => {
                 this.onOptionChange()
             })
@@ -32,31 +32,26 @@ if (!customElements.get('custom-web-product')) {
             });
         }
 
-        variantChange(){
-            console.log(this.querySelector('input[type="radio"]:checked').value)
-        }
+        // variantChange(){
+        //     console.log(this.querySelector('input[type="radio"]:checked').value)
+        // }
         
         onOptionChange() {
-            // console.log("clicked");
-            // console.log("product-handle", this.productHandle);
-            // console.log("variant data",this.variantData);
-            this.selectedOptions = Array.from(
-              this.querySelectorAll('input[type="radio"]:checked'),
-              (input) => input.value
-            );
-            console.log("selectedoption",this.selectedOptions)
-
-            this.currentVariant = this.variantData.find((variant) => {
-                return variant.options.some((option, index) => {
-                    return this.selectedOptions[index] === option;
-                });
-            });
-            // console.log("variantdata", this.variantData);
-            // console.log("current variant", this.currentVariant);
+            this.selectedId = this.querySelector("input[type='radio']:checked").value
+            // this.selectedOptions = Array.from(
+            //   this.querySelectorAll('input[type="radio"]:checked'),
+            //   (input) => input.value
+            // );
+            
+            // this.currentVariant = this.variantData.find((variant) => {
+            //     return variant.options.some((option, index) => {
+            //         return this.selectedOptions[index] === option;
+            //     });
+            // });
             this.getUpdatedCard();
           }
           getUpdatedCard() {
-            const url = `/products/${this.productHandle}?view=card&variant=${this.currentVariant.id}`;
+            const url = `/products/${this.productHandle}?view=card&variant=${this.selectedId}`;
             console.log(url);
             fetch(url)
               .then((response) => response.text())
