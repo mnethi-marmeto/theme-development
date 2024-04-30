@@ -77,6 +77,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-color: #FCF9F6;
 }
 .custom-rings-product--card-details .custom-rings-product--vendor,.custom-rings-product--title,.custom-rings-product--price{
     margin: 5px 0;

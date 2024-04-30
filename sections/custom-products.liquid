@@ -32,9 +32,7 @@
                   {%- assign each_product = block.settings.product -%}
                     {%- if each_product != blank -%}
                         {% render 'custom-web-product',
-                            product : each_product,
-                            Quick_view_button : block.settings.Quick_view_button,
-                            card_color : block.settings.card_color
+                            product : each_product
                          %}
                     {%- endif -%}
                 {%- endfor -%}

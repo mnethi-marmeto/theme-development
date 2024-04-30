@@ -1,5 +1,10 @@
 {
   "sections": {
+    "custom_breadcrumbs_Lw8jzN": {
+      "type": "custom-breadcrumbs",
+      "settings": {
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -14,7 +19,7 @@
         "products_per_page": 16,
         "columns_desktop": 3,
         "color_scheme": "scheme-1",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": true,
@@ -22,7 +27,7 @@
         "enable_quick_add": false,
         "enable_filtering": true,
         "filter_type": "drawer",
-        "enable_sorting": false,
+        "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
@@ -30,6 +35,7 @@
     }
   },
   "order": [
+    "custom_breadcrumbs_Lw8jzN",
     "banner",
     "product-grid"
   ]

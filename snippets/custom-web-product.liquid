@@ -9,15 +9,13 @@
                             <img src="{{ product.images[1] | image_url }}" height="" width="" alt="{{ product.title }}" class="custom-rings-product--second-image" id="secondImage">
                         {%- endif -%}
                     </div>
-                    {%- if Quick_view_button -%}
                         <div class="custom-rings-product--view-container">
                             <button>Quick view</button>
                         </div>
-                    {%- endif -%}
                 </div>
             </a>
         {%- endif -%}
-        <div class="custom-rings-product--card-details" style="background-color:{{ card_color }};">
+        <div class="custom-rings-product--card-details">
             {%- if product.vendor != blank -%}
                 <h4 class="custom-rings-product--vendor">{{ product.vendor }}</h4>
             {%- endif -%}
