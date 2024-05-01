@@ -421,7 +421,7 @@ class MenuDrawer extends HTMLElement {
 
     this.mainDetailsToggle.classList.remove('menu-opening');
     this.mainDetailsToggle.querySelectorAll('details').forEach((details) => {
-      details.removeAttribute('open');
+      // details.removeAttribute('open');
       details.classList.remove('menu-opening');
     });
     this.mainDetailsToggle.querySelectorAll('.submenu-open').forEach((submenu) => {
