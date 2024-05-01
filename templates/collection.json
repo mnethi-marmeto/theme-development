@@ -32,11 +32,60 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_scrool_text_eMyWqa": {
+      "type": "custom-scrool-text",
+      "blocks": {
+        "block_k8qHdw": {
+          "type": "block",
+          "settings": {
+            "text": "UNIQUE & AFFORDABLE",
+            "checkbox": false
+          }
+        },
+        "block_tmEtYm": {
+          "type": "block",
+          "settings": {
+            "text": "A PERSONAL TOUCH",
+            "checkbox": true
+          }
+        },
+        "block_NjHzpY": {
+          "type": "block",
+          "settings": {
+            "text": "DIAMONDS ARE FOREVER",
+            "checkbox": false
+          }
+        },
+        "block_rfCib8": {
+          "type": "block",
+          "settings": {
+            "text": "TIMELESS STYLE",
+            "checkbox": true
+          }
+        }
+      },
+      "block_order": [
+        "block_k8qHdw",
+        "block_tmEtYm",
+        "block_NjHzpY",
+        "block_rfCib8"
+      ],
+      "settings": {
+        "bg_color": "#7d5c70",
+        "padding": 20,
+        "scroll_time": "50",
+        "font_color": "#ecdbc3",
+        "font_size": 60,
+        "pause_text": "initial",
+        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_66bd8fb6-0d75-42b3-8b96-2b0c0ca18470.png"
+      }
     }
   },
   "order": [
     "custom_breadcrumbs_Lw8jzN",
     "banner",
-    "product-grid"
+    "product-grid",
+    "custom_scrool_text_eMyWqa"
   ]
 }
