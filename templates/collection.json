@@ -19,7 +19,7 @@
         "products_per_page": 16,
         "columns_desktop": 3,
         "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": true,
@@ -30,7 +30,12 @@
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "image_select": "shopify:\/\/shop_images\/download.webp",
+        "imageHeading": "SALE OFF",
+        "imageDescription": "<p>Gold and crystal chained heart stud and ear cuff<\/p>",
+        "imageButton": "Shop Sale",
+        "url": ""
       }
     },
     "custom_scrool_text_eMyWqa": {
@@ -80,12 +85,55 @@
         "pause_text": "initial",
         "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_66bd8fb6-0d75-42b3-8b96-2b0c0ca18470.png"
       }
+    },
+    "rich_text_ggJfRg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MpaaDz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>USE IT TO ADD SEO TEXT<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_8e6THz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Due to high demand, occasionally some of our products do go out of stock. We are constantly monitoring our stock levels, and we usually expect to replenish any product line within a couple of weeks. If you have placed a pre-order for an item that is out of stock and it looks like it will take longer than expected to get it to you.<\/p>"
+          }
+        },
+        "button_mnUmGk": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MpaaDz",
+        "text_8e6THz",
+        "button_mnUmGk"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "custom_breadcrumbs_Lw8jzN",
     "banner",
     "product-grid",
-    "custom_scrool_text_eMyWqa"
+    "custom_scrool_text_eMyWqa",
+    "rich_text_ggJfRg"
   ]
 }

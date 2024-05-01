@@ -1,5 +1,10 @@
 {
   "sections": {
+    "custom_breadcrumbs_XQA8i9": {
+      "type": "custom-breadcrumbs",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -77,6 +82,283 @@
         "padding_bottom": 12
       }
     },
+    "multicolumn_PCntDQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_aQ49ep": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_879f82a8-1b82-4455-a0b6-cfab0e43bf63.webp",
+            "title": "<strong>EASY RETURNS<\/strong>",
+            "text": "<p>Research your appliances and language capabilities to be sure the voice assistant you choose works with your household’s needs.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FVdxmk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img33_814x_crop_center_9b796e92-afaf-4744-86df-fe935ced7943.webp",
+            "title": "<strong>HANDMADE IN LONDON<\/strong>",
+            "text": "<p>Stay connected to your community with real-time crime and safety alerts from your neighbors and local public safety agencies.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Njc8G4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img32_814x_crop_center_2e0cea33-dd89-46f0-9ef6-30ca77430d4b.webp",
+            "title": "<strong>FINANCING OPTIONS<\/strong>",
+            "text": "<p>Keeping up with the devices connected to your network has never been easier. Invite guests or view and manage connected devices with just a few clicks.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_aQ49ep",
+        "column_FVdxmk",
+        "column_Njc8G4"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_UDWKtU": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_gQNg7j": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_WJpYUz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>THERE IS NO BETTER TIME TO BE YOUR BEST THAN NOW<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_pjq77N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_XCbicG": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_gQNg7j",
+        "heading_WJpYUz",
+        "text_pjq77N",
+        "button_XCbicG"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/download_70e25955-d3e0-4bfc-a8a9-b1ef8f17594d.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_scrool_text_LiJpke": {
+      "type": "custom-scrool-text",
+      "blocks": {
+        "block_ncXCXf": {
+          "type": "block",
+          "settings": {
+            "text": "THE FINEST GEMSTONES",
+            "checkbox": false
+          }
+        },
+        "block_DbHaW4": {
+          "type": "block",
+          "settings": {
+            "text": "YOUR STYLE, OUR DESIGN",
+            "checkbox": false
+          }
+        },
+        "block_cHVmbW": {
+          "type": "block",
+          "settings": {
+            "text": "ROMANCE IS PRICELESS",
+            "checkbox": false
+          }
+        }
+      },
+      "block_order": [
+        "block_ncXCXf",
+        "block_DbHaW4",
+        "block_cHVmbW"
+      ],
+      "custom_css": [
+        "{transform: rotate(2deg); margin: 20px 0;}"
+      ],
+      "settings": {
+        "bg_color": "#e9f1eb",
+        "padding": 34,
+        "scroll_time": "50",
+        "font_color": "#263d2d",
+        "font_size": 40,
+        "pause_text": "initial",
+        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_66bd8fb6-0d75-42b3-8b96-2b0c0ca18470.png"
+      }
+    },
+    "rich_text_dFCyJb": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_6jBchU": {
+          "type": "caption",
+          "settings": {
+            "caption": "Custom Design",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
+        },
+        "heading_K4tED8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>JEWELRY IS THE COMPANION OF LOVE✨<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_hDmKk3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For women, jewelry is often seen as a way to express their personal style and add a touch of glamour to their outfit. Popular jewelry styles for women include delicate necklaces, statement earrings, and stackable bracelets.<\/p>"
+          }
+        },
+        "button_9jPwT8": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6jBchU",
+        "heading_K4tED8",
+        "text_hDmKk3",
+        "button_9jPwT8"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "video_f6DeDq": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/5915fba7e49e419886a3689ac1cdd535.HD-1080p-4.8Mbps-12891231.mp4",
+        "video_url": "",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_RiEhyi": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_tQqD3n": {
+          "type": "caption",
+          "settings": {
+            "caption": "Self Expression",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        },
+        "heading_F3C9TW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>DISCOVER THE PERFECT ACCESSORY FOR YOUR STYLE<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_tpYe4r": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_RDbNfE": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_tQqD3n",
+        "heading_F3C9TW",
+        "text_tpYe4r",
+        "button_RDbNfE"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/download_bc459994-1dd8-41d4-af38-6f15278c79c8.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e08c588e-a77d-4f39-ae18-ce9a700d68e9",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -97,7 +379,14 @@
     }
   },
   "order": [
+    "custom_breadcrumbs_XQA8i9",
     "main",
+    "multicolumn_PCntDQ",
+    "image_with_text_UDWKtU",
+    "custom_scrool_text_LiJpke",
+    "rich_text_dFCyJb",
+    "video_f6DeDq",
+    "image_with_text_RiEhyi",
     "related-products"
   ]
 }

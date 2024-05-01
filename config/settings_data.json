@@ -173,7 +173,7 @@
             "type": "colorSettings",
             "settings": {
               "title": "White",
-              "color_code": "#fff"
+              "color_code": "#ffffff"
             }
           },
           "color_settings_wdjMqE": {
@@ -314,6 +314,17 @@
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
+        }
+      },
+      "scheme-e08c588e-a77d-4f39-ae18-ce9a700d68e9": {
+        "settings": {
+          "background": "#ffe8e3",
+          "background_gradient": "",
+          "text": "#a45050",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#a45050",
+          "shadow": "#edcdc5"
         }
       }
     }
