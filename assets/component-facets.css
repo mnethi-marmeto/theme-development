@@ -664,12 +664,12 @@ a.active-facets__button.focused .active-facets__button-inner,
 .mobile-facets__inner {
   background-color: rgb(var(--color-background));
   width: calc(100% - 5rem);
-  margin-left: auto;
+  margin-right: auto;
   height: 100%;
   overflow-y: auto;
   pointer-events: all;
   transition: transform var(--duration-default) ease;
-  max-width: 37.5rem;
+  max-width: 540px;
   display: flex;
   flex-direction: column;
   border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
@@ -686,13 +686,13 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .js .disclosure-has-popup:not(.menu-opening) .mobile-facets__inner {
-  transform: translateX(105vw);
+  transform: translateX(-105vw);
 }
 
 .mobile-facets__header {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   padding: 1rem 2.5rem;
-  text-align: center;
+  text-align: left;
   display: flex;
   position: sticky;
   top: 0;
@@ -709,8 +709,9 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__heading {
-  font-size: calc(var(--font-heading-scale) * 1.4rem);
+  font-size: calc(var(--font-heading-scale) * 2rem);
   margin: 0;
+  font-weight: 600;
 }
 
 .mobile-facets__count {
@@ -771,7 +772,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   justify-content: center;
   position: fixed;
   top: 0.7rem;
-  right: 1rem;
+  left: 48rem;
   width: 4.4rem;
   height: 4.4rem;
   z-index: 101;

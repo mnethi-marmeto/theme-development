@@ -6,6 +6,9 @@
         speak: none;
         
     }
+    .breadcrumbs{
+    margin-top:15px;
+    }
     .breadcrumbs-list{
         list-style: none;
         display: flex;
@@ -34,18 +37,6 @@
                     <a class="tw-underline" href="{{ page.url }}" class="tw-text-inherit tw-font-[normal] tw-no-underline hover:tw-underline focus:tw-underline" aria-current="page" >{{ page.title }}</a>
                 </li>
 
-            {% when 'product' %}
-                
-                {% if collection.url %}
-                <li class="tw-inline-block">
-                    {{ collection.title | link_to: collection.url }}
-                </li>
-                {% endif %}
-
-                <li class="tw-inline-block">
-                    <a class="tw-underline" href="{{ product.url }}" class="tw-text-inherit tw-font-[normal] tw-no-underline hover:tw-underline focus:tw-underline" aria-current="page" >{{ product.title }}</a>
-                </li>
-
             {% when 'collection' and collection.handle %}
                 {% if current_tags %}
                 <li class="tw-inline-block">{{ collection.title | link_to: collection.url }}</li>
@@ -57,7 +48,19 @@
                 <li class="tw-inline-block">
                     <a class="tw-underline" href="{{ collection.url }}" class="tw-text-inherit tw-font-[normal] tw-no-underline hover:tw-underline focus:tw-underline" aria-current="page" >{{ collection.title }}</a>
                 </li>
+                {% endif %}   
+
+            {% when 'product' %}
+                
+                {% if collection.url %}
+                <li class="tw-inline-block">
+                    {{ collection.title | link_to: collection.url }}
+                </li>
                 {% endif %}
+
+                <li class="tw-inline-block">
+                    <a class="tw-underline" href="{{ product.url }}" class="tw-text-inherit tw-font-[normal] tw-no-underline hover:tw-underline focus:tw-underline" aria-current="page" >{{ product.title }}</a>
+                </li>
 
             {% when 'blog' %}
 
