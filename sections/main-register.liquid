@@ -49,6 +49,9 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+    <label for="RegisterForm-FirstName" class="custom-label">
+      {{ 'customer.register.first_name' | t }}
+    </label>
     <div class="field">
       <input
         type="text"
@@ -64,6 +67,9 @@
         {{ 'customer.register.first_name' | t }}
       </label>
     </div>
+    <label for="RegisterForm-LastName" class="custom-label">
+      {{ 'customer.register.last_name' | t }}
+    </label>
     <div class="field">
       <input
         type="text"
@@ -79,6 +85,9 @@
         {{ 'customer.register.last_name' | t }}
       </label>
     </div>
+    <label for="RegisterForm-email" class="custom-label">
+      {{ 'customer.register.email' | t }}
+    </label>
     <div class="field">
       <input
         type="email"
@@ -110,6 +119,9 @@
         {{ form.errors.messages.email }}.
       </span>
     {%- endif -%}
+    <label for="RegisterForm-password" class="custom-label">
+      {{ 'customer.register.password' | t }}
+    </label>
     <div class="field">
       <input
         type="password"
@@ -135,9 +147,12 @@
         {{ form.errors.messages.password }}.
       </span>
     {%- endif -%}
-    <button>
+    <button class="sign-in-button">
       {{ 'customer.register.submit' | t }}
     </button>
+    <a href="{{ routes.account_login_url }}">
+      {{ 'customer.log_in'| t }}
+    </a>
   {%- endform -%}
 </div>
 

@@ -69,3 +69,17 @@
 .newsletter-form__button .icon {
   width: 1.5rem;
 }
+
+/* custom-stylings */
+.field-container{
+  display: flex;
+}
+
+.subscribe-button{
+  border-radius: 0 20px 20px 0;
+  background-color: #3b5342;
+}
+
+.field-container .field,.field::after,.field::before{
+  border-radius: 0;
+}

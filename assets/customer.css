@@ -1,4 +1,4 @@
-.customer:not(.account):not(.order) {
+.customer:not(.account):not(.order):not(.addresses) {
   margin: 0 auto;
   max-width: 33.4rem;
   padding-left: 1.5rem;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .customer:not(.account):not(.order) {
+  .customer:not(.account):not(.order):not(.addresses) {
     max-width: 47.8rem;
   }
 }
@@ -752,4 +752,50 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7),
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
+}
+
+
+/* custom stylings */
+
+.custom-label{
+  text-align: left;
+  display: block;
+}
+
+.custom-label{
+  margin: 2rem 0 0;
+}
+
+.customer .sign-in-button{
+  background-color: #3b5342;
+}
+
+.register a {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+.custom-account{
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+.tabs-wrapper{
+  width: 30%;
+}
+.custom-account .tab,.customer .tab{
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  background-color: #8d5d48;
+}
+.custom-account .active, .customer .active{
+  background-color: #3b5342;
+}
+.custom-account .navigater{
+  width:100%
+}
+.addaddress-button{
+  display: flex;
+  justify-content: center;
 }
