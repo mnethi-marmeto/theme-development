@@ -516,6 +516,20 @@
   "shopify": {
     "links": {
       "powered_by_shopify": " "
+    },
+    "checkout": {
+      "general": {
+        "autocomplete_powered_by_google": " "
+      }
+    }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "pagination": {
+          "nav_accessibility_label": "order"
+        }
+      }
     }
   }
 }
