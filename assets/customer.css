@@ -799,3 +799,8 @@ li[data-address] > h2 {
   display: flex;
   justify-content: center;
 }
+.order-name{
+  color: #8d5d48;
+  text-decoration: underline;
+  cursor: pointer;
+}

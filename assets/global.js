@@ -1538,3 +1538,16 @@ class PincodeChecker extends HTMLElement {
 }
 
 customElements.define('pincode-checker', PincodeChecker);
+
+function getorders(url){
+  fetchUrl = url + "?section=template--15650135507034__main"
+  fetch(fetchUrl)
+  .then(response=>response.text())
+  .then((responseText) => {
+      const html = new DOMParser().parseFromString(responseText,'text/html');
+      const container = document.getElementById("view-container");
+      const content = html.querySelector(".order-detail-section")
+      console.log(html);
+      container.innerHTML = content.innerHTML;
+  })
+}

@@ -18,7 +18,7 @@
         <a href="{{ routes.account_url }}" class="navigater">
             <button class="tab active button">Profile</button>
           </a>
-          <a href="/account/order" class="navigater">
+          <a href="/pages/order" class="navigater">
             <button class="tab  button">Orders</button>
           </a>
           <a href="{{ routes.account_addresses_url }}" class="navigater">
@@ -29,7 +29,7 @@
           </a>
     </div>
     <div>
-        <p>Hello {{ customer.first_name }}. Not {{ customer.first_name }} 
+        <p>Hello {{ customer.first_name }}. Not {{ customer.first_name }} </p>
         <a href="{{ routes.account_logout_url }}">
             Sign out
         </a>
@@ -62,7 +62,6 @@
                 </tr>
             </tbody>
         </table>
-    </p>
     </div>
 </div>
 {% schema %}
