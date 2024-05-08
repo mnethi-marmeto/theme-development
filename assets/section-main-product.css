@@ -211,15 +211,20 @@
   color: rgb(var(--color-foreground));
 }
 
+.shopify-payment-button{
+  width: 50%;
+}
+
 .shopify-payment-button__button {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
+  background: #263d2d;
 }
 
 /* Product info */
 
 .product__info-container > * + * {
-  margin: 1.5rem 0;
+  margin: .5rem 0;
 }
 
 .product__info-container iframe {
@@ -248,7 +253,7 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
 }
 
 .product__title > * {
@@ -367,7 +372,15 @@ a.product__text {
 }
 
 .product-form__buttons {
-  max-width: 44rem;
+  /* max-width: 44rem; */
+  display: flex;
+  gap: 10px;
+}
+.product-form__submit{
+  width: 50%;
+  background-color: #8d5d48;
+  color: white;
+  border: none;
 }
 
 .product--no-media .product__info-container > modal-opener {
@@ -1495,4 +1508,294 @@ a.product__text {
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
   }
+}
+
+/* for coupoun */
+.coupon {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5));
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  text-transform: uppercase;
+}
+.coupon::before,
+.coupon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+
+.coupon::before {
+  left: 0;
+  background-image: radial-gradient(
+    circle at 0 50%,
+    transparent 25px,
+    gold 26px
+  );
+}
+
+.coupon::after {
+  right: 0;
+  background-image: radial-gradient(
+    circle at 100% 50%,
+    transparent 25px,
+    gold 26px
+  );
+}
+
+.coupon > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  width: 20%;
+  border-right: 2px dashed rgba(0, 0, 0, 0.13);
+}
+.left div {
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.coupon--right {
+  width: 120px;
+  background-image: radial-gradient(
+    circle at 100% 50%,
+    transparent 25px,
+    #fff 26px
+  );
+}
+.coupon--right div {
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  transform: rotate(-90deg);
+}
+
+.center #coupon_code {
+  background: #000;
+  color: gold;
+  padding: 0 10px;
+  font-size: 2.15rem;
+  white-space: nowrap;
+}
+
+.center .coup {
+  font-size: 2.15rem;
+}
+.center small {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width:500px){
+  .coupon {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .left div {
+    transform: rotate(0deg);
+  }
+  .coupon--right div {
+    transform: rotate(0deg);
+    
+  }
+}
+
+/* popup */
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	gap: 10px 0;
+	height: 100%;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.toast-btn {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px 5px;
+	margin: 2em auto;
+	padding: 1.5rem;
+	border: none;
+	font-weight: 500;
+	border-radius: 3px;
+	cursor: pointer;
+	min-width: 150px;
+	font-size: 1.2rem;
+	outline: none;
+	background: #3498db;
+	color: #fff;
+}
+
+.toast-btn:hover {
+	filter: brightness(0.8);
+}
+
+button.success-toast {
+	background-color: #27ae60;
+}
+
+button.danger-toast {
+	background-color: #c0392b;
+}
+  
+button.info-toast {
+	background-color: #2980b9;
+}
+
+button.warning-toast {
+	background-color: #f39c12;
+}
+
+.toasts {
+	position: absolute;
+	top: 2rem;
+	right: 1rem;
+}
+	
+.toast-notification {
+  width: 350px;
+	margin-bottom: .75rem;
+  background: #f8f8ff;
+  border-radius: 2px;
+  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.hide-toast {
+	display: none;
+}
+
+.toast-notification .toast-content {
+	font-weight: 400;
+	color: #353b48;
+	padding: 1rem;
+	display: flex;
+  justify-content: flex-start;
+	align-items: center;
+	gap: 0 1rem;
+}
+
+.toast-notification .toast-icon {
+	background-color: #27ae60;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.toast-notification .toast-icon i {
+	font-size: 1.25rem;
+}
+
+.toast-notification .toast-progress {
+	height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.toast-notification .toast-progress-bar {
+	background-color: #b7b7b7;
+	height: 2px;
+	animation: toastProgress 3s ease-in-out forwards;
+}
+
+.slide-in-slide-out {
+	animation: slideInRight 0.3s ease-in-out forwards, slideOutRight 0.5s ease-in-out forwards 3s;
+	transform: translateX(110%);
+}
+
+.slide-in-fade-out {
+	animation: slideInRight 0.3s ease-in-out forwards, fadeOut 0.5s ease-in-out forwards 3s;
+	transform: translateX(110%);
+}
+
+.wiggle-me {
+	animation: wiggle 2s ease-in;
+}
+
+@keyframes slideInRight { 
+	0% { transform: translateX(110%); }
+	75% { transform: translateX(-10%); }
+	100% { transform: translateX(0%); }
+}
+
+@keyframes slideOutRight { 
+	0% { transform: translateX(0%); }
+	25% { transform: translateX(-10%); }
+	100% { transform: translateX(110%); }
+}
+  
+@keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes toastProgress {
+	0% { width: 100%; }
+	100% { width: 0%; }
+}
+
+@keyframes wiggle {
+	0%, 7% { transform: rotateZ(0); }
+	15% { transform: rotateZ(-13deg); }
+	20% { transform: rotateZ(9deg); }
+	25% { transform: rotateZ(-10deg); }
+	30% { transform: rotateZ(7deg); }
+	35% { transform: rotateZ(-2deg); }
+	40%, 100% { transform: rotateZ(0); }
+}
+
+/* handlep pincode */
+/* pincode checker */
+
+.pincode-checker {
+  display: flex;
+  margin: 1.1rem 0 10px;
+}
+.pincode-checker__button{
+  margin-left: 5px;
+  background-color: #263d2d;
+}
+.pincode-message.is-hidden {
+  display: none;
+}
+.pincode-message.is-error {
+  color: red;
+}
+.pincode-message.is-success {
+  color: darkgreen;
+}
+.pincode-message ul {
+  padding: 0 25px;
+  margin: 0;
 }

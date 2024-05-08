@@ -30,6 +30,17 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+    .star-rating:before {
+    content: "\2605\2605\2605\2605\2605";
+    background: linear-gradient(90deg, #FFAA47 calc({{product.metafields.custom.product_rating.value}}/5 * 100%), #E1E1E1 calc({{product.metafields.custom.product_rating.value}}/5 * 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    .star-rating {
+        font-size: 1.5rem;
+        display:block !important;
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -70,6 +81,7 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
         {% render 'product-media-gallery', variant_images: variant_images %}
+        {% comment %} {% render 'custom-web-product-slider', variant_images: variant_images %} {% endcomment %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <product-info
@@ -119,7 +131,7 @@
                     {{ 'products.product.include_taxes' | t }}
                   {%- endif -%}
                   {%- if shop.shipping_policy.body != blank -%}
-                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    Tax included {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                   {%- endif -%}
                 </div>
                 <div {{ block.shopify_attributes }}>
@@ -129,6 +141,12 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+                {% comment %} {%- if product.metafields.custom.tax_incuded != blank -%}
+                  <p class="tax-included">{{ product.metafields.custom.tax_incuded }}</p>
+                {%- endif -%} {% endcomment %}
+                {%- if product.metafields.custom.product_rating != blank -%}
+                  <div class="star-rating"></div>
+                {%- endif -%}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -449,6 +467,13 @@
                   {{- block.settings.text -}}
                 </a>
               {%- when 'share' -%}
+                {%- for item in product.metafields.custom.usp.value -%}
+                  <div class="grid">
+                    <img src="{{ item.usp_image | image_url }}" height="auto" width="auto">
+                    <span class="tax-included">{{item.usp_text }}</span>
+                  </div>
+                {%- endfor -%}
+
                 {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
                 {% render 'share-button', block: block, share_link: share_url %}
 
@@ -462,6 +487,94 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+              {%- when 'variant-offer' -%}
+                <div class="coupon">
+                  {%- if product.selected_or_first_available_variant.metafields.custom.coupon  != blank -%}
+                  <div class="left">
+                    <div>{{block.settings.offer_title }}</div>
+                  </div>
+                  <div class="center">
+                    <div>
+                      {%- if product.selected_or_first_available_variant.metafields.custom.coupon  != blank -%}
+                        <h2 id="coupon_code">{{ product.selected_or_first_available_variant.metafields.custom.coupon }}</h2>
+                      {%- endif -%}
+                      <h3 class="coup">Coupon</h3>
+                      <button onclick="copy()">Copy</button>
+                    </div>
+                  </div>
+                  
+                  <div class="coupon--right">
+                    <div>87878521112</div>
+                  </div>
+                {%- endif -%}
+                </div>
+              {%- when 'pincode-check' -%}
+                <h2>{{block.settings.pincode-heading }}</h2>
+                {% comment %} <pincode-check>
+                  <div>
+                    <input type="text"/>
+                    <button>check</button>
+                  </div>
+                  <div class="toasts"></div>
+                    <div class="master-toast-notification hide-toast">
+                      <div class="toast-content">
+                        <div class="toast-icon">
+                          <i class="fa-solid"></i>
+                        </div>
+                        <div class="toast-msg"></div>
+                      </div>
+                      <div class="toast-progress">
+                        <div class="toast-progress-bar"></div>
+                      </div>
+                    </div>
+                </pincode-check> {% endcomment %}
+                <pincode-checker>
+                  <div class="pincode-checker">
+                    <div class="field pincode-checker__field">
+                      <input class="field__input" id="PincodeInput" type="text" name="pincode-input" placeholder="Eg. 560012">
+                      <label class="field__label" for="PincodeInput">Enter Pincode</label>
+                    </div>
+                    <button type="button" class="button pincode-checker__button" name="pincode-submit">Check</button>
+                  </div>
+                  <div class="pincode-message text-body is-hidden" name="pincode-message"></div>
+              </pincode-checker>
+                {% when 'bundles' %}
+                  <div class="product-bundle-wrapper">
+                    <div class="product-bundle">
+                      <h2 class="product-bundle__heading">{{ section.settings.bundle_heading }}</h2>
+                      <div class="product-bundle-container">
+                        <product-bundle class="product-bundle__grid " data-section-id="{{ section.id }}">
+                          {% for product in product.metafields.custom.bundles.value %}
+                            <div class="product-bundle__grid-item product-bundles">
+                              {% render 'custom-web-product',
+                                product: product,                    
+                                section_id: section.id
+                              %}
+                              <input class="bundle-checkbox" data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                              value="{{  product.selected_or_first_available_variant.id }}"
+                              type="checkbox" 
+                              >
+                                {% comment %} {% if forloop.index != forloop.length %}
+                                    <span class="addicon">
+                                    +
+                                    </span>   
+                                {%  else %}  
+                                    <span class="addicon">
+                                        =
+                                    </span>        
+                                {% endif %} {% endcomment %}
+                              </div>
+                            {% endfor %}
+                            {% comment %} <div id="bundle__atc" 
+                            class="button custom-atc__hover-button" 
+                            data-product-id="{{ product.id }}"  
+                            data-variant-id="{{ product.selected_variant.id }}"
+                            data-section-id="{{ section.id }}"
+                            >Add to cart</div> {% endcomment %}
+                            </product-bundle>
+                        </div>
+                    </div>
+                </div>  
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -2121,6 +2234,42 @@
           "default": "Heading",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "variant-offer",
+      "name": "Varient offer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "offer_title",
+          "label": "Offer Title"
+        }
+      ]
+    },
+    {
+      "type": "pincode-check",
+      "name" : "Pincode Check",
+      "settings": [
+        {
+          "type": "text",
+          "id": "pincode-heading",
+          "label": "Heading",
+          "default": "SHIPPING & DELIVERY"
+        }
+      ]
+    },
+    {
+      "type": "bundles",
+      "name":"Product Bundles",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "bundle_heading",
+          "label": "Bundle Heading",
+          "default": "Frequently bought together"
         }
       ]
     }

@@ -184,7 +184,10 @@ class QuantityInput extends HTMLElement {
     event.preventDefault();
     const previousValue = this.input.value;
 
+    const card_quantity = document.querySelector("#Quantity-cartButton");
+
     event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
+    event.target.name === 'plus' ? card_quantity.stepUp() : card_quantity.stepDown();
     if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
   }
 
@@ -1117,6 +1120,15 @@ class VariantSelects extends HTMLElement {
         if (this.currentVariant.id !== requestedVariantId) return;
 
         const html = new DOMParser().parseFromString(responseText, 'text/html');
+
+        // code for changing coupon code
+        const codeSource = html.querySelector(".coupon");
+        const codeDestination = document.querySelector(".coupon");
+
+        if(codeSource && codeDestination){
+          codeDestination.innerHTML = codeSource.innerHTML;
+        } 
+
         const destination = document.getElementById(`price-${this.dataset.section}`);
         const source = html.getElementById(
           `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
@@ -1161,7 +1173,7 @@ class VariantSelects extends HTMLElement {
         if (pricePerItemSource && pricePerItemDestination) {
           pricePerItemDestination.innerHTML = pricePerItemSource.innerHTML;
           pricePerItemDestination.classList.toggle('hidden', pricePerItemSource.classList.contains('hidden'));
-        }
+        } 
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
@@ -1182,6 +1194,13 @@ class VariantSelects extends HTMLElement {
             variant: this.currentVariant,
           },
         });
+        // price in custom add to cart
+        const cardPriceSource = html.querySelector("#cardPrice");
+        const cardPriceDestination = document.querySelector("#cardPrice");
+
+        if(cardPriceSource && cardPriceDestination){
+          cardPriceDestination.innerHTML = cardPriceSource.innerHTML;
+        } 
       });
   }
 
@@ -1273,3 +1292,249 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+// for copying coupon code
+
+async function copy(){
+  // console.log("copied")
+    try {
+      let code = document.getElementById("coupon_code").textContent
+      await navigator.clipboard.writeText(code);
+      console.log("copied")
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
+}
+
+// for pincode check
+
+class pincodeCheck extends HTMLElement{
+  constructor(){
+    super()
+    this.input = this.querySelector('[type="text"]');
+    this.button = this.querySelector("button")
+    this.input.addEventListener("keydown",(event)=>{
+      this.keycheck(event)
+    })
+    this.button.addEventListener("click",()=>{
+      this.validate()
+      this.checkAvaliability()
+    })
+    this.toastCounter = 1
+  }
+
+  validate(){
+    if(this.input.value.length !== 6){
+      alert("Enter correct pincode")
+    }
+  }
+  keycheck(event){
+    // Ensure that it is a number and stop the keypress
+    if ((event.shiftKey || (event.keyCode < 48 || event.keyCode > 57)) && (event.keyCode < 96 || event.keyCode > 105)) {
+        event.preventDefault();
+    }
+  }
+  checkAvaliability(){
+    let value = this.input.value;
+    if(value.length === 6){
+      fetch(`https://api.postalpincode.in/pincode/${value}`)
+      .then(response=>response.json())
+      .then((data)=>{
+        if(data[0].Status === "Success"){
+          // alert("Delivery available");
+          this.displayToastNotification("delivery is avaliablw", "fa check", "green", "slide-in-fade-out"); 
+        }else{
+          alert("No delivery")
+        }
+      })
+    }
+  }
+  displayToastNotification(msg, icon, icon_color, animation) {
+    debugger
+    var class_name = "toast-" + this.toastCounter;
+    var new_node = document.querySelector(".master-toast-notification").cloneNode(true);
+    document.querySelector(".toasts").appendChild(new_node);
+    new_node.classList.add(class_name, "toast-notification");
+    new_node.classList.remove("master-toast-notification");
+    new_node.querySelector(".toast-msg").textContent = msg;
+    // new_node.querySelector(".toast-icon i").classList.add(icon);
+    // new_node.querySelector(".toast-icon").classList.add("wiggle-me");
+    // new_node.querySelector(".toast-icon").style.backgroundColor = icon_color;
+    new_node.classList.remove("hide-toast");
+    new_node.classList.add(animation);
+    setTimeout(function () {
+      new_node.parentNode.removeChild(new_node);
+    }, 3800);
+    this.toastCounter++;
+  }
+  
+}
+
+customElements.define('pincode-check',pincodeCheck)
+
+// bundles
+
+class ProductBundle extends HTMLElement {
+  constructor() {
+      super();
+      this.addEventListener('click', this.bundleAddtocart)
+      this.sectionId = this.dataset.sectionId
+  }
+
+
+  bundleAddtocart() {
+      console.log(this.querySelectorAll('.bundle-checkbox'));
+      this.products = []
+      this.querySelectorAll('.bundle-checkbox').forEach((element) => {
+          if (element.checked == true) {
+              console.log(element);
+              this.products.push(element.value)
+              console.log(this.products);
+          }
+      })
+
+      const handleClick = () => {
+          this.addToCart(this.products);
+      };
+
+      document.querySelector('#bundle__atc').addEventListener('click', handleClick);
+  }
+
+  addToCart(variants) {
+      let cart=document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+      let formData = {
+          "items": variants.map((variantId) =>
+          (
+              {
+                  "id": variantId,
+                  "quantity": 1,
+              }
+          )),
+          "sections": cart.getSectionsToRender().map((section) => section.id)
+      }
+      console.log(formData);
+
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData),
+      })
+          .then(response => {
+              return response.json();
+          })
+          .then(response=>
+              {
+                  cart.renderContents(response);
+              })
+          .catch((error) => {
+              console.error('Error:', error);
+          });
+  }
+
+}
+
+customElements.define('product-bundle', ProductBundle);
+
+// handled pincodechecker
+class PincodeChecker extends HTMLElement {
+  constructor() {
+    super();
+    this.pincodeJson = {};
+    this.sheetKey = '1tHY85BH7aN8dSC4SnjoJ8_beRUZf5g4nh7CpyeJW1WE';
+    this.apiKey = 'AIzaSyCClZcL6ukR5QzKckXmUKHfiANjIewgqsg';
+    this.pincodeInput = this.querySelector('[name="pincode-input"]');
+    this.pincodeSubmitBtn = this.querySelector('[name="pincode-submit"]');
+    this.pincodeMessage = this.querySelector('[name="pincode-message"]');
+    this.sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + this.sheetKey + "/values/Sheet1?key=" + this.apiKey;
+      
+    this.getPincodeJson();
+    this.pincodeSubmitBtn.addEventListener('click', this.validatePincode.bind(this));
+    //COSMETICS :: CLEAR INPUT ON CLICK :: ALLOW ONLY NUMBERS
+    // this.pincodeInput.addEventListener('click', this.clearInput.bind(this));
+    this.pincodeInput.addEventListener('keypress', function(e) {
+      if (e.which < 48 || e.which > 57 || e.target.value.length === 6) 
+        e.preventDefault();
+    });
+  }
+
+  getPincodeJson() {
+    if (sessionStorage.getItem("pincodeData") === null) {
+      fetch(this.sheetUrl)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        let sheetData = JSON.stringify(data.values);
+        sessionStorage.setItem("pincodeData", sheetData);        
+      })
+      .catch(function(error) {
+        console.error('Error:', error);
+      });
+    }
+  }
+  
+  validatePincode() {
+    if(this.pincodeInput.value.length === 6) {      
+      this.pincodeJson = JSON.parse(sessionStorage.getItem("pincodeData"));
+      this.jsonResult = {
+        pincodeServiceable: 'No',
+        codAvailable: 'No',
+        deliveryMessage: ''
+      };
+
+      for (let i=0; i<this.pincodeJson.length; i++) {
+        if (this.pincodeJson[i] && this.pincodeJson[i][0] == this.pincodeInput.value) {
+          this.jsonResult.pincodeServiceable = this.pincodeJson[i][1];
+          this.jsonResult.codAvailable = this.pincodeJson[i][2];
+          this.jsonResult.deliveryMessage = this.pincodeJson[i][3];   
+          break;
+        }
+      }
+
+      if(this.jsonResult.pincodeServiceable.toLowerCase() == 'yes') {
+        let successHtml = '<ul>';
+        successHtml += '<li>Service is available to your location</li>';
+
+        if(this.jsonResult.codAvailable.toLowerCase() == 'yes') {
+          successHtml += '<li>COD is available</li>';
+        }
+        if(this.jsonResult.deliveryMessage != '') {
+          successHtml += '<li>'+ this.jsonResult.deliveryMessage +'</li>';
+        }          
+        successHtml += '</ul>';
+
+        this.pincodeMessage.innerHTML = successHtml;
+        this.pincodeMessage.classList.add('is-success');
+        this.pincodeMessage.classList.remove('is-error', 'is-hidden');
+        let addButton = document.querySelector(".product-form__submit");
+        addButton.removeAttribute("disabled")
+      } 
+      else {
+        //IF THE ENTERED PINCODE DOESN'T MATCH WITH THE SHEET PINCODES OR UNSERVICEABLE
+        this.pincodeMessage.innerHTML = 'Service is not available to your location. Please try with an alternative pincode!';
+        this.pincodeMessage.classList.add('is-error');
+        this.pincodeMessage.classList.remove('is-success', 'is-hidden');
+        let addButton = document.querySelector(".product-form__submit");
+        addButton.setAttribute("disabled","disabled")
+      }
+    } 
+    else {
+      //IF THE PINCODE IS NOT 6 DIGITS
+      this.pincodeMessage.innerHTML = 'Please enter a valid 6 digit pincode!!';
+      this.pincodeMessage.classList.add('is-error');
+      this.pincodeMessage.classList.remove('is-success', 'is-hidden');
+      let addButton = document.querySelector(".product-form__submit");
+      addButton.setAttribute("disabled","disabled")
+    }  
+  }
+
+  clearInput() {
+    this.pincodeInput.value = '';
+    this.pincodeMessage.classList.add('is-hidden');
+    this.pincodeMessage.classList.remove('is-success', 'is-error');
+  }
+}
+
+customElements.define('pincode-checker', PincodeChecker);

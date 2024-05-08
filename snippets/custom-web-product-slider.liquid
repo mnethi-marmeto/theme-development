@@ -1,0 +1,19 @@
+<script src='{{ custom-web-product-slider.js | asset_url }}' defer></script>
+
+<product-slider>
+    <section
+        id="thumbnail-carousel"
+        class="splide"
+        aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
+      >
+        <div class="splide__track">
+              <ul class="splide__list">
+                {%- for media in product.media -%}
+                    <li class="splide__slide">
+                      <img src='{{media.preview_image | image_url}}' width="auto" height="auto"/>
+                    </li>
+                {%- endfor -%}
+              </ul>
+        </div>
+      </section>
+</product-slider>
