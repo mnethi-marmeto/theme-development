@@ -539,42 +539,44 @@
                   <div class="pincode-message text-body is-hidden" name="pincode-message"></div>
               </pincode-checker>
                 {% when 'bundles' %}
-                  <div class="product-bundle-wrapper">
-                    <div class="product-bundle">
-                      <h2 class="product-bundle__heading">{{ section.settings.bundle_heading }}</h2>
-                      <div class="product-bundle-container">
-                        <product-bundle class="product-bundle__grid " data-section-id="{{ section.id }}">
-                          {% for product in product.metafields.custom.bundles.value %}
-                            <div class="product-bundle__grid-item product-bundles">
-                              {% render 'custom-web-product',
-                                product: product,                    
-                                section_id: section.id
-                              %}
-                              <input class="bundle-checkbox" data-product-id="{{ product.selected_or_first_available_variant.id }}"
-                              value="{{  product.selected_or_first_available_variant.id }}"
-                              type="checkbox" 
-                              >
-                                {% comment %} {% if forloop.index != forloop.length %}
-                                    <span class="addicon">
-                                    +
-                                    </span>   
-                                {%  else %}  
-                                    <span class="addicon">
-                                        =
-                                    </span>        
-                                {% endif %} {% endcomment %}
-                              </div>
-                            {% endfor %}
-                            <div id="bundle__atc" 
-                            class="button custom-atc__hover-button" 
-                            data-product-id="{{ product.id }}"  
-                            data-variant-id="{{ product.selected_variant.id }}"
-                            data-section-id="{{ section.id }}"
-                            >Add to cart</div> 
-                            </product-bundle>
-                        </div>
-                    </div>
-                </div>  
+                  {%- if product.metafields.custom.bundles != blank -%}
+                    <div class="product-bundle-wrapper">
+                      <div class="product-bundle">
+                        <h2 class="product-bundle__heading">{{ section.settings.bundle_heading }}</h2>
+                        <div class="product-bundle-container">
+                          <product-bundle class="product-bundle__grid " data-section-id="{{ section.id }}">
+                            {% for product in product.metafields.custom.bundles.value %}
+                              <div class="product-bundle__grid-item product-bundles">
+                                {% render 'custom-web-product',
+                                  product: product,                    
+                                  section_id: section.id
+                                %}
+                                <input class="bundle-checkbox" data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                                value="{{  product.selected_or_first_available_variant.id }}"
+                                type="checkbox" 
+                                >
+                                  {% comment %} {% if forloop.index != forloop.length %}
+                                      <span class="addicon">
+                                      +
+                                      </span>   
+                                  {%  else %}  
+                                      <span class="addicon">
+                                          =
+                                      </span>        
+                                  {% endif %} {% endcomment %}
+                                </div>
+                              {% endfor %}
+                              <div id="bundle__atc" 
+                              class="button custom-atc__hover-button" 
+                              data-product-id="{{ product.id }}"  
+                              data-variant-id="{{ product.selected_variant.id }}"
+                              data-section-id="{{ section.id }}"
+                              >Add to cart</div> 
+                              </product-bundle>
+                          </div>
+                      </div>
+                    </div> 
+                  {%- endif -%}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">

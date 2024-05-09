@@ -66,7 +66,7 @@
         {%- endif -%}
 
         {% comment %} custom add to card {% endcomment %}
-        <button
+        {% comment %} <button
           id="ProductSubmitButton-{{ section_id }}"
           type="submit"
           name="add"
@@ -103,7 +103,7 @@
             {%- endif -%}
           </span>
           {%- render 'loading-spinner' -%}
-        </button>
+        </button> {% endcomment %}
 
         <div class="product-form__buttons">
           {%- liquid
