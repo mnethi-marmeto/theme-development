@@ -63,7 +63,7 @@
     "custom_header_9kGjCk": {
       "type": "custom-header",
       "blocks": {
-        "image_XhiPHX": {
+        "image_ABKXAa": {
           "type": "Image",
           "settings": {
             "megamenu_name": "Shop",
@@ -72,7 +72,7 @@
         }
       },
       "block_order": [
-        "image_XhiPHX"
+        "image_ABKXAa"
       ],
       "settings": {
         "hover_logo_image": "shopify:\/\/shop_images\/logo2x.png",
@@ -80,7 +80,7 @@
         "menu": "main-menu",
         "menu_type_desktop": "mega",
         "sticky_header_type": "none",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 20,
