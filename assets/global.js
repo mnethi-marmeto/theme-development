@@ -1540,7 +1540,7 @@ class PincodeChecker extends HTMLElement {
 customElements.define('pincode-checker', PincodeChecker);
 
 function getorders(url){
-  fetchUrl = url + "?section=template--15650135507034__main"
+  fetchUrl = url
   fetch(fetchUrl)
   .then(response=>response.text())
   .then((responseText) => {

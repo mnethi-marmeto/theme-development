@@ -32,8 +32,8 @@
         <div id="view-container">
             <div>
                 <h2>{{ 'customer.orders.title' | t }}</h2>
-          
-                {% paginate customer.orders by 20 %}
+                
+                {% paginate customer.orders by 4 %}
                   {%- if customer.orders.size > 0 -%}
                     <table >
                       <caption class="visually-hidden">
