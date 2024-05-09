@@ -50,6 +50,14 @@
       </ul>
     {%- endif -%}
     <label for="RegisterForm-FirstName" class="custom-label">
+      Account Type
+    </label>
+    <select name="customer[tags]" id="AccountType" class="input-full" required="">
+      <option value="" disabled="" selected="">Please select an option</option>            
+      <option value="B2B">B2B</option>
+      <option value="Customer">Merchant</option>
+    </select>
+    <label for="RegisterForm-FirstName" class="custom-label">
       {{ 'customer.register.first_name' | t }}
     </label>
     <div class="field">

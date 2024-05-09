@@ -184,10 +184,10 @@ class QuantityInput extends HTMLElement {
     event.preventDefault();
     const previousValue = this.input.value;
 
-    const card_quantity = document.querySelector("#Quantity-cartButton");
+    // const card_quantity = document.querySelector("#Quantity-cartButton");
 
     event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
-    event.target.name === 'plus' ? card_quantity.stepUp() : card_quantity.stepDown();
+    // event.target.name === 'plus' ? card_quantity.stepUp() : card_quantity.stepDown();
     if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
   }
 
@@ -1394,6 +1394,7 @@ class ProductBundle extends HTMLElement {
       })
 
       const handleClick = () => {
+        debugger
           this.addToCart(this.products);
       };
 
@@ -1402,6 +1403,7 @@ class ProductBundle extends HTMLElement {
 
   addToCart(variants) {
       let cart=document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+      console.log(cart)
       let formData = {
           "items": variants.map((variantId) =>
           (

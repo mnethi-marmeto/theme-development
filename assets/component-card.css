@@ -8,7 +8,6 @@
 .card {
   text-decoration: none;
   text-align: var(--text-alignment);
-  border-radius: 10%;
 }
 
 .card:not(.ratio) {
@@ -483,6 +482,6 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
-.drawer__inner hr{
-  margin:1rem 0;
+.drawer__inner hr {
+  margin: 1rem 0;
 }
