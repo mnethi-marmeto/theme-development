@@ -75,7 +75,8 @@
         "image_XhiPHX"
       ],
       "settings": {
-        "hover_logo_image": "shopify:\/\/shop_images\/logo2x.png",
+        "hover_logo_image": "shopify:\/\/shop_images\/logo-white_bac07ddb-d848-4240-b717-c345f8b26b1f_1.png",
+        "logo_image": "shopify:\/\/shop_images\/logo-white_bac07ddb-d848-4240-b717-c345f8b26b1f_1.png",
         "logo_position": "top-center",
         "menu": "main-menu",
         "menu_type_desktop": "mega",

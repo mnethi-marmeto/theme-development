@@ -1,0 +1,16 @@
+{% comment %} {% liquid 
+    assign firstVariant = product.selected_or_first_available_variant.id
+%}
+
+<custom-add data-variantId="{{ firstVariant }}">
+    {%- form 'product',
+        product,
+        id: product_form_id,
+        class: 'form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'%}
+        <button type="submit" class="product-form__submit button">
+            add to cart
+        </button>
+    {%- endform -%}
+</custom-add>  {% endcomment %}

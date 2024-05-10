@@ -3601,3 +3601,16 @@ details-disclosure > details {
   .custom-static-banner--arrow-container:hover .custom-static-banner--arrow-behind {
     animation: moveBackward 0.3s ease-in-out forwards;
   }
+
+
+  /* bundel products */
+
+  .product-bundle-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .bundel-image{
+    height: 200px;
+    width: 200px;
+  }

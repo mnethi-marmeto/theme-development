@@ -487,6 +487,14 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+                {% comment %} custom add button {% endcomment %}
+              {% comment %} {% when "customadd" %}
+                {% render 'custom-addtocard',
+                  block: block,
+                  product: product,
+                  product_form_id: product_form_id,
+                  section_id: section.id,
+                  show_pickup_availability: true %} {% endcomment %}
               {%- when 'variant-offer' -%}
                 <div class="coupon">
                   {%- if product.selected_or_first_available_variant.metafields.custom.coupon  != blank -%}
@@ -510,24 +518,6 @@
                 </div>
               {%- when 'pincode-check' -%}
                 <h2>{{block.settings.pincode-heading }}</h2>
-                {% comment %} <pincode-check>
-                  <div>
-                    <input type="text"/>
-                    <button>check</button>
-                  </div>
-                  <div class="toasts"></div>
-                    <div class="master-toast-notification hide-toast">
-                      <div class="toast-content">
-                        <div class="toast-icon">
-                          <i class="fa-solid"></i>
-                        </div>
-                        <div class="toast-msg"></div>
-                      </div>
-                      <div class="toast-progress">
-                        <div class="toast-progress-bar"></div>
-                      </div>
-                    </div>
-                </pincode-check> {% endcomment %}
                 <pincode-checker>
                   <div class="pincode-checker">
                     <div class="field pincode-checker__field">
@@ -541,39 +531,18 @@
                 {% when 'bundles' %}
                   {%- if product.metafields.custom.bundles != blank -%}
                     <div class="product-bundle-wrapper">
-                      <div class="product-bundle">
-                        <h2 class="product-bundle__heading">{{ section.settings.bundle_heading }}</h2>
-                        <div class="product-bundle-container">
-                          <product-bundle class="product-bundle__grid " data-section-id="{{ section.id }}">
-                            {% for product in product.metafields.custom.bundles.value %}
-                              <div class="product-bundle__grid-item product-bundles">
-                                {% render 'custom-web-product',
-                                  product: product,                    
-                                  section_id: section.id
-                                %}
-                                <input class="bundle-checkbox" data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                      <h2 class="product-bundle__heading">{{ block.settings.bundle_heading }}</h2>
+                      <div class="product-bundle-container">
+                        {%- for product in product.metafields.custom.bundles.value -%}
+                          <div class="product-bundle">
+                              <img src="{{product.selected_or_first_available_variant.image| image_url}}" height="auto" width="auto" class="bundel-image"/>
+                              <p>{{product.title}}</p>
+                              <p>{{product.price | money_with_currency}}</p>
+                              <input class="bundle-checkbox" name="bundelproduct-{{ forloop.index }}" data-product-id="{{ product.selected_or_first_available_variant.id }}"
                                 value="{{  product.selected_or_first_available_variant.id }}"
-                                type="checkbox" 
-                                >
-                                  {% comment %} {% if forloop.index != forloop.length %}
-                                      <span class="addicon">
-                                      +
-                                      </span>   
-                                  {%  else %}  
-                                      <span class="addicon">
-                                          =
-                                      </span>        
-                                  {% endif %} {% endcomment %}
-                                </div>
-                              {% endfor %}
-                              <div id="bundle__atc" 
-                              class="button custom-atc__hover-button" 
-                              data-product-id="{{ product.id }}"  
-                              data-variant-id="{{ product.selected_variant.id }}"
-                              data-section-id="{{ section.id }}"
-                              >Add to cart</div> 
-                              </product-bundle>
+                                type="checkbox">
                           </div>
+                        {%- endfor -%}
                       </div>
                     </div> 
                   {%- endif -%}
@@ -2274,6 +2243,11 @@
           "default": "Frequently bought together"
         }
       ]
+    },
+    {
+      "type": "customadd",
+      "name":"custom add button",
+      "limit": 1
     }
   ],
   "settings": [
