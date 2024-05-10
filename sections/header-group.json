@@ -63,7 +63,7 @@
     "custom_header_9kGjCk": {
       "type": "custom-header",
       "blocks": {
-        "image_XhiPHX": {
+        "image_ABKXAa": {
           "type": "Image",
           "settings": {
             "megamenu_name": "Shop",
@@ -72,7 +72,7 @@
         }
       },
       "block_order": [
-        "image_XhiPHX"
+        "image_ABKXAa"
       ],
       "settings": {
         "hover_logo_image": "shopify:\/\/shop_images\/logo-white_bac07ddb-d848-4240-b717-c345f8b26b1f_1.png",
