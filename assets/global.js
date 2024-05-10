@@ -1585,11 +1585,8 @@ if (!customElements.get('custom-add')) {
 // bundels
 
 function removeBundels(){
-  let removestr = localStorage.getItem("bundels") ?? "[]"
-  let  removeItems = JSON.parse(removestr)
   let divContainer = JSON.parse(document.querySelector("#cartLineItems").textContent);
-  console.log(JSON.parse(document.querySelector("#cartLineItems").textContent))
-  let cart=document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+  let cart=document.querySelector("cart-items")
 
   let cartVariants = []
 
@@ -1626,7 +1623,7 @@ function removeBundels(){
     })
     .then(response=>
     {
-        cart.renderContents(response);
+        cart.renderContent(response);
         console.log(response)
     })
     .catch((error) => {

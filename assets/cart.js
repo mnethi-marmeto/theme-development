@@ -19,6 +19,7 @@ class CartItems extends HTMLElement {
       document.getElementById('shopping-cart-line-item-status') || document.getElementById('CartDrawer-LineItemStatus');
 
     const debouncedOnChange = debounce((event) => {
+      debugger
       this.onChange(event);
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
@@ -95,13 +96,25 @@ class CartItems extends HTMLElement {
         section: 'cart-live-region-text',
         selector: '.shopify-section',
       },
-      {
-        id: 'main-cart-footer',
-        section: document.getElementById('main-cart-footer').dataset.id,
-        selector: '.js-contents',
-      },
+      // {
+      //   id: 'main-cart-footer',
+      //   section: document.getElementById('main-cart-footer').dataset.id,
+      //   selector: '.js-contents',
+      // },
     ];
   }
+  
+  renderContent(parsedState){
+    this.getSectionsToRender().forEach((section) => {
+      const elementToReplace =
+        document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+      elementToReplace.innerHTML = this.getSectionInnerHTML(
+        parsedState.sections[section.id],
+        section.selector
+      );
+    });
+  }
+  
 
   updateQuantity(line, quantity, name, variantId) {
     this.enableLoading(line);
@@ -136,14 +149,8 @@ class CartItems extends HTMLElement {
         if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
         if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
 
-        this.getSectionsToRender().forEach((section) => {
-          const elementToReplace =
-            document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-          elementToReplace.innerHTML = this.getSectionInnerHTML(
-            parsedState.sections[section.section],
-            section.selector
-          );
-        });
+        this.renderContent(parsedState);
+
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
         let message = '';
         if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {
@@ -196,6 +203,7 @@ class CartItems extends HTMLElement {
   }
 
   getSectionInnerHTML(html, selector) {
+    // console.log(html)
     return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
   }
 

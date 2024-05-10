@@ -46,8 +46,6 @@ if (!customElements.get('product-form')) {
 
         const selected = this.bundleAddtocart()
 
-        localStorage.setItem("bundels",JSON.stringify(selected))  
-
 
         const seletedItems = selected.map((variantId) =>
           (
@@ -59,8 +57,6 @@ if (!customElements.get('product-form')) {
                   }
               }
           ))
-
-        
         
         const formData = {
           "items" : [
