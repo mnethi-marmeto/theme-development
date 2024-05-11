@@ -537,10 +537,12 @@
                           <div class="product-bundle">
                               <img src="{{product.selected_or_first_available_variant.image| image_url}}" height="auto" width="auto" class="bundel-image"/>
                               <p>{{product.title}}</p>
-                              <p>{{product.price | money_with_currency}}</p>
-                              <input class="bundle-checkbox" name="bundelproduct-{{ forloop.index }}" data-product-id="{{ product.selected_or_first_available_variant.id }}"
-                                value="{{  product.selected_or_first_available_variant.id }}"
-                                type="checkbox">
+                              <div class="checkbox-container">
+                                <p>{{product.price | money_with_currency}}</p>
+                                <input class="bundle-checkbox" name="bundelproduct-{{ forloop.index }}" data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                                  value="{{  product.selected_or_first_available_variant.id }}"
+                                  type="checkbox">
+                              </div>
                           </div>
                         {%- endfor -%}
                       </div>

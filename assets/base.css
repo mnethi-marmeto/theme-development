@@ -3609,8 +3609,19 @@ details-disclosure > details {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+    overflow-x: auto;
+    width: 600px;
+    scrollbar-width: none; 
+    cursor: grab;
   }
   .bundel-image{
     height: 200px;
     width: 200px;
+  }
+  .checkbox-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  .bundle-checkbox{
+    cursor: pointer;
   }
