@@ -8,6 +8,16 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "Cart free shipping bar",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Free shipping threshold",
+        "id": "freeshipping"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
