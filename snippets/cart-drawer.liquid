@@ -76,8 +76,9 @@
       <hr>
 
       {% comment %} Progress bar {% endcomment %}
+      {% assign ts = settings.freeshipping | times: 1 %}
       <div class="progress-bar{% if cart == empty %} hidden{% endif %}">
-        <p class="progress-bar--money"> {% if cart.total_price < settings.freeshipping %} Spend {{ settings.freeshipping | minus: cart.total_price | money }} more to get FREE shipping{% else %} You are eligibal for FREE shipping {% endif %}</p>
+        <p class="progress-bar--money"> {% if cart.total_price < ts %} Spend {{ ts | minus: cart.total_price | money }} more to get FREE shipping{% else %} You are eligibal for FREE shipping {% endif %}</p>
         <div class="progress-bar--container" id="progress-bar">
             <div class="progress-bar--progress">
               <span class="in-stock-bar"  style="width:{% if widthpercent < 100 %}{{ widthpercent }}{% else %}100{% endif %}%;">
