@@ -14,7 +14,13 @@
         "type": "text",
         "label": "Free shipping threshold",
         "id": "freeshipping"
-      }
+      },
+      {
+        "type": "text",
+        "label": "Success message",
+        "id": "success_message"
+      },
+      
     ]
   },
   {
