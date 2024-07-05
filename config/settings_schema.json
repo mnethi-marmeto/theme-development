@@ -19,8 +19,7 @@
         "type": "text",
         "label": "Success message",
         "id": "success_message"
-      },
-      
+      }
     ]
   },
   {
