@@ -10,6 +10,7 @@
 {
   "current": {
     "freeshipping": "5000",
+    "success_message": "Got free shipping unlocked",
     "logo": "shopify:\/\/shop_images\/logo-2x.png",
     "logo_width": 140,
     "type_header_font": "itc_stepp_n4",
