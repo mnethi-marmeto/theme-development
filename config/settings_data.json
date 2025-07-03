@@ -227,7 +227,7 @@
     "blocks": {
       "4493994212685255146": {
         "type": "shopify://apps/hextom-whatsapp-sms-push/blocks/app-block/7861f6ce-2897-4f30-be3b-04c90bf56b8c",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     },
